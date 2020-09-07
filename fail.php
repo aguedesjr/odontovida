@@ -22,6 +22,7 @@
                   <label>Senha</label>
                   <input name="pass" type="password" placeholder="Digite a senha" data-role="input" />
               </div>
+              <small class="text-muted" style="color:Red">Usuário ou senha incorretos!</small><%}%>
               <div class="form-group mt-10">
                   <button class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
               </div>
