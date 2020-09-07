@@ -3,6 +3,7 @@
   <head>
     <title>Odontovida</title>
     <link rel="stylesheet" href="MetroUI/build/css/metro-all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
   </head>
   <body>
     <div class="container-fluid">
