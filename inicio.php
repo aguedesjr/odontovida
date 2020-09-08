@@ -332,7 +332,7 @@
         </ul>
 
         <div class="w-100 text-center text-small data-box p-2 border-top bd-grayMouse" style="position: absolute; bottom: 0">
-            <div>&copy; <%= new Date().getFullYear();%> ODONTOVIDA</div>
+            <div>&copy; <? echo date("Y"); ?> ODONTOVIDA</div>
         </div>
     </div>
 

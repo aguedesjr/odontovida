@@ -48,7 +48,7 @@ $(function(){
         window.on_page_functions = [];
         $.get(target + ".php").then(
             function(response){
-                $("#content-wrapper").php(response);
+                $("#content-wrapper").html(response);
 
                 window.on_page_functions.forEach(function(func){
                     Metro.utils.exec(func, []);
