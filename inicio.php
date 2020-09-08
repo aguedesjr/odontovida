@@ -329,6 +329,12 @@
                     <span class="caption">Metro 4</span>
                 </a>
             </li>
+            <li>
+                <a href="logout.php">
+                    <span class="icon"><span class="mif-exit fg-red"></span></span>
+                    <span class="caption">Sair</span>
+                </a>
+            </li>
         </ul>
 
         <div class="w-100 text-center text-small data-box p-2 border-top bd-grayMouse" style="position: absolute; bottom: 0">
@@ -345,20 +351,6 @@
                 <a href="#" class="app-bar-item">
                     <span class="mif-bell"></span>
                     <span class="badge bg-orange fg-white mt-2 mr-1">10</span>
-                </a>
-                <div class="app-bar-container">
-                    <a href="#" class="app-bar-item">
-                        <span class="ml-2 app-bar-name">Jack Sparrow</span>
-                    </a>
-                    <div class="user-block shadow-1" data-role="collapse" data-collapsed="true">
-                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2 bg-light">
-                            <button class="button mr-1">Profile</button>
-                            <button class="button ml-1">Sign out</button>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="app-bar-item">
-                    <span class="mif-cogs"></span>
                 </a>
             </div>
         </div>
