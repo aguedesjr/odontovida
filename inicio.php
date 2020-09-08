@@ -321,14 +321,6 @@
                     </a></li>
                 </ul>
             </li>
-
-            <li class="item-header">Documentation</li>
-            <li>
-                <a href="https://metroui.org.ua/intro.html">
-                    <span class="icon"><span class="mif-brightness-auto fg-red"></span></span>
-                    <span class="caption">Metro 4</span>
-                </a>
-            </li>
             <li>
                 <a href="logout.php">
                     <span class="icon"><span class="mif-exit fg-red"></span></span>
