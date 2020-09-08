@@ -21,49 +21,43 @@
                      <div class="row mb-3">
                          <div class="cell-md-6">
                              <label>Nome</label>
-                             <input type="text" required="" value="" title="">
+                             <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>CPF</label>
-                             <input type="text" required="" value="" title="">
+                             <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>Data de Nascimento</label>
-                             <input type="text" required="" value="" title="">
+                             <input type="text" required="" title="">
                          </div>
                      </div>
                      <div class="row mb-2">
                          <div class="cell-md-6">
                              <label>Cidade</label>
-                             <input type="text" required="" placeholder="City" title="">
-                             <div class="invalid_feedback">Please provide a valid city.</div>
+                             <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>Estado</label>
-                             <input type="text" required="" placeholder="State" title="">
-                             <div class="invalid_feedback">Please provide a valid state.</div>
+                             <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>CEP</label>
-                             <input type="text" required="" placeholder="Zip" title="">
-                             <div class="invalid_feedback">Please provide a valid zip.</div>
+                             <input type="text" required="" title="">
                          </div>
                      </div>
                      <div class="row mb-2">
                          <div class="cell-md-6">
                              <label>Bairro</label>
-                             <input type="text" required="" placeholder="City" title="">
-                             <div class="invalid_feedback">Please provide a valid city.</div>
+                             <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>Telefone</label>
-                             <input type="text" required="" placeholder="State" title="">
-                             <div class="invalid_feedback">Please provide a valid state.</div>
+                             <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>Celular</label>
-                             <input type="text" required="" placeholder="Zip" title="">
-                             <div class="invalid_feedback">Please provide a valid zip.</div>
+                             <input type="text" required="" title="">
                          </div>
                      </div>
                      <button class="button primary">Cadastrar</button>
