@@ -22,7 +22,6 @@
 
 </head>
 <body class="m4-cloak h-vh-100">
-<div data-role="activity" data-type="square" data-style="color"></div>
 <div data-role="navview" data-toggle="#paneToggle" data-expand="xl" data-compact="lg" data-active-state="true">
     <? include ("menu.php"); ?>
   </div>
