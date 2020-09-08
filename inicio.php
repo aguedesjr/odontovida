@@ -15,7 +15,10 @@
         window.on_page_functions = [];
     </script>
 
-    <? $login = $_SESSION['login']; ?>
+    <? 
+        session_start();
+        $login = $_SESSION['login']; 
+    ?>
 
 </head>
 <body class="m4-cloak h-vh-100">
