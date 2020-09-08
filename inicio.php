@@ -8,7 +8,7 @@
     <!-- Metro 4 -->
     <link rel="stylesheet" href="Pandora/source/vendors/metro4/css/metro-all.min.css">
     <link rel="stylesheet" href="Pandora/source/css/index.css">
-
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     <title>Odontovida</title>
 
     <script>

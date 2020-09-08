@@ -182,7 +182,7 @@
                        data-rows="5"
                        data-rows-steps="5, 10"
                        data-show-activity="false"
-                       data-source="data/table.json"
+                       data-source="Pandora/source/data/table.json"
                        data-horizontal-scroll="true"
                 >
                 </table>
@@ -194,42 +194,42 @@
         <div data-role="panel" data-title-caption="New members" data-collapsible="true" data-title-icon="<span class='mif-users'></span>" class="mt-4">
             <ul class="user-list">
                 <li>
-                    <img src="images/user1-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user1-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Sergey</div>
                     <div class="text-small text-muted">Today</div>
                 </li>
                 <li>
-                    <img src="images/user2-160x160.jpg" class="avatar">
+                    <img src="Pandora/source/images/user2-160x160.jpg" class="avatar">
                     <div class="text-ellipsis">Alex</div>
                     <div class="text-small text-muted">Yesterday</div>
                 </li>
                 <li>
-                    <img src="images/user3-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user3-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Norma</div>
                     <div class="text-small text-muted">Yesterday</div>
                 </li>
                 <li>
-                    <img src="images/user4-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user4-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Katty</div>
                     <div class="text-small text-muted">11 Jan</div>
                 </li>
                 <li>
-                    <img src="images/user5-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user5-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Julia</div>
                     <div class="text-small text-muted">11 Jan</div>
                 </li>
                 <li>
-                    <img src="images/user6-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user6-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Mark</div>
                     <div class="text-small text-muted">11 Jan</div>
                 </li>
                 <li>
-                    <img src="images/user7-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user7-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Marta</div>
                     <div class="text-small text-muted">11 Jan</div>
                 </li>
                 <li>
-                    <img src="images/user8-128x128.jpg" class="avatar">
+                    <img src="Pandora/source/images/user8-128x128.jpg" class="avatar">
                     <div class="text-ellipsis">Ustas</div>
                     <div class="text-small text-muted">11 Jan</div>
                 </li>
