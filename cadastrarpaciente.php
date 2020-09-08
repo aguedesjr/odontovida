@@ -15,35 +15,38 @@
 <div class="m-3">
      <div class="row">
          <div class="cell-lg-6">
-             <div class="bg-white p-4 m-2">
-                 <h4>Default input styling</h4>
-                 <form>
-                     <div class="form-group">
-                         <label>Input[text]</label>
-                         <input type="text">
+            <div class="bg-white p-4 m-2">
+                 <h4>Default validating</h4>
+                 <form class="custom-validation need-validation" novalidate="">
+                     <div class="row mb-3">
+                         <div class="cell-md-6">
+                             <label>Nome</label>
+                             <input type="text" required="" value="" title="">
+                         </div>
+                         <div class="cell-md-6">
+                             <label>CPF</label>
+                             <input type="text" required="" value="" title="">
+                         </div>
                      </div>
-                     <div class="form-group">
-                         <label>Input[password]</label>
-                         <input type="password">
+                     <div class="row mb-2">
+                         <div class="cell-md-6">
+                             <label>Cidade</label>
+                             <input type="text" required="" placeholder="City" title="">
+                             <div class="invalid_feedback">Please provide a valid city.</div>
+                         </div>
+                         <div class="cell-md-3">
+                             <label>Estado</label>
+                             <input type="text" required="" placeholder="State" title="">
+                             <div class="invalid_feedback">Please provide a valid state.</div>
+                         </div>
+                         <div class="cell-md-3">
+                             <label>CEP</label>
+                             <input type="text" required="" placeholder="Zip" title="">
+                             <div class="invalid_feedback">Please provide a valid zip.</div>
+                         </div>
                      </div>
-                     <div class="form-group">
-                         <label>Select</label>
-                         <select>
-                             <option>Value 1</option>
-                             <option>Value 2</option>
-                             <option>Value 3</option>
-                         </select>
-                     </div>
-                     <div class="form-group">
-                         <label>Text area</label>
-                         <textarea></textarea>
-                     </div>
-                     <div class="form-group">
-                         <input type="submit" value="Submit">
-                         <input type="reset" value="Reset">
-                         <input type="button" value="Button">
-                     </div>
+                     <button class="button primary">Submit form</button>
                  </form>
-             </div>
+            </div>
      </div>
 </div>
