@@ -68,7 +68,7 @@ $(function(){
         var pane = $(this).closest(".navview-pane");
         var hash;
 
-        if (Metro.utils.isValue(href) && href.indexOf(".html") > -1) {
+        if (Metro.utils.isValue(href) && href.indexOf(".php") > -1) {
             document.location.href = href;
             return false;
         }
@@ -78,7 +78,7 @@ $(function(){
         }
 
         hash = href.substr(1);
-        href = hash + ".html";
+        href = hash + ".php";
 
         getContent(hash);
 
@@ -89,7 +89,7 @@ $(function(){
         pane.find("li").removeClass("active");
         $(this).closest("li").addClass("active");
 
-        window.history.pushState(href, href, "index.html#"+hash);
+        window.history.pushState(href, href, "inicio.php#"+hash);
 
         return false;
     });
