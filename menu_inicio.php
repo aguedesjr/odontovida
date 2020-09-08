@@ -21,7 +21,7 @@
                 </a>
                 <ul class="navview-menu stay-open" data-role="dropdown">
                     <li class="item-header">Pacientes</li>
-                    <li><a href="cadastrarpaciente.php">
+                    <li><a href="#cadastrarpaciente">
                         <span class="icon"><span class="mif-user-plus"></span></span>
                         <span class="caption">Cadastrar</span>
                     </a></li>
@@ -331,3 +331,4 @@
         <div id="content-wrapper" class="content-inner h-100" style="overflow-y: auto"></div>
 
     </div>
+</div>

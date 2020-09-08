@@ -24,7 +24,6 @@
 <body class="m4-cloak h-vh-100">
 <div data-role="navview" data-toggle="#paneToggle" data-expand="xl" data-compact="lg" data-active-state="true">
     <? include ("menu_inicio.php"); ?>
-  </div>
 </div>
 
 
