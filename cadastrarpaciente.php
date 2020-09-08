@@ -16,15 +16,19 @@
      <div class="row">
          <div class="cell-lg-6">
             <div class="bg-white p-4 m-2">
-                 <h4>Default validating</h4>
+                 <h4>Cadastrar Pacientes</h4>
                  <form class="custom-validation need-validation" novalidate="">
                      <div class="row mb-3">
                          <div class="cell-md-6">
                              <label>Nome</label>
                              <input type="text" required="" value="" title="">
                          </div>
-                         <div class="cell-md-6">
+                         <div class="cell-md-3">
                              <label>CPF</label>
+                             <input type="text" required="" value="" title="">
+                         </div>
+                         <div class="cell-md-3">
+                             <label>Data de Nascimento</label>
                              <input type="text" required="" value="" title="">
                          </div>
                      </div>
@@ -45,7 +49,24 @@
                              <div class="invalid_feedback">Please provide a valid zip.</div>
                          </div>
                      </div>
-                     <button class="button primary">Submit form</button>
+                     <div class="row mb-2">
+                         <div class="cell-md-6">
+                             <label>Bairro</label>
+                             <input type="text" required="" placeholder="City" title="">
+                             <div class="invalid_feedback">Please provide a valid city.</div>
+                         </div>
+                         <div class="cell-md-3">
+                             <label>Telefone</label>
+                             <input type="text" required="" placeholder="State" title="">
+                             <div class="invalid_feedback">Please provide a valid state.</div>
+                         </div>
+                         <div class="cell-md-3">
+                             <label>Celular</label>
+                             <input type="text" required="" placeholder="Zip" title="">
+                             <div class="invalid_feedback">Please provide a valid zip.</div>
+                         </div>
+                     </div>
+                     <button class="button primary">Cadastrar</button>
                  </form>
             </div>
      </div>
