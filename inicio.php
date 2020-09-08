@@ -330,7 +330,7 @@
                 </a>
             </li>
             <li>
-                <a href="./logout.php">
+                <a href="logout">
                     <span class="icon"><span class="mif-exit fg-red"></span></span>
                     <span class="caption">Sair</span>
                 </a>
