@@ -63,6 +63,13 @@
                      <button class="button primary">Cadastrar</button>
 
                      <script>
+                         function mascaraInteiro(){
+                            if (event.keyCode < 48 || event.keyCode > 57){
+                                event.returnValue = false;
+                                return false;
+                            }
+                            return true;
+                        }
                          function MascaraCPF(cpf){
                             if(mascaraInteiro(cpf)==false){
                                 event.returnValue = false;
