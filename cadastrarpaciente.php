@@ -76,6 +76,8 @@
                      </div>
                      <button class="button primary">Cadastrar</button>
                      <script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
+                     <script src="Pandora/source/vendors/metro4/js/metro.min.js"></script>
+                     <script src="Pandora/source/js/index.js"></script>
                      <script>
                          function mascaraInteiro(){
                             if (event.keyCode < 48 || event.keyCode > 57){
@@ -190,7 +192,6 @@
                                 }
                                 return formataCampo(cel, '(00) 00000-0000', event);
                         }
-                        window.on_page_functions = [];
                     </script>
 
                  </form>
