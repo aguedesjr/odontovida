@@ -23,13 +23,22 @@
                   <input name="pass" type="password" placeholder="Digite a senha" data-role="input" />
               </div>
               <div class="form-group mt-10">
-                  <button class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
+                  <button onClick="preloader();" class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
               </div>
           </form>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      function preloader() {
+        Metro.activity.open({
+          type: 'metro',
+          text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
+          autoHide: 3000
+        })
+      }
+    </script>
     <script src="MetroUI/build/js/metro.min.js></script>
   </body>
 </html>
