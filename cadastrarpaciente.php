@@ -71,7 +71,7 @@
                          </div>
                          <div class="cell-md-3">
                              <label>Celular</label>
-                             <input type="text" required="" title="" name="cel" onKeyPress="MascaraTelefone(form1.cel);" maxlength="15">
+                             <input type="text" required="" title="" name="cel" onKeyPress="MascaraCelular(form1.cel);" maxlength="15">
                          </div>
                      </div>
                      <button class="button primary">Cadastrar</button>
