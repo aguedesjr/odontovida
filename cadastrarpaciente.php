@@ -35,21 +35,21 @@
                      <div class="row mb-2">
                         <div class="cell-md-3">
                              <label>CEP</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" id="cep" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="10" onBlur="ValidaCep(form1.cep)">
                          </div>
                          <div class="cell-md-6">
                              <label>Cidade</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" id="cidade">
                          </div>
                          <div class="cell-md-3">
                              <label>Estado</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" id="uf">
                          </div>
                      </div>
                      <div class="row mb-2">
                          <div class="cell-md-6">
                              <label>Bairro</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" id="bairro">
                          </div>
                          <div class="cell-md-3">
                              <label>Telefone</label>
@@ -71,7 +71,7 @@
                          </div>
                      </div>
                      <button class="button primary">Cadastrar</button>
-
+                     <script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
                      <script>
                          function mascaraInteiro(){
                             if (event.keyCode < 48 || event.keyCode > 57){
@@ -119,7 +119,7 @@
                         function ValidarCPF(Objcpf){
                             var cpf = Objcpf.value;
                             exp = /\.|\-/g
-                            cpf = cpf.toString().replace( exp, "" ); 
+                            cpf = cpf.toString().replace( exp, "" );
                             var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
                             var soma1=0, soma2=0;
                             var vlr =11;
@@ -136,6 +136,31 @@
                             if(digitoGerado!=digitoDigitado)
                                 alert('CPF Invalido!');
                         }
+                        function MascaraCep(cep){
+                            if(mascaraInteiro(cep)==false){
+                                event.returnValue = false;
+                            }
+                            return formataCampo(cep, '00.000-000', event);
+                        }
+                        function ValidaCep(cep){
+                            exp = /\d{2}\.\d{3}\-\d{3}/
+                            if(!exp.test(cep.value))
+                                alert('Numero de Cep Invalido!');
+                        }
+                        $("#cep").focusout(function(){
+		                    $.ajax({
+			                    url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+			                    dataType: 'json',
+			                    success: function(resposta){
+				                    $("#logradouro").val(resposta.logradouro);
+				                    $("#complemento").val(resposta.complemento);
+				                    $("#bairro").val(resposta.bairro);
+				                    $("#cidade").val(resposta.localidade);
+				                    $("#uf").val(resposta.uf);
+                                    //$("#numero").focus();
+			                    }
+		                    });
+	                    });
                     </script>
 
                  </form>
