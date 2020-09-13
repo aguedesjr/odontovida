@@ -35,7 +35,7 @@
                      <div class="row mb-2">
                         <div class="cell-md-3">
                              <label>CEP</label>
-                             <input type="text" required="" title="" id="cep" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="10" onBlur="ValidaCep(form1.cep)">
+                             <input type="text" required="" title="" id="cep" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="8">
                          </div>
                          <div class="cell-md-6">
                              <label>Cidade</label>
@@ -44,20 +44,6 @@
                          <div class="cell-md-3">
                              <label>Estado</label>
                              <input type="text" required="" title="" id="uf">
-                         </div>
-                     </div>
-                     <div class="row mb-2">
-                         <div class="cell-md-6">
-                             <label>Bairro</label>
-                             <input type="text" required="" title="" id="bairro">
-                         </div>
-                         <div class="cell-md-3">
-                             <label>Telefone</label>
-                             <input type="text" required="" title="">
-                         </div>
-                         <div class="cell-md-3">
-                             <label>Celular</label>
-                             <input type="text" required="" title="">
                          </div>
                      </div>
                      <div class="row mb-2">
@@ -71,6 +57,20 @@
                          </div>
                          <div class="cell-md-3">
                              <label>Complemento</label>
+                             <input type="text" required="" title="">
+                         </div>
+                     </div>
+                     <div class="row mb-2">
+                         <div class="cell-md-6">
+                             <label>Bairro</label>
+                             <input type="text" required="" title="" id="bairro">
+                         </div>
+                         <div class="cell-md-3">
+                             <label>Telefone</label>
+                             <input type="text" required="" title="">
+                         </div>
+                         <div class="cell-md-3">
+                             <label>Celular</label>
                              <input type="text" required="" title="">
                          </div>
                      </div>
