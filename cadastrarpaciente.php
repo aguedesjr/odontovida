@@ -1,4 +1,4 @@
-<div class="row border-bottom bd-lightGray m-3">
+<div class="row border-bottom bd-lightGray m-3" data-role="activity" data-type="ring" data-style="color">
     <div class="cell-md-4 d-flex flex-align-center">
         <!--<h3 class="dashboard-section-title text-center text-left-md w-100"><small></small></h3>-->
     </div>
@@ -33,16 +33,16 @@
                          </div>
                      </div>
                      <div class="row mb-2">
+                        <div class="cell-md-3">
+                             <label>CEP</label>
+                             <input type="text" required="" title="">
+                         </div>
                          <div class="cell-md-6">
                              <label>Cidade</label>
                              <input type="text" required="" title="">
                          </div>
                          <div class="cell-md-3">
                              <label>Estado</label>
-                             <input type="text" required="" title="">
-                         </div>
-                         <div class="cell-md-3">
-                             <label>CEP</label>
                              <input type="text" required="" title="">
                          </div>
                      </div>
@@ -57,6 +57,16 @@
                          </div>
                          <div class="cell-md-3">
                              <label>Celular</label>
+                             <input type="text" required="" title="">
+                         </div>
+                     </div>
+                     <div class="row mb-2">
+                         <div class="cell-md-8">
+                             <label>Endereço</label>
+                             <input type="text" required="" title="">
+                         </div>
+                         <div class="cell-md-4">
+                             <label>Complemento</label>
                              <input type="text" required="" title="">
                          </div>
                      </div>
