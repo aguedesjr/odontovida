@@ -140,7 +140,7 @@
                             if(mascaraInteiro(cep)==false){
                                 event.returnValue = false;
                             }
-                            return formataCampo(cep, '00.000-000', event);
+                            return formataCampo(cep, '00000000', event);
                         }
                         function ValidaCep(cep){
                             exp = /\d{2}\.\d{3}\-\d{3}/
