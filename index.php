@@ -23,24 +23,17 @@
                   <input name="pass" type="password" placeholder="Digite a senha" data-role="input" />
               </div>
               <div class="form-group mt-10">
-                  <button onClick="preloader();" class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
+                  <button onClick="Metro.activity.open({
+                    type: 'metro',
+                    text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
+                    autoHide: 300000
+                  })" class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
               </div>
           </form>
           </div>
         </div>
       </div>
     </div>
-    <script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
     <script src="MetroUI/build/js/metro.js"></script>
-    <script>
-      function preloader() {
-        Metro.activity.open({
-          type: 'metro',
-          text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
-          overlayClickClose: true
-          //autoHide: 300000
-        })
-      }
-    </script>    
   </body>
 </html>
