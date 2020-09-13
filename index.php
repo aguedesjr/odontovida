@@ -24,12 +24,10 @@
               </div>
               <div class="form-group mt-10">
                   <button onClick="Metro.activity.open({
-        type: 'square',
-        overlayColor: '#fff',
-        overlayAlpha: 1,
-        text: '<div class=\'mt-2 text-small\'>Please, wait...</div>',
-        overlayClickClose: true
-    });" class="button primary" style="background-color: #735b3c;">Entrar</button>
+                    type: 'metro',
+                    text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
+                    autoHide: 3000
+                  })" class="button primary" style="background-color: #735b3c;">Entrar</button>
               </div>
           </form>
           </div>

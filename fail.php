@@ -22,15 +22,18 @@
                   <label>Senha</label>
                   <input name="pass" type="password" placeholder="Digite a senha" data-role="input" />
               </div>
-              <small class="text-muted" style="color:Red">Usuário ou senha incorretos!</small>
               <div class="form-group mt-10">
-                  <button class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
+                  <button onClick="Metro.activity.open({
+                    type: 'metro',
+                    text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
+                    autoHide: 3000
+                  })" class="button primary" style="background-color: #735b3c;">Entrar</button>
               </div>
           </form>
           </div>
         </div>
       </div>
     </div>
-    <script src="MetroUI/build/js/metro.min.js></script>
+    <script src="MetroUI/build/js/metro.js"></script>
   </body>
 </html>
