@@ -29,7 +29,7 @@
                          </div>
                          <div class="cell-md-3">
                              <label>Data de Nascimento</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10">
                          </div>
                      </div>
                      <div class="row mb-2">
@@ -67,11 +67,11 @@
                          </div>
                          <div class="cell-md-3">
                              <label>Telefone</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" name="tel" onKeyPress="MascaraTelefone(form1.tel);" maxlength="14">
                          </div>
                          <div class="cell-md-3">
                              <label>Celular</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" name="cel" onKeyPress="MascaraTelefone(form1.cel);" maxlength="15">
                          </div>
                      </div>
                      <button class="button primary">Cadastrar</button>
@@ -171,7 +171,25 @@
                                 },
                                 error: function (jqXHR, textStatus, errorThrown) { errorFunction(); }
 		                    });
-	                    });
+                        });
+                        function MascaraData(data){
+                                if(mascaraInteiro(data)==false){
+                                        event.returnValue = false;
+                                }
+                                return formataCampo(data, '00/00/0000', event);
+                        }
+                        function MascaraTelefone(tel){
+                                if(mascaraInteiro(tel)==false){
+                                        event.returnValue = false;
+                                }
+                                return formataCampo(tel, '(00) 0000-0000', event);
+                        }
+                        function MascaraCelular(cel){
+                                if(mascaraInteiro(cel)==false){
+                                        event.returnValue = false;
+                                }
+                                return formataCampo(cel, '(00) 00000-0000', event);
+                        }
                     </script>
 
                  </form>
