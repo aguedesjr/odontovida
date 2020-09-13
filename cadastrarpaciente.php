@@ -61,11 +61,15 @@
                          </div>
                      </div>
                      <div class="row mb-2">
-                         <div class="cell-md-8">
+                         <div class="cell-md-6">
                              <label>Endereço</label>
-                             <input type="text" required="" title="">
+                             <input type="text" required="" title="" id="logradouro">
                          </div>
-                         <div class="cell-md-4">
+                         <div class="cell-md-3">
+                             <label>Número</label>
+                             <input type="text" required="" title="" id="numero">
+                         </div>
+                         <div class="cell-md-3">
                              <label>Complemento</label>
                              <input type="text" required="" title="">
                          </div>
@@ -157,8 +161,11 @@
 				                    $("#bairro").val(resposta.bairro);
 				                    $("#cidade").val(resposta.localidade);
 				                    $("#uf").val(resposta.uf);
-                                    //$("#numero").focus();
-			                    }
+                                    $("#numero").focus();
+                                },
+                                error: function () {
+                                    alert("CEP não encontrado!!");
+                                }
 		                    });
 	                    });
                     </script>
