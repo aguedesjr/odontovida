@@ -27,7 +27,7 @@
                     type: 'metro',
                     text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
                     autoHide: 300000
-                  })" class="button primary" data-role="button" style="background-color: #735b3c;">Entrar</button>
+                  })" class="button" style="background-color: #735b3c;">Entrar</button>
               </div>
           </form>
           </div>
