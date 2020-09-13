@@ -30,6 +30,7 @@
         </div>
       </div>
     </div>
+    <script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
     <script src="MetroUI/build/js/metro.js"></script>
     <script>
       function preloader() {
