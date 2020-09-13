@@ -146,11 +146,6 @@
                             }
                             return formataCampo(cep, '00000000', event);
                         }
-                        function ValidaCep(cep){
-                            exp = /\d{2}\.\d{3}\-\d{3}/
-                            if(!exp.test(cep.value))
-                                alert('Numero de Cep Invalido!');
-                        }
                         $("#cep").focusout(function(){
 		                    $.ajax({
 			                    url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
@@ -164,7 +159,15 @@
 				                        $("#uf").val(resposta.uf);
                                         $("#numero").focus();
                                     }
-                                    else {alert("CEP não encontrado!!");}
+                                    else {
+                                        alert("CEP não encontrado!!");
+                                        $("#logradouro").val();
+				                        $("#complemento").val();
+				                        $("#bairro").val();
+				                        $("#cidade").val();
+				                        $("#uf").val();
+                                        $("#cep").focus();
+                                    }
                                 },
                                 error: function (jqXHR, textStatus, errorThrown) { errorFunction(); }
 		                    });
