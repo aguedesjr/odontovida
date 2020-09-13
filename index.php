@@ -30,6 +30,7 @@
         </div>
       </div>
     </div>
+    <script src="MetroUI/build/js/metro.js"></script>
     <script>
       function preloader() {
         Metro.activity.open({
@@ -38,7 +39,6 @@
           autoHide: 3000
         })
       }
-    </script>
-    <script src="MetroUI/build/js/metro.js></script>
+    </script>    
   </body>
 </html>
