@@ -190,6 +190,7 @@
                                 }
                                 return formataCampo(cel, '(00) 00000-0000', event);
                         }
+                        window.on_page_functions = [];
                     </script>
 
                  </form>
