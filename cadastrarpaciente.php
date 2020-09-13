@@ -156,7 +156,7 @@
 			                    url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
 			                    dataType: 'json',
 			                    success: function(resposta){
-                                    if (resposta == 1) {
+                                    if (!("erro" in resposta)) {
 				                        $("#logradouro").val(resposta.logradouro);
 				                        $("#complemento").val(resposta.complemento);
 				                        $("#bairro").val(resposta.bairro);
@@ -165,7 +165,8 @@
                                         $("#numero").focus();
                                     }
                                     else {alert("CEP não encontrado!!");}
-                                }
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) { errorFunction(); }
 		                    });
 	                    });
                     </script>
