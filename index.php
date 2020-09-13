@@ -36,7 +36,8 @@
         Metro.activity.open({
           type: 'metro',
           text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
-          autoHide: 300000
+          overlayClickClose: true
+          //autoHide: 300000
         })
       }
     </script>    
