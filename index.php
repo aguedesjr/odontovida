@@ -39,6 +39,6 @@
         })
       }
     </script>
-    <script src="MetroUI/build/js/metro.min.js></script>
+    <script src="MetroUI/build/js/metro.js></script>
   </body>
 </html>
