@@ -33,10 +33,10 @@ if (isset($_POST ['cadastrarPaciente'])) {
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['message']="Cadastro realizado com sucesso!";
-        header("Location: cadastrarpaciente.php");
+        header("Location: ../cadastrarpaciente.php");
     } else {
         $_SESSION['message']="Falha ao realizar cadastro!";
-        header("Location: cadastrarpaciente.php");
+        header("Location: ../cadastrarpaciente.php");
     }
 }
 $conn->close();
