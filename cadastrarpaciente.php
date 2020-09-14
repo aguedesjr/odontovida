@@ -76,11 +76,12 @@
                          </div>
                      </div>
                      <?
-                        session_start();
-                        if(isset($_SESSION['message'])){?>
-                        <div class="invalid_feedback"><?echo $_SESSION['message'];?></div>
-                        <?unset($_SESSION['message']);
-                    }
+                        if($ok) {
+                            echo '<div class="invalid_feedback">Cadastro realizado com sucesso!</div>';
+                        }
+                        if($nok) {
+                            echo '<div class="invalid_feedback">Falha ao realizar o cadastro!</div>';
+                        }
                      ?>
                      <button onClick="Metro.activity.open({
                         type: 'metro',
