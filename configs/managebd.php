@@ -32,9 +32,11 @@ if (isset($_POST ['cadastrarPaciente'])) {
     ('$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento');";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<h3> Cadastro realizado com sucesso! </h3>";
+        $_SESSION['message']="Cadastro realizado com sucesso!";
+        header("Location: cadastrarpaciente.php");
     } else {
-        echo "<h3> Falha ao realizar cadastro! </h3>";
+        $_SESSION['message']="Falha ao realizar cadastro!";
+        header("Location: cadastrarpaciente.php");
     }
 }
 $conn->close();

@@ -75,6 +75,11 @@
                              <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                          </div>
                      </div>
+                     <?if(isset($_SESSION['message'])){?>
+                        <div class="invalid_feedback"><?echo $_SESSION['message'];?></div>
+                        <?unset($_SESSION['message']);
+                    }
+                     ?>
                      <button onClick="Metro.activity.open({
                         type: 'metro',
                         text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
@@ -170,7 +175,7 @@
 				                        $("#bairro").val();
 				                        $("#cidade").val();
 				                        $("#uf").val();
-                                        $("#cep").focus();
+                                        //$("#cep").focus();
                                     }
                                 },
                                 error: function (jqXHR, textStatus, errorThrown) { errorFunction(); }
