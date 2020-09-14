@@ -39,31 +39,31 @@
                          </div>
                          <div class="cell-md-6">
                              <label>Cidade</label>
-                             <input type="text" required="" title="" id="cidade" style="text-transform: uppercase;">
+                             <input type="text" required="" title="" id="cidade" name="cidade" style="text-transform: uppercase;">
                          </div>
                          <div class="cell-md-3">
                              <label>Estado</label>
-                             <input type="text" required="" title="" id="uf" style="text-transform: uppercase;">
+                             <input type="text" required="" title="" id="uf" name="uf" style="text-transform: uppercase;">
                          </div>
                      </div>
                      <div class="row mb-2">
                          <div class="cell-md-6">
                              <label>Endereço</label>
-                             <input type="text" required="" title="" id="logradouro" style="text-transform: uppercase;">
+                             <input type="text" required="" title="" id="logradouro" name="logradouro" style="text-transform: uppercase;">
                          </div>
                          <div class="cell-md-3">
                              <label>Número</label>
-                             <input type="text" required="" title="" id="numero">
+                             <input type="text" required="" title="" id="numero" name="numero">
                          </div>
                          <div class="cell-md-3">
                              <label>Complemento</label>
-                             <input type="text" required="" title="" style="text-transform: uppercase;">
+                             <input type="text" required="" title="" name="complemento" style="text-transform: uppercase;">
                          </div>
                      </div>
                      <div class="row mb-2">
                          <div class="cell-md-6">
                              <label>Bairro</label>
-                             <input type="text" required="" title="" id="bairro" style="text-transform: uppercase;">
+                             <input type="text" required="" title="" id="bairro" name="bairro" style="text-transform: uppercase;">
                          </div>
                          <div class="cell-md-3">
                              <label>Telefone</label>

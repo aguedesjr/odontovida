@@ -34,7 +34,7 @@ if (isset($_POST ['cadastrarPaciente'])) {
     if ($conn->query($sql) === TRUE) {
         echo "<h3> Cadastro realizado com sucesso! </h3>";
     } else {
-        echo "<h3> Falh ao realizar cadastro! </h3>";
+        echo "<h3> Falha ao realizar cadastro! </h3>";
     }
 }
 $conn->close();
