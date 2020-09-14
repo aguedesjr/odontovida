@@ -65,6 +65,12 @@
                          <div class="cell-md-6">
                              <label>Bairro</label>
                              <input type="text" required="" title="" id="bairro" name="bairro" style="text-transform: uppercase;">
+                             <?
+                                if(isset($_SESSION['message'])){
+                                        echo '<div class="invalid_feedback"> '. $_SESSION['message'] . '</div>';
+                                        unset($_SESSION['message']);
+                                }
+                             ?>
                          </div>
                          <div class="cell-md-3">
                              <label>Telefone</label>
@@ -76,12 +82,6 @@
                              <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                          </div>
                      </div>
-                     <?
-                        if(isset($_SESSION['message'])){
-                                echo '<div class="invalid_feedback"> '. $_SESSION['message'] . '</div>';
-                                unset($_SESSION['message']);
-                        }
-                     ?>
                      <button onClick="Metro.activity.open({
                         type: 'metro',
                         text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
