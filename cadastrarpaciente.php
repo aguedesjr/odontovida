@@ -21,7 +21,7 @@
                      <div class="row mb-3">
                          <div class="cell-md-6">
                              <label>Nome</label>
-                             <input type="text" required="" title="" style="text-transform: uppercase;">
+                             <input type="text" required="" title="" name="nome" style="text-transform: uppercase;">
                          </div>
                          <div class="cell-md-3">
                              <label>CPF</label>
@@ -190,7 +190,7 @@
                                 return formataCampo(cel, '(00) 00000-0000', event);
                         }
                     </script>
-
+                 <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                  </form>
             </div>
      </div>
