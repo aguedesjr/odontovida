@@ -32,9 +32,11 @@ if (isset($_POST ['cadastrarPaciente'])) {
     ('$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento');";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: ../inicio.php#cadastrarpaciente?ok=1");
+        $_SESSION['message']="password has been updated";
+        header("Location: ../inicio.php#cadastrarpaciente");
     } else {
-        header("Location: ../inicio.php#cadastrarpaciente?nok=1");
+        $_SESSION['message']="password";
+        header("Location: ../inicio.php#cadastrarpaciente");
     }
 }
 $conn->close();
