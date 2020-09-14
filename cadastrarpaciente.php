@@ -1,3 +1,4 @@
+<?session_start();?>
 <div class="row border-bottom bd-lightGray m-3">
     <div class="cell-md-4 d-flex flex-align-center">
         <!--<h3 class="dashboard-section-title text-center text-left-md w-100"><small></small></h3>-->
@@ -203,7 +204,6 @@
      </div>
 </div>
 <?
-session_start();
 if(isset($_SESSION['message'])){
         echo $_SESSION['message'];
         unset($_SESSION['message']);
