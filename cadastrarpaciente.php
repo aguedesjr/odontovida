@@ -138,6 +138,7 @@
                             var digitoGerado=(soma1*10)+soma2;
                             if(digitoGerado!=digitoDigitado)
                                 alert('CPF Invalido!');
+                                $("#cpf").focus();
                         }
                         function MascaraCep(cep){
                             if(mascaraInteiro(cep)==false){
