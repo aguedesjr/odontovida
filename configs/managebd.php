@@ -1,9 +1,9 @@
 <?
 //Requer estar autenticado no sistema
-require_once ("validalogin.php");
+require_once ("../validalogin.php");
 
 //Requer conexao previa com o banco
-require_once ("configs/conn.php");
+require_once ("conn.php");
 
 if ($conn->connect_error) {
     die("Connection failed:" . $conn->connect_error);
