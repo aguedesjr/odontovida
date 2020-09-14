@@ -1,3 +1,8 @@
+<?
+//Requer estar autenticado no sistema
+require_once ("validalogin.php");
+$login = $_SESSION['login']; 
+?>
 <!DOCTYPE html>
 <html lang="en" class=" scrollbar-type-1 sb-cyan">
 <head>
@@ -14,11 +19,6 @@
     <script>
         window.on_page_functions = [];
     </script>
-
-    <? 
-        session_start();
-        $login = $_SESSION['login']; 
-    ?>
 
 </head>
 <body class="m4-cloak h-vh-100">
