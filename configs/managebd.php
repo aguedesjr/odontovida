@@ -32,10 +32,10 @@ if (isset($_POST ['cadastrarPaciente'])) {
     ('$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento');";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['message']="password has been updated";
+        $_SESSION['message']="Cadastro realizado com sucesso!";
         header("Location: ../inicio.php#cadastrarpaciente");
     } else {
-        $_SESSION['message']="password";
+        $_SESSION['message']="Falha ao realizar o cadastro!";
         header("Location: ../inicio.php#cadastrarpaciente");
     }
 }

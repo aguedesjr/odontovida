@@ -1,8 +1,8 @@
 <?
 session_start();
 if(isset($_SESSION['message'])){
-        echo $_SESSION['message'];
-        //unset($_SESSION['message']);
+        $message =  $_SESSION['message'];
+        unset($_SESSION['message']);
     }
 ?>
 <div class="row border-bottom bd-lightGray m-3">
@@ -83,12 +83,7 @@ if(isset($_SESSION['message'])){
                          </div>
                      </div>
                      <?
-                        /*if($ok) {
-                            echo '<div class="invalid_feedback">Cadastro realizado com sucesso!</div>';
-                        }
-                        if($nok) {
-                            echo '<div class="invalid_feedback">Falha ao realizar o cadastro!</div>';
-                        }*/
+                        echo '<div class="invalid_feedback"> '. $message . '</div>';
                      ?>
                      <button onClick="Metro.activity.open({
                         type: 'metro',
