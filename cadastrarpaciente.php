@@ -17,7 +17,7 @@
          <div class="cell-lg-6">
             <div class="bg-white p-4 m-2">
                  <h4>Cadastrar Pacientes</h4>
-                 <form name="form1" class="custom-validation need-validation" novalidate="">
+                 <form name="form1" class="custom-validation need-validation" novalidate="" action="configs/managebd.php" method="POST">
                      <div class="row mb-3">
                          <div class="cell-md-6">
                              <label>Nome</label>
@@ -72,9 +72,14 @@
                          <div class="cell-md-3">
                              <label>Celular</label>
                              <input type="text" required="" title="" name="cel" onKeyPress="MascaraCelular(form1.cel);" maxlength="15">
+                             <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                          </div>
                      </div>
-                     <button class="button primary">Cadastrar</button>
+                     <button onClick="Metro.activity.open({
+                        type: 'metro',
+                        text: '<div class=\'mt-2 text-small\'>Aguarde...</div>',
+                        autoHide: 3000
+                     })" class="button primary">Cadastrar</button>
                      <script>
                          function mascaraInteiro(){
                             if (event.keyCode < 48 || event.keyCode > 57){
@@ -190,7 +195,6 @@
                                 return formataCampo(cel, '(00) 00000-0000', event);
                         }
                     </script>
-                 <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                  </form>
             </div>
      </div>
