@@ -77,6 +77,12 @@
                          </div>
                      </div>
                      <?
+                        if(isset($_SESSION['message'])){
+                                echo $_SESSION['message'];
+                                unset($_SESSION['message']);
+                        }
+                     ?>
+                     <?
                         //echo '<div class="invalid_feedback"> '. $message . '</div>';
                      ?>
                      <button onClick="Metro.activity.open({
@@ -203,9 +209,3 @@
             </div>
      </div>
 </div>
-<?
-if(isset($_SESSION['message'])){
-        echo $_SESSION['message'];
-        unset($_SESSION['message']);
-}
-?>
