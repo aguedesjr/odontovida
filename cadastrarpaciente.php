@@ -1,6 +1,6 @@
 <?if(isset($_SESSION['message'])){
         echo $_SESSION['message'];
-        unset($_SESSION['message']);
+        //unset($_SESSION['message']);
     }
 ?>
 <div class="row border-bottom bd-lightGray m-3">
