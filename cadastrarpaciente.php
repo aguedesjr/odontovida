@@ -75,7 +75,6 @@
                          </div>
                      </div>
                      <button class="button primary">Cadastrar</button>
-                     <script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
                      <script>
                          function mascaraInteiro(){
                             if (event.keyCode < 48 || event.keyCode > 57){
