@@ -75,7 +75,9 @@
                              <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                          </div>
                      </div>
-                     <?if(isset($_SESSION['message'])){?>
+                     <?
+                        session_start();
+                        if(isset($_SESSION['message'])){?>
                         <div class="invalid_feedback"><?echo $_SESSION['message'];?></div>
                         <?unset($_SESSION['message']);
                     }
