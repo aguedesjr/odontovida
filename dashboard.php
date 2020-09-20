@@ -55,29 +55,6 @@
     </div>
 
     <hr>
-
-    <div class="row">
-        <div class="cell-lg-3 cell-sm-6 text-center mt-4">
-            <div class="fg-green"><span class="mif-arrow-drop-up"></span>17%</div>
-            <div class="text-bold">$35,210.43</div>
-            <div class="text-upper">TOTAL REVENUE</div>
-        </div>
-        <div class="cell-lg-3 cell-sm-6 text-center mt-4">
-            <div class="fg-orange"><span class="">=</span>0</div>
-            <div class="text-bold">$10,390.90</div>
-            <div class="text-upper">TOTAL COST</div>
-        </div>
-        <div class="cell-lg-3 cell-sm-6 text-center mt-4">
-            <div class="fg-green"><span class="mif-arrow-drop-up"></span>20%</div>
-            <div class="text-bold">$24,813.53</div>
-            <div class="text-upper">TOTAL PROFIT</div>
-        </div>
-        <div class="cell-lg-3 cell-sm-6 text-center mt-4">
-            <div class="fg-red"><span class="mif-arrow-drop-down"></span>18%</div>
-            <div class="text-bold">1,200</div>
-            <div class="text-upper">GOAL COMPLETIONS</div>
-        </div>
-    </div>
 </div>
 </div>
 
