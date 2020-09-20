@@ -2,7 +2,7 @@
 	"use strict";
 	var options = {
 		events_source: 'event.php',
-		view: 'week',
+		view: 'month',
 		tmpl_path: 'tmpls/',
 		tmpl_cache: false,
 		day: 'now',
