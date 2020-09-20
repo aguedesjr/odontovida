@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<!--<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
 <link rel="stylesheet" href="css/calendar.css">
 
 <div class="row border-bottom bd-lightGray m-3">
@@ -59,7 +59,7 @@
 </div>
 </div>
 
-<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="js/underscore-min.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
 <script type="text/javascript" src="js/events.js"></script>
