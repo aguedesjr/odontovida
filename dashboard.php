@@ -16,7 +16,7 @@
 </div>
 
 <div class="m-3">
-<div data-role="panel" data-title-caption="Agenda" data-collapsible="true" data-title-icon="<span class='mif-calendar'></span>" class="mt-4">
+<div data-role="panel" data-title-caption="Agenda" data-collapsible="false" data-title-icon="<span class='mif-calendar'></span>" class="mt-4">
     <div class="row">
         <div class="cell-md-8 p-10">
         <h5 class="text-center" >Event Calendar with jQuery, PHP and MySQL</h5>	
