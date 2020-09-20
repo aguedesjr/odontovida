@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/calendar.css">
-
 <div class="row border-bottom bd-lightGray m-3">
     <div class="cell-md-4 d-flex flex-align-center">
         <h3 class="dashboard-section-title  text-center text-left-md w-100">Pandora <small>Version 1.0</small></h3>
@@ -41,6 +37,9 @@
             </div>
             <div class="row">
                 <div class="cell-md-20 p-10">
+                    <link rel="stylesheet" href="css/bootstrap.min.css">
+                    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                    <link rel="stylesheet" href="css/calendar.css">
                     <div id="showEventCalendar"></div>
                 </div>
                 <!--<div class="col-md-3">
