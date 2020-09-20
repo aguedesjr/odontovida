@@ -39,7 +39,7 @@
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <div id="showEventCalendar" language="pt-BR"></div>
+                    <div id="showEventCalendar"></div>
                 </div>
                 <!--<div class="col-md-3">
                     <h4>All Events List</h4>
