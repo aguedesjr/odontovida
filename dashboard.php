@@ -23,8 +23,8 @@
             <div class="page-header">
                 <div class="pull-right form-inline">
                     <div class="btn-group">
-                        <button class="button warning" data-calendar-view="week">Semana</button>
                         <button class="button alert" data-calendar-view="day">Dia</button>
+                        <button class="button warning" data-calendar-view="week">Semana</button>
                         <button class="button primary" data-calendar-nav="prev"><< Ant</button>
                         <button class="button success" data-calendar-nav="today">Hoje</button>
                         <button class="button primary" data-calendar-nav="next">Próx >></button>                        
@@ -41,10 +41,10 @@
                 <div class="col-md-9">
                     <div id="showEventCalendar"></div>
                 </div>
-                <div class="col-md-3">
+                <!--<div class="col-md-3">
                     <h4>All Events List</h4>
                     <ul id="eventlist" class="nav nav-list"></ul>
-                </div>
+                </div>-->
             </div>	
             <!--<div class="container">	
             <h2>Event Calendar with jQuery, PHP and MySQL</h2>	
