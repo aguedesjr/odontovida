@@ -239,8 +239,6 @@ if(!String.prototype.formatNum) {
 		easter:       'Páscoa',
 		easterMonday: 'Domingo de Páscoa',
 
-		first_day: 2,
-
 	};
 
 	var browser_timezone = '';
