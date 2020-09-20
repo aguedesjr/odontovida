@@ -23,16 +23,18 @@
             <div class="page-header">
                 <div class="pull-right form-inline">
                     <div class="btn-group">
+                        <button class="button warning" data-calendar-view="week">Semana</button>
+                        <button class="button alert" data-calendar-view="day">Dia</button>
                         <button class="button primary" data-calendar-nav="prev"><< Ant</button>
                         <button class="button success" data-calendar-nav="today">Hoje</button>
-                        <button class="button primary" data-calendar-nav="next">Próx >></button>
+                        <button class="button primary" data-calendar-nav="next">Próx >></button>                        
                     </div>
-                    <div class="btn-group">
+                    <!--<div class="btn-group">
                         <button class="btn btn-warning" data-calendar-view="year">Year</button>
                         <button class="btn btn-warning active" data-calendar-view="month">Month</button>
                         <button class="btn btn-warning" data-calendar-view="week">Week</button>
                         <button class="btn btn-warning" data-calendar-view="day">Day</button>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="row">
