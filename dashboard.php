@@ -25,6 +25,7 @@
                     <div class="btn-group">
                         <button class="button alert" data-calendar-view="day">Dia</button>
                         <button class="button warning" data-calendar-view="week">Semana</button>
+                        <button class="button default" data-calendar-view="month">Mês</button>
                         <button class="button primary" data-calendar-nav="prev"><< Ant</button>
                         <button class="button success" data-calendar-nav="today">Hoje</button>
                         <button class="button primary" data-calendar-nav="next">Próx >></button>                        
