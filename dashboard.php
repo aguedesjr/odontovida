@@ -18,6 +18,7 @@
 <div class="m-3">
 <div data-role="panel" data-title-caption="Agenda" data-collapsible="true" data-title-icon="<span class='mif-calendar'></span>" class="mt-4">
     <div class="row">
+        <div class="cell-md-8 p-10">
             <div class="container">	
             <h2>Event Calendar with jQuery, PHP and MySQL</h2>	
             <div class="page-header">
@@ -50,6 +51,7 @@
                 <a class="btn btn-default read-more" style="background:#3399ff;color:white" href="http://www.phpzag.com/create-event-calendar-with-jquery-php-and-mysql/">Back to Tutorial</a>		
             </div>
             </div>
+        </div>
     </div>
 
     <hr>
