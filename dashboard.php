@@ -39,7 +39,7 @@
                 <h3></h3>
             </div>
             <div class="row">
-                <div class="cell-md-4 p-10">
+                <div class="cell-md-10 p-10">
                     <div id="showEventCalendar"></div>
                 </div>
                 <!--<div class="col-md-3">
