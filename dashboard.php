@@ -55,6 +55,7 @@
     <hr>
 </div>
 </div>
+<script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/underscore-min.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
