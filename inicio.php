@@ -14,6 +14,7 @@ $login = $_SESSION['login'];
         <title>Dashboard - SB Admin</title>
         <link href="Bootstrap/dist/css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/calendar.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -668,6 +669,7 @@ $login = $_SESSION['login'];
                             </div>
                         </div>
                     </div>
+                    <div id="showEventCalendar"></div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
@@ -692,5 +694,8 @@ $login = $_SESSION['login'];
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="Bootstrap/dist/assets/demo/datatables-demo.js"></script>
+        <script type="text/javascript" src="js/calendar.js"></script>
+        <script type="text/javascript" src="js/events.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
     </body>
 </html>
