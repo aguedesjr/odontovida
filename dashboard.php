@@ -115,16 +115,17 @@
 <div id="calendar"></div>
 
 <div class="m-3">
-<div data-role="panel" data-title-caption="Agenda" data-collapsible="false" data-title-icon='<span class="mif-calendar"></span>' class="mt-4">
+<!--<div data-role="panel" data-title-caption="Agenda" data-collapsible="false" data-title-icon='<span class="mif-calendar"></span>' class="mt-4">-->
     <div class="row">
-        <div class="cell-md-8 p-10">
-
         <div id="calendar"></div>
-        </div>
+        <!--<div class="cell-md-8 p-10">
+
+        
+        </div>-->
     </div>
 
     <hr>
-</div>
+<!--</div>-->
 </div>
 
 
