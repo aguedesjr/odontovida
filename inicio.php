@@ -30,10 +30,10 @@ $login = $_SESSION['login'];
 
 <!-- jQuery first, then Metro UI JS -->
 <script src="Pandora/source/vendors/jquery/jquery-3.4.1.min.js"></script>
-<script src="Pandora/source/vendors/chartjs/Chart.bundle.min.js"></script>
+<!--<script src="Pandora/source/vendors/chartjs/Chart.bundle.min.js"></script>
 <script src="Pandora/source/vendors/qrcode/qrcode.min.js"></script>
 <script src="Pandora/source/vendors/jsbarcode/JsBarcode.all.min.js"></script>
-<script src="Pandora/source/vendors/ckeditor/ckeditor.js"></script>
+<script src="Pandora/source/vendors/ckeditor/ckeditor.js"></script>-->
 <script src="Pandora/source/vendors/metro4/js/metro.min.js"></script>
 <script src="Pandora/source/js/index.js"></script>
 <script src="lib/main.js"></script>
