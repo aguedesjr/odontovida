@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/calendar.css">-->
 <link href="lib/main.css" rel="stylesheet" />
-
+<script src="lib/main.js"></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -98,7 +98,7 @@
 </div>
 </div>
 
-<script src="lib/main.js"></script>
+
 <!--<script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/underscore-min.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
