@@ -20,6 +20,17 @@ $login = $_SESSION['login'];
     <script>
         window.on_page_functions = [];
     </script>
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth'
+    });
+    calendar.render();
+});
+
+</script>
 
 </head>
 <body class="m4-cloak h-vh-100">
