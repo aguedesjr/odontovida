@@ -13,6 +13,7 @@ $login = $_SESSION['login'];
     <!-- Metro 4 -->
     <link rel="stylesheet" href="Pandora/source/vendors/metro4/css/metro-all.min.css">
     <link rel="stylesheet" href="Pandora/source/css/index.css">
+    <link rel="stylesheet" href="lib/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     <title>Odontovida</title>
 
@@ -35,5 +36,6 @@ $login = $_SESSION['login'];
 <script src="Pandora/source/vendors/ckeditor/ckeditor.js"></script>
 <script src="Pandora/source/vendors/metro4/js/metro.min.js"></script>
 <script src="Pandora/source/js/index.js"></script>
+<script src="lib/main.js"></script>
 </body>
 </html>
