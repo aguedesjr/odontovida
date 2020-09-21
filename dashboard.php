@@ -96,12 +96,7 @@
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
   }
-
-  #calendar {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
+  
 </style>
 
 <div class="row border-bottom bd-lightGray m-3">
