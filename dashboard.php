@@ -36,13 +36,6 @@
 </script>
 <style>
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-
   #script-warning {
     display: none;
     background: #eee;
@@ -53,13 +46,6 @@
     font-weight: bold;
     font-size: 12px;
     color: red;
-  }
-
-  #loading {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
   }
 
   #calendar {
@@ -87,8 +73,6 @@
 <div data-role="panel" data-title-caption="Agenda" data-collapsible="false" data-title-icon="<span class='mif-calendar'></span>" class="mt-4">
     <div class="row">
         <div class="cell-md-8 p-10">
-
-        <div id='loading'>loading...</div>
 
         <div id='calendar'></div>
         </div>
