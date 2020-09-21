@@ -13,25 +13,12 @@ $login = $_SESSION['login'];
     <!-- Metro 4 -->
     <link rel="stylesheet" href="Pandora/source/vendors/metro4/css/metro-all.min.css">
     <link rel="stylesheet" href="Pandora/source/css/index.css">
-    <link rel="stylesheet" href="lib/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     <title>Odontovida</title>
 
     <script>
         window.on_page_functions = [];
     </script>
-    <script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth'
-    });
-    calendar.render();
-});
-
-</script>
-
 </head>
 <body class="m4-cloak h-vh-100">
 <div data-role="navview" data-toggle="#paneToggle" data-expand="xl" data-compact="lg" data-active-state="true">
@@ -47,6 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="Pandora/source/vendors/ckeditor/ckeditor.js"></script>-->
 <script src="Pandora/source/vendors/metro4/js/metro.min.js"></script>
 <script src="Pandora/source/js/index.js"></script>
-<script src="lib/main.js"></script>
 </body>
 </html>
