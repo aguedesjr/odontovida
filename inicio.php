@@ -179,6 +179,7 @@ $login = $_SESSION['login'];
                                 </div>
                             </div>
                         </div>
+                        <div id="showEventCalendar"></div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
@@ -670,7 +671,6 @@ $login = $_SESSION['login'];
                             </div>
                         </div>
                     </div>
-                    <div id="showEventCalendar"></div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
