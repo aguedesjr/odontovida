@@ -30,6 +30,7 @@
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
       locale: 'pt-br',
+      month: 'short',
       events: {
         url: 'php/get-events.php',
         failure: function() {
