@@ -16,8 +16,7 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
-    var t = new Date();
-    var hoje = t.getDay();
+    var hoje = new Date();
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
@@ -25,12 +24,11 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
-      initialDate: hoje,
+      initialDate: hoje.getDay();,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
       locale: 'pt-br',
-      month: 'short',
       events: {
         url: 'php/get-events.php',
         failure: function() {
