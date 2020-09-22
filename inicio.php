@@ -24,7 +24,7 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
-      initialDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();,
+      initialDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
       editable: true,
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
