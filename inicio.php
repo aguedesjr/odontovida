@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- jQuery -->
+<meta charset='utf-8' />
+<link href='lib/main.css' rel='stylesheet' />
+<script src='lib/main.js'></script>
+<script>
 
-<title>phpzag.com : Demo Create Event Calendar with jQuery, PHP and MySQL</title>
-<link rel="stylesheet" href="css/calendar.css">
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      initialDate: '2020-09-12',
+      editable: true,
+      navLinks: true, // can click day/week names to navigate views
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: {
+        url: 'php/get-events.php',
+        failure: function() {
+          document.getElementById('script-warning').style.display = 'block'
+        }
+      },
+      loading: function(bool) {
+        document.getElementById('loading').style.display =
+          bool ? 'block' : 'none';
+      }
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  #script-warning {
+    display: none;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+  }
+
+  #loading {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+</style>
 </head>
-<body class="">
-<div role="navigation" class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="http://www.phpzag.com" class="navbar-brand">PHPZAG.COM</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="http://www.phpzag.com">Home</a></li>
-           
-          </ul>
-         
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-	
-	<div class="container" style="min-height:500px;">
-	<div class=''>
-	</div>
-	<h2>Event Calendar with jQuery, PHP and MySQL</h2>	
-	<div class="page-header">
-		<div class="pull-right form-inline">
-			<div class="btn-group">
-				<button class="btn btn-primary" data-calendar-nav="prev"><< Prev</button>
-				<button class="btn btn-default" data-calendar-nav="today">Today</button>
-				<button class="btn btn-primary" data-calendar-nav="next">Next >></button>
-			</div>
-			<div class="btn-group">
-				<button class="btn btn-warning" data-calendar-view="year">Year</button>
-				<button class="btn btn-warning active" data-calendar-view="month">Month</button>
-				<button class="btn btn-warning" data-calendar-view="week">Week</button>
-				<button class="btn btn-warning" data-calendar-view="day">Day</button>
-			</div>
-		</div>
-		<h3></h3>
-		<small>To see example with events navigate to Februray 2018</small>
-	</div>
-	<div class="row">
-		<div class="col-md-9">
-			<div id="showEventCalendar"></div>
-		</div>
-		<div class="col-md-3">
-			<h4>All Events List</h4>
-			<ul id="eventlist" class="nav nav-list"></ul>
-		</div>
-	</div>	
-	<div style="margin:50px 0px 0px 0px;">
-		<a class="btn btn-default read-more" style="background:#3399ff;color:white" href="http://www.phpzag.com/create-event-calendar-with-jquery-php-and-mysql/">Back to Tutorial</a>		
-	</div>
-</div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script type="text/javascript" src="js/calendar.js"></script>
-<script type="text/javascript" src="js/events.js"></script>
+<body>
 
-<div class="insert-post-ads1" style="margin-top:20px;">
+  <div id='script-warning'>
+    <code>php/get-events.php</code> must be running.
+  </div>
 
-</div>
-</div>
+  <div id='loading'>loading...</div>
+
+  <div id='calendar'></div>
+
 </body>
 </html>
