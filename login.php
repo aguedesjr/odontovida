@@ -35,7 +35,7 @@ if ($linhas > 0){ //Verifica se encontrou algum usuário
   $_SESSION['autenticado']="sim";
   $_SESSION['login']=mysql_result($resultado,0,"login");
   $_SESSION['perfil']= mysql_result($resultado,0,"perfil");
-  header ("location:inicio.html");
+  header ("location:inicio.php");
 }
 else {
   header ("location:fail.php");
