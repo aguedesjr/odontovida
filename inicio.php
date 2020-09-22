@@ -179,7 +179,15 @@ $login = $_SESSION['login'];
                                 </div>
                             </div>
                         </div>
-                        <div id="showEventCalendar"></div>
+                        <div class="row">
+		<div class="col-md-9">
+			<div id="showEventCalendar"></div>
+		</div>
+		<div class="col-md-3">
+			<h4>All Events List</h4>
+			<ul id="eventlist" class="nav nav-list"></ul>
+		</div>
+	</div>	
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
