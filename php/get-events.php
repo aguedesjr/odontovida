@@ -24,8 +24,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
         //'url' => "#",
 		    //"class" => 'event-important',
         'start' => "$start",
-        'end' => "$end",
-        'display' => 'background'
+        'end' => "$end"
     );
 }
 
