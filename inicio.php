@@ -14,7 +14,6 @@ $login = $_SESSION['login'];
         <title>Odontovida</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
         <link href="Bootstrap/dist/css/styles.css" rel="stylesheet" />
-        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
@@ -81,7 +80,7 @@ $login = $_SESSION['login'];
   }
 
   #calendar {
-    max-width: 1100px;
+    /*max-width: 1900px;*/
     margin: 40px auto;
     padding: 0 10px;
   }
