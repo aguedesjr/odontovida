@@ -18,6 +18,8 @@
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var today = new Date();
+    var mes = (today.getMonth()+1 < 10) ? '0'+(today.getMonth()+1) : (today.getMonth()+1);
+    var dataatual = today.getFullYear()+'-'+mes+'-'+today.getDate();
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
@@ -25,7 +27,7 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
-      initialDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
+      initialDate: dataatual,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
