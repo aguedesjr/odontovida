@@ -33,7 +33,10 @@ $login = $_SESSION['login'];
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
       buttonText: {
-        month:  'Mes'
+        month:  'Mes',
+        week: 'Semana',
+        day: 'Dia',
+        list: 'Lista'
       },
       initialDate: dataatual,
       editable: true,
