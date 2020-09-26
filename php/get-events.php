@@ -57,7 +57,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
 
 // Accumulate an output array of event data arrays.
 $output_arrays = array();
-foreach ($calendar as $array) {
+foreach ((json_decode(json_encode($calendar), true)) as $array) {
 
   // Convert the input array into a useful Event object
   $event = new Event($array, $time_zone);
