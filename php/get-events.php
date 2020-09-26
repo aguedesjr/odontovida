@@ -53,8 +53,11 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
     );
 }
 
+$calendarData = array(
+	"success" => 1,	
+    "result"=>$calendar);
 
-$input_arrays = json_decode($calendar, true);
+$input_arrays = json_decode(json_encode($calendarData), true);
 
 // Accumulate an output array of event data arrays.
 $output_arrays = array();
