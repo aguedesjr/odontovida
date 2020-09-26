@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------------------------
 
 // Conexao ao BD
-include_once ("configs/conn.php");
+include_once ("../configs/conn.php");
 
 // Require our Event class and datetime utilities
 require dirname(__FILE__) . '/utils.php';
@@ -47,7 +47,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
         'id' =>$rows['id'],
         'title' => $rows['title'],
         'url' => "#",
-		"class" => 'event-important',
+		    "class" => 'event-important',
         'start' => "$start",
         'end' => "$end"
     );
