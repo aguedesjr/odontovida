@@ -44,6 +44,14 @@
     calendar.render();
   });
 
+  <script>
+        $(document).ready(function() {
+            var today = new Date();
+            var teste = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            alert(teste);
+        });
+      </script>
+
 </script>
 <style>
 
