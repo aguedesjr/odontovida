@@ -13,6 +13,7 @@ include_once ("../configs/conn.php");
 $sqlEvents = "SELECT id, title, start_date, end_date FROM events LIMIT 20";
 $resultset = mysqli_query($conn, $sqlEvents) or die("database error:". mysqli_error($conn));
 $calendar = array();
+$response = array();
 while( $rows = mysqli_fetch_assoc($resultset) ) {	
 	// convert  date to milliseconds
 	$start = $rows['start_date'];
@@ -26,6 +27,12 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
         'end' => "$end"
     );
 }
+$response['calendar'] = $calendar;
+
+$fp = fopen('results.json', 'w');
+fwrite($fp, json_encode($response));
+fclose($fp);
+
 $calendarData = array(
 	"success" => 1,	
     "result"=>$calendar);
@@ -55,12 +62,13 @@ if (isset($_GET['timeZone'])) {
 
 // Read and parse our events JSON file into an array of event data arrays.
 //$json = file_get_contents(dirname(__FILE__) . '/../json/events1.json');
-//$input_arrays = json_decode($json, true);
+$json = file_get_contents(dirname(__FILE__) . 'results.json');
+$input_arrays = json_decode($json, true);
 
 // Accumulate an output array of event data arrays.
 $output_arrays = array();
-//foreach ($input_arrays as $array) {
-foreach ((json_decode(json_encode($calendarData, true))) as $array) {
+foreach ($input_arrays as $array) {
+//foreach ((json_decode(json_encode($calendarData, true))) as $array) {
 
   // Convert the input array into a useful Event object
   $event = new Event($array, $time_zone);
