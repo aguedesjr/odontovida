@@ -27,18 +27,10 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
         'end' => "$end"
     );
 }
-$response['calendar'] = $calendar;
 
 $fp = fopen('../json/results.json', 'w');
 fwrite($fp, json_encode($calendar));
 fclose($fp);
-
-$calendarData = array(
-	"success" => 1,	
-    "result"=>$calendar);
-echo json_encode($calendarData);
-exit;
-
 
 // Require our Event class and datetime utilities
 require dirname(__FILE__) . '/utils.php';
