@@ -9,7 +9,7 @@
 // Requires PHP 5.2.0 or higher.
 //--------------------------------------------------------------------------------------------------
 
-include_once ("configs/conn.php");
+include_once ("../configs/conn.php");
 $sqlEvents = "SELECT id, title, start_date, end_date FROM events LIMIT 20";
 $resultset = mysqli_query($conn, $sqlEvents) or die("database error:". mysqli_error($conn));
 $calendar = array();
