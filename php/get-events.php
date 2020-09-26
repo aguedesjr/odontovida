@@ -21,8 +21,8 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
 	$calendar[] = array(
         'id' =>$rows['id'],
         'title' => $rows['title'],
-        'url' => "#",
-		    "class" => 'event-important',
+        //'url' => "#",
+		    //"class" => 'event-important',
         'start' => "$start",
         'end' => "$end"
     );
@@ -30,7 +30,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
 $response['calendar'] = $calendar;
 
 $fp = fopen('results.json', 'w');
-fwrite($fp, json_encode($response));
+fwrite($fp, json_encode($calendar));
 fclose($fp);
 
 $calendarData = array(
