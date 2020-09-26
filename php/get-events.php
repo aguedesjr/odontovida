@@ -29,7 +29,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
 }
 $response['calendar'] = $calendar;
 
-$fp = fopen('results.json', 'w');
+$fp = fopen('../json/results.json', 'w');
 fwrite($fp, json_encode($calendar));
 fclose($fp);
 
@@ -62,7 +62,7 @@ if (isset($_GET['timeZone'])) {
 
 // Read and parse our events JSON file into an array of event data arrays.
 //$json = file_get_contents(dirname(__FILE__) . '/../json/events1.json');
-$json = file_get_contents(dirname(__FILE__) . '/results.json');
+$json = file_get_contents(dirname(__FILE__) . '/../results.json');
 $input_arrays = json_decode($json, true);
 
 // Accumulate an output array of event data arrays.
