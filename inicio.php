@@ -179,7 +179,7 @@ $login = $_SESSION['login'];
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
+                        <div class="small">Logado como:</div>
                         <?echo $login;?>
                     </div>
                 </nav>
@@ -191,7 +191,7 @@ $login = $_SESSION['login'];
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active"></li>
                         </ol>
-                        <div class="card mb-4">
+                        <div class="card mb-5">
                             <div id='script-warning'>
                                 <code>php/get-events.php</code> must be running.
                             </div>
