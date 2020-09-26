@@ -34,7 +34,7 @@ $login = $_SESSION['login'];
       },
       buttonText: {
         month:  'Mes'
-      }
+      },
       initialDate: dataatual,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
