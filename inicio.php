@@ -30,14 +30,14 @@ $login = $_SESSION['login'];
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
+        month:  'Mês'
       },
       initialDate: dataatual,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
       locale: 'pt-br',
-      month:  'Mês',
       events: {
         url: 'php/get-events.php',
         failure: function() {
