@@ -18,6 +18,8 @@ $login = $_SESSION['login'];
         <link href='lib/main.css' rel='stylesheet' />
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src='lib/main.js'></script>
+        <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+        <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
         <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -99,7 +101,7 @@ $login = $_SESSION['login'];
     margin: 40px auto;
     padding: 0 10px;
   }
-  
+
   .popper,
   .tooltip {
     position: absolute;
