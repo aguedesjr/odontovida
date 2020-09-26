@@ -190,12 +190,18 @@ $login = $_SESSION['login'];
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active"></li>
                         </ol>
-                        <div class="row">
-                            <div id='script-warning'>
-                                <code>php/get-events.php</code> must be running.
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-calendar mr-1"></i>
+                                Agenda
                             </div>
-                            <div id='loading'>loading...</div>
-                            <div id='calendar'></div>
+                            <div class="card-body">
+                                <div id='script-warning'>
+                                    <code>php/get-events.php</code> must be running.
+                                </div>
+                                <div id='loading'>loading...</div>
+                                <div id='calendar'></div>
+                            </div>
                         </div>
                     </div>
                 </main>
