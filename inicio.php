@@ -47,16 +47,7 @@
     calendar.render();
   });
 </script>
-<script>
- $(document).ready(function() {
-            $("button").click(function(){
-            var today = new Date();
-            var mes = (today.getMonth()+1 < 10) ? '0'+(today.getMonth()+1) : (today.getMonth()+1);
-            var teste = today.getFullYear()+'-'+mes+'-'+today.getDate();
-            alert(teste);
-        });
-        });
-</script>
+
 <style>
 
   body {
