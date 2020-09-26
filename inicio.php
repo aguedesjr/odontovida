@@ -30,9 +30,11 @@ $login = $_SESSION['login'];
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
-        month:  'Mês'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
+      buttonText: {
+        month:  'Mes'
+      }
       initialDate: dataatual,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
