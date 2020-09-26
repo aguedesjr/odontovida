@@ -9,6 +9,9 @@
 // Requires PHP 5.2.0 or higher.
 //--------------------------------------------------------------------------------------------------
 
+// Conexao ao BD
+include_once ("configs/conn.php");
+
 // Require our Event class and datetime utilities
 require dirname(__FILE__) . '/utils.php';
 
@@ -31,8 +34,27 @@ if (isset($_GET['timeZone'])) {
 
 // Read and parse our events JSON file into an array of event data arrays.
 //$json = file_get_contents(dirname(__FILE__) . '/../json/events.json');
-$json = file_get_contents(dirname(__FILE__) . '/../event.php');
-$input_arrays = json_decode($json, true);
+//$json = file_get_contents(dirname(__FILE__) . '/../event.php');
+
+$sqlEvents = "SELECT id, title, start_date, end_date FROM events LIMIT 20";
+$resultset = mysqli_query($conn, $sqlEvents) or die("database error:". mysqli_error($conn));
+$calendar = array();
+while( $rows = mysqli_fetch_assoc($resultset) ) {	
+	// convert  date to milliseconds
+	$start = strtotime($rows['start_date']) * 1000;
+	$end = strtotime($rows['end_date']) * 1000;	
+	$calendar[] = array(
+        'id' =>$rows['id'],
+        'title' => $rows['title'],
+        'url' => "#",
+		"class" => 'event-important',
+        'start' => "$start",
+        'end' => "$end"
+    );
+}
+
+
+$input_arrays = json_decode($calendar, true);
 
 // Accumulate an output array of event data arrays.
 $output_arrays = array();
