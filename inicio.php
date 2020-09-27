@@ -17,7 +17,7 @@ $login = $_SESSION['login'];
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         <script src='lib/main.js'></script>
         <script>
 
@@ -46,7 +46,8 @@ $login = $_SESSION['login'];
           if (info.event.url) {
               window.open(info.event.url);
           } else {
-              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+'\n'+'Fim: '+info.event.end.toLocaleString(), 'info');
+              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+'
+              Fim: '+info.event.end.toLocaleString(), 'success');
           }
       },
       initialDate: dataatual,
