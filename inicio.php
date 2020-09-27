@@ -46,7 +46,7 @@ $login = $_SESSION['login'];
           if (info.event.url) {
               window.open(info.event.url);
           } else {
-              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+'Fim: '+info.event.end.toLocaleString(), 'info');
+              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+'\n Fim: '+info.event.end.toLocaleString(), 'info');
           }
       },
       initialDate: dataatual,
