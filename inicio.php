@@ -55,7 +55,7 @@ $login = $_SESSION['login'];
       dayMaxEvents: true, // allow "more" link when too many events
       locale: 'pt-br',
       events: {
-        url: 'php/get-events.php',
+        url: 'configs/get-events.php',
         failure: function() {
           document.getElementById('script-warning').style.display = 'block'
         }
@@ -63,6 +63,22 @@ $login = $_SESSION['login'];
       loading: function(bool) {
         document.getElementById('loading').style.display =
           bool ? 'block' : 'none';
+      },
+      select: function (start, end, allDay) {
+          var title = prompt("Informe o agendamento");
+          if(title){
+              var start = $.fullCalendar.formatDate(start,"YY-MM-DDTHH:mm:ss-03:00");
+              var end = $.fullCalendar.formatDate(end,"YY-MM-DDTHH:mm:ss-03:00");
+              $.ajax({
+                  url:"configs/managebd.php",
+                  type:"POST",
+                  data:{title:title, start:start, end:end},
+                  success:function () {
+                      calendar.fullCalendar('refetchEvents');
+                      alert("Adicionado com sucesso!");
+                  }
+              })
+          }
       }
     });
 

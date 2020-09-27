@@ -5,10 +5,24 @@ require_once ("../validalogin.php");
 //Requer conexao previa com o banco
 require_once ("conn.php");
 
+//Retorna erro em caso de problema de conexão com o BD
 if ($conn->connect_error) {
     die("Connection failed:" . $conn->connect_error);
 }
 
+//Cria o evento na agenda
+if (isset($_POST ['title'])) {
+    $title = ($_POST["title"]);
+    $start = $_POST["start"];
+    $end = $_POST["end"];
+
+    $sql = "INSERT INTO events 
+    (title,start_date,end_date) 
+    VALUES 
+    ('$title','$start','$end');";
+}
+
+//Cadastra o paciente
 if (isset($_POST ['cadastrarPaciente'])) {
 
     $nome = utf8_decode($_POST["nome"]);
@@ -39,6 +53,7 @@ if (isset($_POST ['cadastrarPaciente'])) {
         header("Location: ../inicio.php#cadastrarpaciente");
     }
 }
+//Encerra a conexão
 $conn->close();
 
 ?>
