@@ -68,8 +68,8 @@ $login = $_SESSION['login'];
       select: function (start, end, allDay) {
           var title = prompt("Informe o agendamento");
           if(title){
-              var start = calendar.fullCalendar.formatDate(start,"YY-MM-DDTHH:mm:ss-03:00");
-              var end = calendar.fullCalendar.formatDate(end,"YY-MM-DDTHH:mm:ss-03:00");
+              var start = calendarEl.fullCalendar.formatDate(start,"YY-MM-DDTHH:mm:ss-03:00");
+              var end = calendarEl.fullCalendar.formatDate(end,"YY-MM-DDTHH:mm:ss-03:00");
               $.ajax({
                   url:"configs/managebd.php",
                   type:"POST",
