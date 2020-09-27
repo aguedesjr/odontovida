@@ -39,6 +39,15 @@ $login = $_SESSION['login'];
         list: 'Lista',
         today: 'Hoje'
       },
+      eventClick: function(info) {
+          info.jsEvent.preventDefault();
+
+          if (info.event.url) {
+              window.open(info.event.url);
+          } else {
+              Swal.fire(info.event.title, 'Inicio: '+info.event.start, 'question');
+          }
+      },
       initialDate: dataatual,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
