@@ -64,6 +64,7 @@ $login = $_SESSION['login'];
         document.getElementById('loading').style.display =
           bool ? 'block' : 'none';
       },
+      selectable: true,
       select: function (start, end, allDay) {
           var title = prompt("Informe o agendamento");
           if(title){
