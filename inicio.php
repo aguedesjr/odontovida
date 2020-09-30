@@ -64,7 +64,7 @@ $login = $_SESSION['login'];
       dayMaxEvents: true, // allow "more" link when too many events
       locale: 'pt-br',
       events: {
-        url: 'configs/get-events.php',
+        url: 'configs/get-events.php?timeZone=America/Sao_Paulo',
         failure: function() {
           document.getElementById('script-warning').style.display = 'block'
         }
