@@ -40,6 +40,7 @@ $login = $_SESSION['login'];
         list: 'Lista',
         today: 'Hoje'
       },
+      timeZone: 'America/Sao_Paulo',
       eventClick: function(info) {
           info.jsEvent.preventDefault();
 
@@ -290,7 +291,7 @@ $login = $_SESSION['login'];
                 </footer>
             </div>
         </div>
-        
+
         <!-- Modal de Cadastro de Usuários -->
         <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
