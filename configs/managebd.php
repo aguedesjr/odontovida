@@ -23,15 +23,13 @@ if (isset($_POST ['title'])) {
 }
 
 //Cadastra o evento na agenda
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+if (isset($_POST['cadastrarEvento'])) {
 
-if (isset($dados['cadastrarEvento'])) {
-
-    $title = utf8_decode($dados["title"]);
-    $color = ($dados["color"]);
-    $data_start = str_replace('/', '-', $dados['start']);
+    $title = utf8_decode($_POST["title"]);
+    $color = ($_POST["color"]);
+    $data_start = str_replace('/', '-', $_POST['start']);
     $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
-    $data_end = str_replace('/', '-', $dados['end']);
+    $data_end = str_replace('/', '-', $_POST['end']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
     
     $sql = "INSERT INTO events 
@@ -40,14 +38,12 @@ if (isset($dados['cadastrarEvento'])) {
     ('$title','$color','$data_start_conv','$data_end_conv');";
 
     if ($conn->query($sql) === TRUE) {
-        //header("Location: ../inicio.php");
-        $retorna = ['sit' => true, 'msg' => '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>'];
-        $_SESSION['msg'] = '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>';
+        $_SESSION['agendamessage']="Cadastro realizado com sucesso!";
+        header("Location: ../inicio.php");
     } else {
         //echo "Erro no cadastro";
         echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
     }
-    echo "Chegou";
 }
 
 

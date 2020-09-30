@@ -111,7 +111,7 @@ $login = $_SESSION['login'];
     }
 }
 
-$(document).ready(function () {
+/*$(document).ready(function () {
     $("#addevent").on("submit", function (event) {
         //event.preventDefault();
        $.ajax({
@@ -133,7 +133,7 @@ $(document).ready(function () {
             }
         })
     });
-});
+});*/
 </script>
 
 <style>
@@ -279,6 +279,12 @@ $(document).ready(function () {
                                 Agenda
                             </div>
                             <div class="card-body">
+                            <?
+                                if(isset($_SESSION['agendamessage'])){
+                                        echo '<div class="invalid_feedback"> '. $_SESSION['agendamessage'] . '</div>';
+                                        unset($_SESSION['agendamessage']);
+                                }
+                             ?>
                                 <div id='script-warning'>
                                     <code>php/get-events.php</code> must be running.
                                 </div>
@@ -315,8 +321,7 @@ $(document).ready(function () {
                     </div>
                     <div class="modal-body">
                         <span id="msg-cad"></span>
-                        <!--<form method="POST" action="configs/managebd.php">-->
-                        <form id="addevent" method="POST" enctype="multipart/form-data">
+                        <form method="POST" action="configs/managebd.php">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
@@ -357,7 +362,7 @@ $(document).ready(function () {
 
                             <div class="form-group row">
                                 <div class="col-sm-10">
-                                    <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Cadastrar</button>
+                                    <button type="submit" class="btn btn-success">Cadastrar</button>
                                 </div>
                             </div>
                         </form>
