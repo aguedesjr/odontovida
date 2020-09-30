@@ -65,7 +65,7 @@ $login = $_SESSION['login'];
           bool ? 'block' : 'none';
       },
       selectable: true,
-      select: var CustomerKey = 1234;//your customer key value.
+      select: //var CustomerKey = 1234;//your customer key value.
                 swal({
                     title: "Add Note",
                     input: "textarea",
