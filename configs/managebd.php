@@ -47,6 +47,7 @@ if (isset($dados['cadastrarEvento'])) {
         //echo "Erro no cadastro";
         echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
     }
+    echo "Chegou";
 }
 
 
