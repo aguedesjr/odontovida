@@ -116,7 +116,7 @@ $(document).ready(function () {
         //event.preventDefault();
        $.ajax({
             method: "POST",
-            url: "managebd.php",
+            url: "configs/managebd.php",
             data: new FormData(this),
             contentType: false,
             processData: false,
