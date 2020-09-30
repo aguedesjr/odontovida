@@ -110,30 +110,6 @@ $login = $_SESSION['login'];
         event.returnValue = false;
     }
 }
-
-/*$(document).ready(function () {
-    $("#addevent").on("submit", function (event) {
-        //event.preventDefault();
-       $.ajax({
-            method: "POST",
-            url: "configs/managebd.php",
-            data: new FormData(this),
-            contentType: false,
-            processData: false,
-            success: function (retorna) {
-                if (retorna['sit']) {
-                    $("#msg-cad").html(retorna['msg']);
-                    //location.reload();
-                } else {
-                    $("#msg-cad").html(retorna['msg']);
-                }
-            },
-            error: function () {
-                alert("Falha");
-            }
-        })
-    });
-});*/
 </script>
 
 <style>
@@ -281,7 +257,10 @@ $login = $_SESSION['login'];
                             <div class="card-body">
                             <?
                                 if(isset($_SESSION['agendamessage'])){
-                                        echo '<div class="invalid_feedback"> '. $_SESSION['agendamessage'] . '</div>';
+                                        echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
+                                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button></div>';
                                         unset($_SESSION['agendamessage']);
                                 }
                              ?>
@@ -320,7 +299,6 @@ $login = $_SESSION['login'];
                         </button>
                     </div>
                     <div class="modal-body">
-                        <span id="msg-cad"></span>
                         <form method="POST" action="configs/managebd.php">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
