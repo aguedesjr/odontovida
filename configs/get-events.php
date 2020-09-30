@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------------------------
 
 include_once ("../configs/conn.php");
-$sqlEvents = "SELECT id, title, start, end FROM events LIMIT 20";
+$sqlEvents = "SELECT id, title, start, end, color FROM events LIMIT 20";
 $resultset = mysqli_query($conn, $sqlEvents) or die("database error:". mysqli_error($conn));
 $calendar = array();
 $response = array();
@@ -21,6 +21,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) {
 	$calendar[] = array(
         'id' =>$rows['id'],
         'title' => $rows['title'],
+        'color' => $rows['color'],
         //'url' => "#",
 		    //"class" => 'event-important',
         'start' => "$start",
