@@ -47,7 +47,7 @@ $range_start = parseDateTime($_GET['start']);
 $range_end = parseDateTime($_GET['end']);
 
 // Parse the timeZone parameter if it is present.
-$time_zone = null;
+$time_zone = 'America/Sao_Paulo';
 if (isset($_GET['timeZone'])) {
   $time_zone = new DateTimeZone($_GET['timeZone']);
 }
