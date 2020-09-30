@@ -107,6 +107,27 @@ $login = $_SESSION['login'];
         event.returnValue = false;
     }
 }
+
+$(document).ready(function () {
+    $("#addevent").on("submit", function (event) {
+        event.preventDefault();
+       $.ajax({
+            method: "POST",
+            url: "managebd.php",
+            data: new FormData(this),
+            contentType: false,
+            processData: false,
+            success: function (retorna) {
+                if (retorna['sit']) {
+                    //$("#msg-cad").html(retorna['msg']);
+                    location.reload();
+                } else {
+                    $("#msg-cad").html(retorna['msg']);
+                }
+            }
+        })
+    });
+});
 </script>
 
 <style>
@@ -287,7 +308,7 @@ $login = $_SESSION['login'];
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="configs/managebd.php" method="POST">
+                        <form id="addevent" method="POST" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">

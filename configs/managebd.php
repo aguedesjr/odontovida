@@ -38,11 +38,10 @@ if (isset($_POST ['cadastrarEvento'])) {
     ('$title','$color','$data_start_conv','$data_end_conv');";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['message']="Cadastro realizado com sucesso!";
-        header("Location: ../inicio.php#cadastrarpaciente");
+        $retorna = ['sit' => true, 'msg' => '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>'];
+        $_SESSION['msg'] = '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>';
     } else {
-        $_SESSION['message']="Falha ao realizar o cadastro!";
-        header("Location: ../inicio.php#cadastrarpaciente");
+        $retorna = ['sit' => false, 'msg' => '<div class="alert alert-danger" role="alert">Erro: Evento não foi cadastrado com sucesso!</div>'];
     }
 }
 
