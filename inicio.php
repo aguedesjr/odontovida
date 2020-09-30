@@ -127,7 +127,8 @@ $(document).ready(function () {
                 } else {
                     $("#msg-cad").html(retorna['msg']);
                 }
-            }
+            },
+            error: function(){alert("Falha!!")};
         })
     });
 });
