@@ -22,6 +22,31 @@ if (isset($_POST ['title'])) {
     ('$title','$start','$end');";
 }
 
+//Cadastra o evento na agenda
+if (isset($_POST ['cadastrarEvento'])) {
+
+    $title = utf8_decode($_POST["title"]);
+    $color = ($_POST["color"]);
+    $data_start = str_replace('/', '-', $_POST['start']);
+    $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
+    $data_end = str_replace('/', '-', $_POST['end']);
+    $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
+    
+    $sql = "INSERT INTO pacientes 
+    (title,color,start,end) 
+    VALUES 
+    ('$title','$color','$data_start_conv','$data_end_conv');";
+
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['message']="Cadastro realizado com sucesso!";
+        header("Location: ../inicio.php#cadastrarpaciente");
+    } else {
+        $_SESSION['message']="Falha ao realizar o cadastro!";
+        header("Location: ../inicio.php#cadastrarpaciente");
+    }
+}
+
+
 //Cadastra o paciente
 if (isset($_POST ['cadastrarPaciente'])) {
 

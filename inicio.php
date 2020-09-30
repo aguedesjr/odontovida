@@ -303,7 +303,7 @@ $login = $_SESSION['login'];
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form novalidate="" action="configs/managebd.php" method="POST">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
@@ -332,6 +332,7 @@ $login = $_SESSION['login'];
                                 <label class="col-sm-2 col-form-label">Início do evento</label>
                                 <div class="col-sm-10">
                                     <input type="text" name="start" class="form-control" id="start" onkeypress="DataHora(event, this)">
+                                    <input type="hidden" name="cadastrarEvento" value="cadastrarEvento">
                                 </div>
                             </div>
                             <div class="form-group row">
