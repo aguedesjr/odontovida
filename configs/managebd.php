@@ -23,16 +23,13 @@ if (isset($_POST ['title'])) {
 }
 
 //Cadastra o evento na agenda
+if (isset($_POST['cadastrarEvento'])) {
 
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-if (isset($dados['cadastrarEvento'])) {
-
-    $title = utf8_decode($dados["title"]);
-    $color = ($dados["color"]);
-    $data_start = str_replace('/', '-', $dados['start']);
+    $title = utf8_decode($_POST["title"]);
+    $color = ($_POST["color"]);
+    $data_start = str_replace('/', '-', $_POST['start']);
     $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
-    $data_end = str_replace('/', '-', $dados['end']);
+    $data_end = str_replace('/', '-', $_POST['end']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
     
     $sql = "INSERT INTO events 
@@ -47,8 +44,7 @@ if (isset($dados['cadastrarEvento'])) {
         $retorna = ['sit' => false, 'msg' => '<div class="alert alert-danger" role="alert">Erro: Evento não foi cadastrado com sucesso!</div>'];
     }
     
-    header('Content-Type: application/json');
-    echo json_encode($retorna);
+    header("Location: ../inicio.php");
 }
 
 
