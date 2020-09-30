@@ -353,7 +353,7 @@ $(document).ready(function () {
 
                             <div class="form-group row">
                                 <div class="col-sm-10">
-                                    <input type="button" name="CadEvent" id="CadEvent" value="Cadastrar" class="btn btn-success">
+                                    <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Cadastrar</button>
                                 </div>
                             </div>
                         </form>
