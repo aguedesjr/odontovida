@@ -38,19 +38,18 @@ if (isset($_POST['cadastrarEvento'])) {
     ('$title','$color','$data_start_conv','$data_end_conv');";
 
     if ($conn->query($sql) === TRUE) {
-        $retorna = ['sit' => true, 'msg' => '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>'];
-        $_SESSION['msg'] = '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>';
+        echo "Cadastro realizado";
     } else {
-        $retorna = ['sit' => false, 'msg' => '<div class="alert alert-danger" role="alert">Erro: Evento não foi cadastrado com sucesso!</div>'];
+        echo "Erro no cadastro";
     }
-    echo "Chegou!";
+    /*echo "Chegou!";
     echo $_POST['cadastrarEvento'];
     echo $title;
     echo $color;
     echo $data_start;
     echo $data_start_conv;
     echo $data_end;
-    echo $data_end_conv;
+    echo $data_end_conv;*/
     //header("Location: ../inicio.php");
 }
 
