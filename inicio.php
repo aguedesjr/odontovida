@@ -65,11 +65,51 @@ $login = $_SESSION['login'];
           bool ? 'block' : 'none';
       },
       selectable: true,
-      select: function(info){
+      select: var CustomerKey = 1234;//your customer key value.
+                swal({
+                    title: "Add Note",
+                    input: "textarea",
+                    showCancelButton: true,
+                    confirmButtonColor: "#1FAB45",
+                    confirmButtonText: "Save",
+                    cancelButtonText: "Cancel",
+                    buttonsStyling: true
+                }).then(function () {       
+                    $.ajax({
+                        type: "POST",
+                        url: "YourPhpFile.php",
+                        data: { 'CustomerKey': CustomerKey},
+                        cache: false,
+                        success: function(response) {
+                            swal(
+                            "Sccess!",
+                            "Your note has been saved!",
+                            "success"
+                            )
+                        },
+                        failure: function (response) {
+                            swal(
+                            "Internal Error",
+                            "Oops, your note was not saved.", // had a missing comma
+                            "error"
+                            )
+                        }
+                    });
+                }, 
+                function (dismiss) {
+                if (dismiss === "cancel") {
+                    swal(
+                    "Cancelled",
+                        "Canceled Note",
+                    "error"
+                    )
+                }
+                })
+      /*select: function(info){
         $('#cadastrar #start').val(info.start.toLocaleString());
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');
-      }
+      }*/
       /*select: function (start, end, allDay) {
           var title = prompt("Informe o agendamento");
           if(title){
@@ -291,7 +331,7 @@ $login = $_SESSION['login'];
             </div>
         </div>
 
-        <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!--<div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -348,7 +388,7 @@ $login = $_SESSION['login'];
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
 
