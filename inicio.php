@@ -40,7 +40,7 @@ $login = $_SESSION['login'];
         list: 'Lista',
         today: 'Hoje'
       },
-      timeZone: 'America/Sao_Paulo',
+      //timeZone: 'America/Sao_Paulo',
       eventClick: function(info) {
           info.jsEvent.preventDefault();
 
@@ -71,22 +71,6 @@ $login = $_SESSION['login'];
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');
       }
-      /*select: function (start, end, allDay) {
-          var title = prompt("Informe o agendamento");
-          if(title){
-              var start = calendar.formatDate(start,"YY-MM-DDTHH:mm:ss-03:00");
-              var end = calendar.formatDate(end,"YY-MM-DDTHH:mm:ss-03:00");
-              $.ajax({
-                  url:"configs/managebd.php",
-                  type:"POST",
-                  data:{title:title, start:start, end:end},
-                  success:function () {
-                      calendar.fullCalendar('refetchEvents');
-                      alert("Adicionado com sucesso!");
-                  }
-              })
-          }
-      }*/
     });
 
     calendar.render();
