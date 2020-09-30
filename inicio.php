@@ -110,7 +110,7 @@ $login = $_SESSION['login'];
 
 $(document).ready(function () {
     $("#addevent").on("submit", function (event) {
-        event.preventDefault();
+        //event.preventDefault();
        $.ajax({
             method: "POST",
             url: "managebd.php",
