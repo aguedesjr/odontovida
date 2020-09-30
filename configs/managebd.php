@@ -32,7 +32,7 @@ if (isset($_POST ['cadastrarEvento'])) {
     $data_end = str_replace('/', '-', $_POST['end']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
     
-    $sql = "INSERT INTO pacientes 
+    $sql = "INSERT INTO events 
     (title,color,start,end) 
     VALUES 
     ('$title','$color','$data_start_conv','$data_end_conv');";
