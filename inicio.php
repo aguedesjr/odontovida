@@ -315,7 +315,7 @@ $login = $_SESSION['login'];
                     </div>
                     <div class="modal-body">
                         <span id="msg-cad"></span>
-                        <form id="addevent" method="POST" action="configs/managebd.php">
+                        <form method="POST" action="configs/managebd.php">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
@@ -356,7 +356,7 @@ $login = $_SESSION['login'];
 
                             <div class="form-group row">
                                 <div class="col-sm-10">
-                                    <button type="submit" name="CadEvent" id="CadEvent" value="CadEvent" class="btn btn-success">Cadastrar</button>
+                                    <button type="submit" class="btn btn-success">Cadastrar</button>
                                 </div>
                             </div>
                         </form>
