@@ -41,7 +41,7 @@ if (isset($_POST['cadastrarEvento'])) {
         echo "Cadastro realizado";
     } else {
         //echo "Erro no cadastro";
-        echo mysql_errno($conn) . ": " . mysql_error($conn) . "\n";
+        echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
     }
     /*echo "Chegou!";
     echo $_POST['cadastrarEvento'];
