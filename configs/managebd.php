@@ -44,6 +44,13 @@ if (isset($_POST['cadastrarEvento'])) {
         $retorna = ['sit' => false, 'msg' => '<div class="alert alert-danger" role="alert">Erro: Evento não foi cadastrado com sucesso!</div>'];
     }
     echo "Chegou!";
+    echo $_POST['cadastrarEvento'];
+    echo $title;
+    echo $color;
+    echo $data_start;
+    echo $data_start_conv;
+    echo $data_end;
+    echo $data_end_conv;
     //header("Location: ../inicio.php");
 }
 
