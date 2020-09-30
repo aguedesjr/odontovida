@@ -122,10 +122,10 @@ $(document).ready(function () {
             processData: false,
             success: function (retorna) {
                 if (retorna['sit']) {
-                    //$("#msg-cad").html(retorna['msg']);
-                    location.reload();
+                    $("#msg-cad").html(retorna['msg']);
+                    //location.reload();
                 } else {
-                    //$("#msg-cad").html(retorna['msg']);
+                    $("#msg-cad").html(retorna['msg']);
                 }
             }
         })
