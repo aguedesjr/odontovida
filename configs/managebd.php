@@ -40,7 +40,8 @@ if (isset($_POST['cadastrarEvento'])) {
     if ($conn->query($sql) === TRUE) {
         echo "Cadastro realizado";
     } else {
-        echo "Erro no cadastro";
+        //echo "Erro no cadastro";
+        echo mysql_errno($conn) . ": " . mysql_error($conn) . "\n"
     }
     /*echo "Chegou!";
     echo $_POST['cadastrarEvento'];
