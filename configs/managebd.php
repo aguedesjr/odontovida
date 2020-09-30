@@ -43,6 +43,9 @@ if (isset($_POST ['cadastrarEvento'])) {
     } else {
         $retorna = ['sit' => false, 'msg' => '<div class="alert alert-danger" role="alert">Erro: Evento não foi cadastrado com sucesso!</div>'];
     }
+    
+    header('Content-Type: application/json');
+    echo json_encode($retorna);
 }
 
 

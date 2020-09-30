@@ -122,7 +122,7 @@ $(document).ready(function () {
                     //$("#msg-cad").html(retorna['msg']);
                     location.reload();
                 } else {
-                    $("#msg-cad").html(retorna['msg']);
+                    //$("#msg-cad").html(retorna['msg']);
                 }
             }
         })
@@ -308,6 +308,7 @@ $(document).ready(function () {
                         </button>
                     </div>
                     <div class="modal-body">
+                        <span id="msg-cad"></span>
                         <form id="addevent" method="POST" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
