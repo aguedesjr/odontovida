@@ -44,7 +44,7 @@ $login = $_SESSION['login'];
         list: 'Lista',
         today: 'Hoje'
       },
-      //timeZone: 'America/Sao_Paulo',
+      timeZone: 'America/Sao_Paulo',
       eventClick: function(info) {
           info.jsEvent.preventDefault();
 
@@ -71,8 +71,8 @@ $login = $_SESSION['login'];
       },
       selectable: true,
       select: function(info){
-        $('#cadastrar #start').val(info.start.toLocaleString());
-        $('#cadastrar #end').val(info.end.toLocaleString());
+        $('#cadastrar #start').val(info.start.toLocaleString()+1);
+        $('#cadastrar #end').val(info.end.toLocaleString()+1);
         $('#cadastrar').modal('show');
       }
     });
