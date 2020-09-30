@@ -45,6 +45,10 @@ $login = $_SESSION['login'];
         today: 'Hoje'
       },
       timeZone: 'America/Sao_Paulo',
+      dateClick: function(arg) {
+        console.log(arg.date.toString()); // use *local* methods on the native Date Object
+        // will output something like 'Sat Sep 01 2018 00:00:00 GMT-XX:XX (Eastern Daylight Time)'
+      },
       eventClick: function(info) {
           info.jsEvent.preventDefault();
 
@@ -71,8 +75,8 @@ $login = $_SESSION['login'];
       },
       selectable: true,
       select: function(info){
-        $('#cadastrar #start').val(info.start.toLocaleString()+1);
-        $('#cadastrar #end').val(info.end.toLocaleString()+1);
+        $('#cadastrar #start').val(info.start.toLocaleString());
+        $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');
       }
     });
