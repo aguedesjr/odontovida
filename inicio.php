@@ -287,7 +287,7 @@ $login = $_SESSION['login'];
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form novalidate="" action="configs/managebd.php" method="POST">
+                        <form action="configs/managebd.php" method="POST">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
