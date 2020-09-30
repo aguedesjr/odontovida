@@ -44,7 +44,7 @@ $login = $_SESSION['login'];
         list: 'Lista',
         today: 'Hoje'
       },
-      timeZone: 'local',
+      //timeZone: 'local',
       dateClick: function(arg) {
         console.log(arg.date.toString()); // use *local* methods on the native Date Object
         // will output something like 'Sat Sep 01 2018 00:00:00 GMT-XX:XX (Eastern Daylight Time)'
