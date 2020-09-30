@@ -16,8 +16,8 @@ $calendar = array();
 $response = array();
 while( $rows = mysqli_fetch_assoc($resultset) ) {	
 	// convert  date to milliseconds
-	$start = $rows['start_date'];
-	$end = $rows['end_date'];
+	$start = $rows['start'];
+	$end = $rows['end'];
 	$calendar[] = array(
         'id' =>$rows['id'],
         'title' => $rows['title'],
