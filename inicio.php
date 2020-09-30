@@ -111,7 +111,7 @@ $login = $_SESSION['login'];
     }
 }
 
-/*$(document).ready(function () {
+$(document).ready(function () {
     $("#addevent").on("submit", function (event) {
         //event.preventDefault();
        $.ajax({
@@ -133,7 +133,7 @@ $login = $_SESSION['login'];
             }
         })
     });
-});*/
+});
 </script>
 
 <style>
@@ -315,7 +315,8 @@ $login = $_SESSION['login'];
                     </div>
                     <div class="modal-body">
                         <span id="msg-cad"></span>
-                        <form method="POST" action="configs/managebd.php">
+                        <!--<form method="POST" action="configs/managebd.php">-->
+                        <form id="addevent" method="POST" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
