@@ -22,7 +22,6 @@ $login = $_SESSION['login'];
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="Bootstrap/dist/js/scripts.js"></script>
         <script src='lib/main.js'></script>
-        <script src='lib/locales/pt-br.js'></script>
         <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -43,11 +42,6 @@ $login = $_SESSION['login'];
         day: 'Dia',
         list: 'Lista',
         today: 'Hoje'
-      },
-      //timeZone: 'local',
-      dateClick: function(arg) {
-        console.log(arg.date.toString()); // use *local* methods on the native Date Object
-        // will output something like 'Sat Sep 01 2018 00:00:00 GMT-XX:XX (Eastern Daylight Time)'
       },
       eventClick: function(info) {
           info.jsEvent.preventDefault();
