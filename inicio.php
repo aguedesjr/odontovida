@@ -52,7 +52,7 @@ $login = $_SESSION['login'];
               Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+' Fim: '+info.event.end.toLocaleString(), 'success');
           }
       },
-      initialDate: dataatual,
+      //initialDate: dataatual,
       editable: true,
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
