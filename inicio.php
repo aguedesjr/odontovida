@@ -53,7 +53,7 @@ $login = $_SESSION['login'];
           }
       },
       //initialDate: dataatual,
-      initialView: 'dayGridWeek',
+      initialView: 'timeGridWeek',
       editable: true,
       navLinks: true, // can click day/week names to navigate views
       dayMaxEvents: true, // allow "more" link when too many events
