@@ -42,7 +42,9 @@ if (isset($_POST['cadastrarEvento'])) {
         header("Location: ../inicio.php");
     } else {
         //echo "Erro no cadastro";
-        echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
+        //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
+        $_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        header("Location: ../inicio.php");
     }
 }
 
