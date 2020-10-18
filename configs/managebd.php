@@ -38,7 +38,7 @@ if (isset($_POST['cadastrarEvento'])) {
     ('$title','$color','$data_start_conv','$data_end_conv');";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['agendastatus']="erro";
+        $_SESSION['agendastatus']="sucesso";
         $_SESSION['agendamessage']="Cadastro realizado com sucesso!";
         header("Location: ../inicio.php");
     } else {
