@@ -256,11 +256,20 @@ $login = $_SESSION['login'];
                             <div class="card-body">
                             <?
                                 if(isset($_SESSION['agendamessage'])){
-                                        echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
-                                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button></div>';
+                                        $status = $_SESSION['agendastatus'];
+                                        if($status == "sucesso"){
+                                            echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
+                                            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></div>';
+                                        } elseif ($status == "erro") {
+                                            echo '<div class="alert alert-danger" role="alert"> '. $_SESSION['agendamessage'] . 
+                                            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></div>';
+                                        }
                                         unset($_SESSION['agendamessage']);
+                                        unset($_SESSION['agendastatus']);
                                 }
                              ?>
                                 <div id='script-warning'>
