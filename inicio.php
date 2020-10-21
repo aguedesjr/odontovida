@@ -76,7 +76,7 @@ $login = $_SESSION['login'];
       },
       eventResize: function(info, delta, revertFunc) {
 
-        alert(info.event.title + " end is now " + info.event.end.format());
+        alert(info.event.title + " end is now " + info.event.end.toLocaleString());
 
         if (!confirm("is this okay?")) {
             revertFunc();
