@@ -73,7 +73,16 @@ $login = $_SESSION['login'];
         $('#cadastrar #start').val(info.start.toLocaleString());
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');
-      }
+      },
+      eventResize: function(event, delta, revertFunc) {
+
+        alert(event.title + " end is now " + event.end.format());
+
+        if (!confirm("is this okay?")) {
+            revertFunc();
+        }
+
+        }
     });
 
     calendar.render();
@@ -320,16 +329,16 @@ $login = $_SESSION['login'];
                                 <div class="col-sm-10">
                                     <select name="color" class="form-control" id="color">
                                         <option value="">Selecione</option>			
-                                        <option style="color:#FFD700;" value="#FFD700">Amarelo</option>
-                                        <option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
-                                        <option style="color:#FF4500;" value="#FF4500">Laranja</option>
-                                        <option style="color:#8B4513;" value="#8B4513">Marrom</option>	
-                                        <option style="color:#1C1C1C;" value="#1C1C1C">Preto</option>
-                                        <option style="color:#436EEE;" value="#436EEE">Royal Blue</option>
-                                        <option style="color:#A020F0;" value="#A020F0">Roxo</option>
-                                        <option style="color:#40E0D0;" value="#40E0D0">Turquesa</option>
-                                        <option style="color:#228B22;" value="#228B22">Verde</option>
-                                        <option style="color:#8B0000;" value="#8B0000">Vermelho</option>
+                                        <option style="color: #FFD700;" value="#FFD700">Amarelo</option>
+                                        <option style="color: #0071c5;" value="#0071c5">Azul Turquesa</option>
+                                        <option style="color: #FF4500;" value="#FF4500">Laranja</option>
+                                        <option style="color: #8B4513;" value="#8B4513">Marrom</option>	
+                                        <option style="color: #1C1C1C;" value="#1C1C1C">Preto</option>
+                                        <option style="color: #436EEE;" value="#436EEE">Royal Blue</option>
+                                        <option style="color: #A020F0;" value="#A020F0">Roxo</option>
+                                        <option style="color: #40E0D0;" value="#40E0D0">Turquesa</option>
+                                        <option style="color: #228B22;" value="#228B22">Verde</option>
+                                        <option style="color: #8B0000;" value="#8B0000">Vermelho</option>
                                     </select>
                                 </div>
                             </div>
