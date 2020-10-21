@@ -76,11 +76,30 @@ $login = $_SESSION['login'];
       },
       eventResize: function(info, delta, revertFunc) {
 
-        if (!confirm("is this okay?")) {
+        Swal.fire({
+            title: 'Deseja alterar a marcação?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Alteração realizada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                    })
+            }
+            })
+
+        /*if (!confirm("is this okay?")) {
             info.revert();
         } else {
             alert(info.event.title + " end is now " + info.event.end.toLocaleString());
-        }
+        }*/
 
         }
     });
