@@ -92,6 +92,15 @@ $login = $_SESSION['login'];
                     showConfirmButton: false,
                     timer: 1500
                     })
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Alteração descartada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                    })
+                info.revert();
             }
             })
 
