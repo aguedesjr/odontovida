@@ -74,9 +74,9 @@ $login = $_SESSION['login'];
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');
       },
-      eventResize: function(event, delta, revertFunc) {
+      eventResize: function(info, delta, revertFunc) {
 
-        alert(event.title + " end is now " + event.end.format());
+        alert(info.event.title + " end is now " + info.event.end.format());
 
         if (!confirm("is this okay?")) {
             revertFunc();
