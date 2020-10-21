@@ -79,7 +79,7 @@ $login = $_SESSION['login'];
         alert(info.event.title + " end is now " + info.event.end.toLocaleString());
 
         if (!confirm("is this okay?")) {
-            revertFunc();
+            info.revert();
         }
 
         }
