@@ -76,10 +76,10 @@ $login = $_SESSION['login'];
       },
       eventResize: function(info, delta, revertFunc) {
 
-        alert(info.event.title + " end is now " + info.event.end.toLocaleString());
-
         if (!confirm("is this okay?")) {
             info.revert();
+        } else {
+            alert(info.event.title + " end is now " + info.event.end.toLocaleString());
         }
 
         }
