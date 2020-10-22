@@ -68,7 +68,7 @@ if ($comando == "alterarEvento") {
     $data_end = str_replace('/', '-', $_POST['newEnd']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
     echo $data_end_conv;
-    $sql = "UPDATE events SET start='$data_start_conv', end='$data_end_conv' WHERE id = '$id';";
+    $sql = "UPDATE events SET start='$data_start_conv', end='$data_end_conv', color='#FF4500' WHERE id = '$id';";
 
     //if ($conn->query($sql) === TRUE) {
         //$_SESSION['agendastatus']="sucesso";
