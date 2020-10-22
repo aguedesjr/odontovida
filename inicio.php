@@ -70,9 +70,25 @@ $login = $_SESSION['login'];
       },
       selectable: true,
       select: function(info){
-        $('#cadastrar #start').val(info.start.toLocaleString());
+        /*$('#cadastrar #start').val(info.start.toLocaleString());
         $('#cadastrar #end').val(info.end.toLocaleString());
-        $('#cadastrar').modal('show');
+        $('#cadastrar').modal('show');*/
+        $('#swal-input1').val(info.start.toLocaleString());
+        $('#swal-input2').val(info.end.toLocaleString());
+        const { value: formValues } = await Swal.fire({
+            title: 'Multiple inputs',
+            html:
+                '<input id="swal-input1" class="swal2-input">' +
+                '<input id="swal-input2" class="swal2-input">',
+            focusConfirm: false,
+            preConfirm: () => {
+                return [
+                document.getElementById('swal-input1').value,
+                document.getElementById('swal-input2').value
+                ]
+            }
+            })
+
       },
       eventResize: function(info, delta, revertFunc) {
         Swal.fire({
