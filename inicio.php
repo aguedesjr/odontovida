@@ -94,7 +94,8 @@ $login = $_SESSION['login'];
                         newEnd: info.event.end.toLocaleString(),
                         comando: "alterarEvento"
                     },
-                    success: function(data) {
+                    success: console.log(data);
+                        /*function(data) {
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
@@ -102,7 +103,7 @@ $login = $_SESSION['login'];
                             showConfirmButton: false,
                             timer: 1500
                         })
-                    }
+                    }*/
                 });
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire({
