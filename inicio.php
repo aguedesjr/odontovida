@@ -85,14 +85,6 @@ $login = $_SESSION['login'];
             confirmButtonText: 'OK'
             }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Alteração realizada!',
-                    showConfirmButton: false,
-                    timer: 1500
-                    })
-            } else if (result.dismiss === Swal.DismissReason.cancel) {
                 $.ajax({
                     type: "POST",
                     url: "configs/managebd.php",
@@ -103,6 +95,14 @@ $login = $_SESSION['login'];
                         comando: "alterarEvento"
                     }
                 });
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Alteração realizada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                    })
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'error',
