@@ -50,12 +50,12 @@ if ($comando == "alterarEvento") {
     $sql = "UPDATE events SET start='$data_start_conv', end='$data_end_conv' WHERE id = '$id';";
     //$conn->query($sql);
     if ($conn->query($sql) === TRUE) {
-        echo "Alteração realizada!"
+        echo "Alteração realizada!";
         //$_SESSION['agendastatus']="sucesso";
         //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
         //header("Location: ../inicio.php");
     } else {
-        echo "Alteração com erro!"
+        echo "Alteração com erro!";
         //echo "Erro no cadastro";
         //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
         //$_SESSION['agendastatus']="erro";
