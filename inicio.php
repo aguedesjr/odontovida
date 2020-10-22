@@ -75,7 +75,7 @@ $login = $_SESSION['login'];
         $('#cadastrar').modal('show');*/
         $('#swal-input1').val(info.start.toLocaleString());
         $('#swal-input2').val(info.end.toLocaleString());
-        const { value: formValues } = await Swal.fire({
+        Swal.fire({
             title: 'Multiple inputs',
             html:
                 '<input id="swal-input1" class="swal2-input">' +
@@ -88,9 +88,6 @@ $login = $_SESSION['login'];
                 ]
             }
             })
-            if (formValues) {
-                Swal.fire(JSON.stringify(formValues))
-            }
 
       },
       eventResize: function(info, delta, revertFunc) {
