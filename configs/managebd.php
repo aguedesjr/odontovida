@@ -57,7 +57,7 @@ if (isset($_POST['cadastrarEvento'])) {
 
     $id = $_POST["id"];
     //$color = ($_POST["color"]);
-    $data_start = str_replace('/', '-', $_POST['newStart']);
+    /*$data_start = str_replace('/', '-', $_POST['newStart']);
     $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
     $data_end = str_replace('/', '-', $_POST['newEnd']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
@@ -65,7 +65,7 @@ if (isset($_POST['cadastrarEvento'])) {
     $sql = "UPDATE events SET
     (start,end) 
     VALUES 
-    ('$data_start_conv','$data_end_conv') WHERE id = $id;";
+    ('$data_start_conv','$data_end_conv') WHERE id = $id;";*/
 
     //if ($conn->query($sql) === TRUE) {
         //$_SESSION['agendastatus']="sucesso";
