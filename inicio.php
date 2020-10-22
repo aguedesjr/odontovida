@@ -93,15 +93,17 @@ $login = $_SESSION['login'];
                         newStart: info.event.start.toLocaleString(),
                         newEnd: info.event.end.toLocaleString(),
                         comando: "alterarEvento"
+                    },
+                    success: function(data) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Alteração realizada!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                     }
                 });
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Alteração realizada!',
-                    showConfirmButton: false,
-                    timer: 1500
-                    })
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire({
                     position: 'top-end',
