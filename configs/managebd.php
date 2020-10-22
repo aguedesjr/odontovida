@@ -50,10 +50,11 @@ if (isset($_POST['cadastrarEvento'])) {
     }
 }
 
-//Cadastra o evento na agenda
-if (isset($_POST['alterarEvento'])) {
+//Altera o evento na agenda
+$comando = utf8_decode($_POST["comando"]);
+if ($comando == "alterarEvento") {
 
-    $id = utf8_decode($_POST["id"]);
+    $id = $_POST["id"];
     //$color = ($_POST["color"]);
     $data_start = str_replace('/', '-', $_POST['newStart']);
     $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
