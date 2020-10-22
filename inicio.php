@@ -76,8 +76,8 @@ $login = $_SESSION['login'];
         Swal.fire({
             title: 'Multiple inputs',
             html:
-                '<input id="swal-input1" class="swal2-input" value="'info.start.toLocaleString()'">' +
-                '<input id="swal-input2" class="swal2-input" value="'info.end.toLocaleString()'">',
+                '<input id="swal-input1" class="swal2-input" value="'+info.start.toLocaleString()+'">' +
+                '<input id="swal-input2" class="swal2-input" value="'+info.end.toLocaleString()+'">',
             focusConfirm: false,
             preConfirm: () => {
                 return [
