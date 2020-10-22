@@ -74,10 +74,10 @@ $login = $_SESSION['login'];
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');*/
         Swal.fire({
-            title: 'Título do evento',
+            title: 'Cadastrar evento',
             html:
                 '<input type="text" name="title" class="swal2-input" id="title" placeholder="Título do evento">' +
-                '<select name="color" class="form-control" id="color">' +
+                '<select name="color" class="swal2-input" id="color">' +
                 '<option value="">Selecione</option>' +
                 '<option style="color: #FFD700;" value="#FFD700">Amarelo</option>' +
                 '<option style="color: #0071c5;" value="#0071c5">Azul Turquesa</option>' +
