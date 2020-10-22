@@ -93,7 +93,16 @@ $login = $_SESSION['login'];
                     timer: 1500
                     })
             } else if (result.dismiss === Swal.DismissReason.cancel) {
-                $.ajax({});
+                $.ajax({
+                    type: "POST",
+                    url: "config/managebd.php",
+                    data: {
+                        id: info.event.id,
+                        newStart: info.event.start.toLocaleString(),
+                        newEnd: info.event.end.toLocaleString(),
+                        comando: "alterarEvento"
+                    }
+                });
                 Swal.fire({
                     position: 'top-end',
                     icon: 'error',

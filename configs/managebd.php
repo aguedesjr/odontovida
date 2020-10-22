@@ -50,6 +50,34 @@ if (isset($_POST['cadastrarEvento'])) {
     }
 }
 
+//Cadastra o evento na agenda
+if (isset($_POST['alterarEvento'])) {
+
+    $id = utf8_decode($_POST["id"]);
+    //$color = ($_POST["color"]);
+    $data_start = str_replace('/', '-', $_POST['newStart']);
+    $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
+    $data_end = str_replace('/', '-', $_POST['newEnd']);
+    $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
+    
+    $sql = "UPDATE events SET
+    (start,end) 
+    VALUES 
+    ('$data_start_conv','$data_end_conv') WHERE id = $id;";
+
+    if ($conn->query($sql) === TRUE) {
+        //$_SESSION['agendastatus']="sucesso";
+        //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
+        header("Location: ../inicio.php");
+    } else {
+        //echo "Erro no cadastro";
+        //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
+        //$_SESSION['agendastatus']="erro";
+        //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        header("Location: ../inicio.php");
+    }
+}
+
 
 //Cadastra o paciente
 if (isset($_POST ['cadastrarPaciente'])) {
