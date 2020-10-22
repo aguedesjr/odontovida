@@ -95,7 +95,7 @@ $login = $_SESSION['login'];
                         comando: "alterarEvento"
                     },
                     success: function(data) {
-                        console.log(data);
+                        console.log(data.id);
                     }
                         /*function(data) {
                         Swal.fire({
