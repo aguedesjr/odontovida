@@ -73,13 +73,11 @@ $login = $_SESSION['login'];
         /*$('#cadastrar #start').val(info.start.toLocaleString());
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');*/
-        $('#swal-input1').val(info.start.toLocaleString());
-        $('#swal-input2').val(info.end.toLocaleString());
         Swal.fire({
             title: 'Multiple inputs',
             html:
-                '<input id="swal-input1" class="swal2-input">' +
-                '<input id="swal-input2" class="swal2-input">',
+                '<input id="swal-input1" class="swal2-input" value="'info.start.toLocaleString()'">' +
+                '<input id="swal-input2" class="swal2-input" value="'info.end.toLocaleString()'">',
             focusConfirm: false,
             preConfirm: () => {
                 return [
