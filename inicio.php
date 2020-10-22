@@ -88,6 +88,9 @@ $login = $_SESSION['login'];
                 ]
             }
             })
+            if (formValues) {
+                Swal.fire(JSON.stringify(formValues))
+            }
 
       },
       eventResize: function(info, delta, revertFunc) {
