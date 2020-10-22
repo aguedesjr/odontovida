@@ -64,10 +64,11 @@ if (isset($_POST['cadastrarEvento'])) {
     echo " ";
     $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
     echo $data_start_conv;
-    /*$data_end = str_replace('/', '-', $_POST['newEnd']);
+    echo " ";
+    $data_end = str_replace('/', '-', $_POST['newEnd']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
-    
-    $sql = "UPDATE events SET
+    echo $data_end_conv;
+    /*$sql = "UPDATE events SET
     (start,end) 
     VALUES 
     ('$data_start_conv','$data_end_conv') WHERE id = $id;";*/
