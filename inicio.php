@@ -91,7 +91,8 @@ $login = $_SESSION['login'];
                     url: "configs/managebd.php",
                     data: {
                         id: info.event.id
-                        //&newStart=info.event.start.toLocaleString()&newEnd=info.event.end.toLocaleString()&comando="alterarEvento"
+                        newStart: info.event.start.toLocaleString();
+                        //&newEnd=info.event.end.toLocaleString()&comando="alterarEvento"
                     },
                     dataType: "html",
                     success: function(data) {

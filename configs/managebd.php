@@ -58,8 +58,9 @@ if (isset($_POST['cadastrarEvento'])) {
     $id = $_POST["id"];
     echo $id;
     //$color = ($_POST["color"]);
-    /*$data_start = str_replace('/', '-', $_POST['newStart']);
-    $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
+    $data_start = str_replace('/', '-', $_POST['newStart']);
+    echo $data_start;
+    /*$data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
     $data_end = str_replace('/', '-', $_POST['newEnd']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
     
