@@ -95,7 +95,7 @@ $login = $_SESSION['login'];
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 $.ajax({
                     type: "POST",
-                    url: "config/managebd.php",
+                    url: "configs/managebd.php",
                     data: {
                         id: info.event.id,
                         newStart: info.event.start.toLocaleString(),
