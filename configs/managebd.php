@@ -10,18 +10,6 @@ if ($conn->connect_error) {
     die("Connection failed:" . $conn->connect_error);
 }
 
-//Cria o evento na agenda
-if (isset($_POST ['title'])) {
-    $title = ($_POST["title"]);
-    $start = $_POST["start"];
-    $end = $_POST["end"];
-
-    $sql = "INSERT INTO events 
-    (title,start_date,end_date) 
-    VALUES 
-    ('$title','$start','$end');";
-}
-
 //Cadastra o evento na agenda
 if (isset($_POST['cadastrarEvento'])) {
 
@@ -52,7 +40,6 @@ if (isset($_POST['cadastrarEvento'])) {
 
 //Altera o evento na agenda
 $comando = utf8_decode($_POST["comando"]);
-echo $comando;
 if ($comando == "alterarEvento") {
 
     $id = $_POST["id"];
@@ -69,7 +56,7 @@ if ($comando == "alterarEvento") {
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
     echo $data_end_conv;
     $sql = "UPDATE events SET start='$data_start_conv', end='$data_end_conv', color='#FF4500' WHERE id = '$id';";
-
+    $conn->query($sql);
     //if ($conn->query($sql) === TRUE) {
         //$_SESSION['agendastatus']="sucesso";
         //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
