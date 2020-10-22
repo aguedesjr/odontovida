@@ -56,6 +56,7 @@ if (isset($_POST['cadastrarEvento'])) {
 //if ($comando == "alterarEvento") {
 
     $id = $_POST["id"];
+    echo $id;
     //$color = ($_POST["color"]);
     /*$data_start = str_replace('/', '-', $_POST['newStart']);
     $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
