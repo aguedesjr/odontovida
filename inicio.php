@@ -89,13 +89,11 @@ $login = $_SESSION['login'];
                     type: "POST",
                     url: "configs/managebd.php",
                     data: {
-                        id: info.event.id,
-                        newStart: info.event.start.toLocaleString(),
-                        newEnd: info.event.end.toLocaleString(),
-                        comando: "alterarEvento"
+                        id=info.event.id&newStart=info.event.start.toLocaleString()&newEnd=info.event.end.toLocaleString()&comando="alterarEvento"
                     },
+                    dataType: "html",
                     success: function(data) {
-                        console.log(data.id);
+                        console.log(data);
                     }
                         /*function(data) {
                         Swal.fire({
