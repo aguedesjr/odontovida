@@ -94,7 +94,9 @@ $login = $_SESSION['login'];
                         newEnd: info.event.end.toLocaleString(),
                         comando: "alterarEvento"
                     },
-                    success: {console.log(data);}
+                    success: {
+                        console.log(data.id);
+                    }
                         /*function(data) {
                         Swal.fire({
                             position: 'top-end',
