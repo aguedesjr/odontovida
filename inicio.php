@@ -76,6 +76,7 @@ $login = $_SESSION['login'];
         Swal.fire({
             title: 'Título do evento',
             html:
+                '<input type="text" name="title" class="swal2-input" id="title" placeholder="Título do evento">' +
                 '<select name="color" class="form-control" id="color">' +
                 '<option value="">Selecione</option>' +
                 '<option style="color: #FFD700;" value="#FFD700">Amarelo</option>' +
