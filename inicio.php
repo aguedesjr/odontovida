@@ -98,8 +98,6 @@ $login = $_SESSION['login'];
                     dataType: "html",
                     success: function(data) {
                         console.log(data);
-                    }
-                        /*function(data) {
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
@@ -107,7 +105,7 @@ $login = $_SESSION['login'];
                             showConfirmButton: false,
                             timer: 1500
                         })
-                    }*/
+                    }
                 });
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire({
