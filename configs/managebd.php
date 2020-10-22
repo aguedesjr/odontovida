@@ -51,9 +51,9 @@ if (isset($_POST['cadastrarEvento'])) {
 }
 
 //Altera o evento na agenda
-$comando = utf8_decode($_POST["comando"]);
-echo $comando;
-if ($comando == "alterarEvento") {
+//$comando = utf8_decode($_POST["comando"]);
+//echo $comando;
+//if ($comando == "alterarEvento") {
 
     $id = $_POST["id"];
     //$color = ($_POST["color"]);
@@ -78,7 +78,7 @@ if ($comando == "alterarEvento") {
         //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
         //header("Location: ../inicio.php");
     //}
-}
+//}
 
 
 //Cadastra o paciente
