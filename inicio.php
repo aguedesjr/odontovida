@@ -75,7 +75,7 @@ $login = $_SESSION['login'];
         $('#cadastrar').modal('show');
       },
       eventResize: function(info, delta, revertFunc) {
-
+        alert(info.event.start.toLocaleString());
         Swal.fire({
             title: 'Deseja alterar a marcação?',
             icon: 'warning',
