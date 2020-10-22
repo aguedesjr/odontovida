@@ -52,6 +52,7 @@ if (isset($_POST['cadastrarEvento'])) {
 
 //Altera o evento na agenda
 $comando = utf8_decode($_POST["comando"]);
+echo $comando;
 if ($comando == "alterarEvento") {
 
     $id = $_POST["id"];
@@ -66,17 +67,17 @@ if ($comando == "alterarEvento") {
     VALUES 
     ('$data_start_conv','$data_end_conv') WHERE id = $id;";
 
-    if ($conn->query($sql) === TRUE) {
+    //if ($conn->query($sql) === TRUE) {
         //$_SESSION['agendastatus']="sucesso";
         //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
-        header("Location: ../inicio.php");
-    } else {
+        //header("Location: ../inicio.php");
+    //} else {
         //echo "Erro no cadastro";
         //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
         //$_SESSION['agendastatus']="erro";
         //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
-        header("Location: ../inicio.php");
-    }
+        //header("Location: ../inicio.php");
+    //}
 }
 
 
