@@ -94,7 +94,7 @@ $login = $_SESSION['login'];
                         newEnd: info.event.end.toLocaleString(),
                         comando: "alterarEvento"
                     },
-                    success: function() {
+                    success: function(data) {
                         console.log(data);
                     }
                         /*function(data) {
