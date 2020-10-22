@@ -49,7 +49,7 @@ $login = $_SESSION['login'];
           if (info.event.url) {
               window.open(info.event.url);
           } else {
-              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+' Fim: '+info.event.end.toLocaleString(), 'success');
+              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+' Fim: '+info.event.end.toLocaleString(), 'info');
           }
       },
       //initialDate: dataatual,
@@ -115,15 +115,51 @@ $login = $_SESSION['login'];
                     });
                 info.revert();
             }
-            })
-
-        /*if (!confirm("is this okay?")) {
-            info.revert();
-        } else {
-            alert(info.event.title + " end is now " + info.event.end.toLocaleString());
-        }*/
-
-        }
+        })
+      },
+      eventDrop: function(info, delta, revertFunc) {
+        Swal.fire({
+            title: 'Deseja alterar a marcação?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "configs/managebd.php",
+                    data: {
+                        id: info.event.id,
+                        newStart: info.event.start.toLocaleString(),
+                        newEnd: info.event.end.toLocaleString(),
+                        comando: "alterarEvento"
+                    },
+                    dataType: "html",
+                    success: function(data) {
+                        console.log(data);
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Alteração realizada!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+                });
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Alteração descartada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                    });
+                info.revert();
+            }
+        })
+      }
     });
 
     calendar.render();
