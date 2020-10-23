@@ -70,10 +70,10 @@ $login = $_SESSION['login'];
       },
       selectable: true,
       select: function(info){
-        /*$('#cadastrar #start').val(info.start.toLocaleString());
+        $('#cadastrar #start').val(info.start.toLocaleString());
         $('#cadastrar #end').val(info.end.toLocaleString());
-        $('#cadastrar').modal('show');*/
-        Swal.fire({
+        $('#cadastrar').modal('show');
+        /*Swal.fire({
             title: 'Cadastrar evento',
             html:
                 '<input type="text" name="title" class="swal2-input" id="title" placeholder="Título do evento">' +
@@ -96,12 +96,7 @@ $login = $_SESSION['login'];
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'OK'
-            /*preConfirm: () => {
-                return [
-                document.getElementById('swal-input1').value,
-                document.getElementById('swal-input2').value
-                ]
-            }*/
+            
             }).then((result) => {
                 if (result.isConfirmed) {
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -112,9 +107,8 @@ $login = $_SESSION['login'];
                         showConfirmButton: false,
                         timer: 1500
                         });
-                    info.revert();
                 }
-            })
+            })*/
       },
       eventResize: function(info, delta, revertFunc) {
         Swal.fire({
@@ -206,6 +200,14 @@ $login = $_SESSION['login'];
 
     calendar.render();
   });
+
+  function cadastrou() {
+    Swal.fire({
+            title: 'Cadastro realizado com sucesso!', 
+            position: 'top-end',
+            icon: 'info'
+        });
+  }
 
   function DataHora(evento, objeto) {
     var keypress = (window.event) ? event.keyCode : evento.which;
@@ -387,10 +389,13 @@ $login = $_SESSION['login'];
                                 if(isset($_SESSION['agendamessage'])){
                                         $status = $_SESSION['agendastatus'];
                                         if($status == "sucesso"){
-                                            echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
+                                            echo '<script type="text/javascript">',
+                                                    'cadastrou();',
+                                                 '</script>';
+                                            /*echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
                                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
-                                            </button></div>';
+                                            </button></div>';*/
                                         } elseif ($status == "erro") {
                                             echo '<div class="alert alert-danger" role="alert"> '. $_SESSION['agendamessage'] . 
                                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
