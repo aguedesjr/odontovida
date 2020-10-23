@@ -80,42 +80,6 @@ $login = $_SESSION['login'];
         $('#cadastrar #start').val(info.start.toLocaleString());
         $('#cadastrar #end').val(info.end.toLocaleString());
         $('#cadastrar').modal('show');
-        /*Swal.fire({
-            title: 'Cadastrar evento',
-            html:
-                '<input type="text" name="title" class="swal2-input" id="title" placeholder="Título do evento">' +
-                '<select name="color" class="swal2-input" id="color">' +
-                '<option value="">Selecione</option>' +
-                '<option style="color: #FFD700;" value="#FFD700">Amarelo</option>' +
-                '<option style="color: #0071c5;" value="#0071c5">Azul Turquesa</option>' +
-                '<option style="color: #FF4500;" value="#FF4500">Laranja</option>' +
-                '<option style="color: #8B4513;" value="#8B4513">Marrom</option>' +
-                '<option style="color: #1C1C1C;" value="#1C1C1C">Preto</option>' +
-                '<option style="color: #436EEE;" value="#436EEE">Royal Blue</option>' +
-                '<option style="color: #A020F0;" value="#A020F0">Roxo</option>' +
-                '<option style="color: #40E0D0;" value="#40E0D0">Turquesa</option>' +
-                '<option style="color: #228B22;" value="#228B22">Verde</option>' +
-                '<option style="color: #8B0000;" value="#8B0000">Vermelho</option>' +
-                '</select>' +
-                '<input id="swal-input1" class="swal2-input" value="'+info.start.toLocaleString()+'">' +
-                '<input id="swal-input2" class="swal2-input" value="'+info.end.toLocaleString()+'">',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'OK'
-            
-            }).then((result) => {
-                if (result.isConfirmed) {
-                } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'error',
-                        title: 'Cadastro não realizado!',
-                        showConfirmButton: false,
-                        timer: 1500
-                        });
-                }
-            })*/
       },
       eventResize: function(info, delta, revertFunc) {
         Swal.fire({
@@ -333,14 +297,14 @@ $login = $_SESSION['login'];
                             </a>
                             <div class="sb-sidenav-menu-heading">Consultório</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
+                                <div class="sb-nav-link-icon"><i class="far fa-address-card"></i></div>
+                                Pacientes
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                    <a class="nav-link" href="layout-static.html">Cadastrar</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Listar</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
