@@ -339,7 +339,7 @@ $login = $_SESSION['login'];
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Sistema</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -411,12 +411,13 @@ $login = $_SESSION['login'];
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
-                            <div>
+                            <div class="text-muted">Copyright &copy; Odontovida <?php echo date("Y"); ?>
+</div>
+                            <!--<div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </footer>
