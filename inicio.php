@@ -402,17 +402,20 @@ $login = $_SESSION['login'];
                                         $status = $_SESSION['agendastatus'];
                                         if($status == "sucesso"){
                                             echo '<script type="text/javascript">',
-                                                    'naocadastrou();',
+                                                    'cadastrou();',
                                                  '</script>';
                                             /*echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
                                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button></div>';*/
                                         } elseif ($status == "erro") {
-                                            echo '<div class="alert alert-danger" role="alert"> '. $_SESSION['agendamessage'] . 
+                                            echo '<script type="text/javascript">',
+                                                    'naocadastrou();',
+                                                 '</script>';
+                                            /*echo '<div class="alert alert-danger" role="alert"> '. $_SESSION['agendamessage'] . 
                                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
-                                            </button></div>';
+                                            </button></div>';*/
                                         }
                                         unset($_SESSION['agendamessage']);
                                         unset($_SESSION['agendastatus']);
@@ -455,9 +458,9 @@ $login = $_SESSION['login'];
                     <div class="modal-body">
                         <form method="POST" action="configs/managebd.php">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Título</label>
+                                <label class="col-sm-2 col-form-label">Nome do Paciente</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="title" class="form-control" id="title" placeholder="Título do evento">
+                                    <input type="text" name="title" class="form-control" id="title" placeholder="Nome do Paciente">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -479,14 +482,14 @@ $login = $_SESSION['login'];
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Início do evento</label>
+                                <label class="col-sm-2 col-form-label">Início da consulta</label>
                                 <div class="col-sm-10">
                                     <input type="text" name="start" class="form-control" id="start" onkeypress="DataHora(event, this)">
                                     <input type="hidden" name="cadastrarEvento" value="cadastrarEvento">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Final do evento</label>
+                                <label class="col-sm-2 col-form-label">Final da consulta</label>
                                 <div class="col-sm-10">
                                     <input type="text" name="end" class="form-control" id="end"  onkeypress="DataHora(event, this)">
                                 </div>
@@ -494,7 +497,7 @@ $login = $_SESSION['login'];
 
                             <div class="form-group row">
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                                 </div>
                             </div>
                         </form>
