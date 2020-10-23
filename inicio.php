@@ -340,9 +340,16 @@ $login = $_SESSION['login'];
                             </div>
                             <div class="sb-sidenav-menu-heading">Sistema</div>
                             <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Usuários
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Cadastrar</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Listar</a>
+                                </nav>
+                            </div>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
