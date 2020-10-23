@@ -205,7 +205,19 @@ $login = $_SESSION['login'];
     Swal.fire({
             title: 'Cadastro realizado com sucesso!', 
             position: 'top-end',
-            icon: 'info'
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500
+        });
+  }
+
+  function naocadastrou() {
+    Swal.fire({
+            title: 'Erro ao realizar o cadastro', 
+            position: 'top-end',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 1500
         });
   }
 
@@ -390,7 +402,7 @@ $login = $_SESSION['login'];
                                         $status = $_SESSION['agendastatus'];
                                         if($status == "sucesso"){
                                             echo '<script type="text/javascript">',
-                                                    'cadastrou();',
+                                                    'naocadastrou();',
                                                  '</script>';
                                             /*echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
                                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
