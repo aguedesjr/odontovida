@@ -53,7 +53,7 @@ $login = $_SESSION['login'];
                   title: info.event.title, 
                   html: 
                     'Inicio: '+info.event.start.toLocaleString()+
-                    '<br>'+
+                    '<br><br>'+
                     'Fim: '+info.event.end.toLocaleString(), 
                    icon: 'info'
               });
