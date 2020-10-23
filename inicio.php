@@ -92,15 +92,29 @@ $login = $_SESSION['login'];
                 '</select>' +
                 '<input id="swal-input1" class="swal2-input" value="'+info.start.toLocaleString()+'">' +
                 '<input id="swal-input2" class="swal2-input" value="'+info.end.toLocaleString()+'">',
-            focusConfirm: false,
-            preConfirm: () => {
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'OK'
+            /*preConfirm: () => {
                 return [
                 document.getElementById('swal-input1').value,
                 document.getElementById('swal-input2').value
                 ]
-            }
+            }*/
+            }).then((result) => {
+                if (result.isConfirmed) {
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: 'Cadastro não realizado!',
+                        showConfirmButton: false,
+                        timer: 1500
+                        });
+                    info.revert();
+                }
             })
-
       },
       eventResize: function(info, delta, revertFunc) {
         Swal.fire({
