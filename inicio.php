@@ -53,8 +53,9 @@ $login = $_SESSION['login'];
                   title: info.event.title, 
                   html: 
                     'Inicio: '+info.event.start.toLocaleString()+
+                    '<br>'+
                     'Fim: '+info.event.end.toLocaleString(), 
-                   icon: info
+                   icon: 'info'
               });
           }
       },
