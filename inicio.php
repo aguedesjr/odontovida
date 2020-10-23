@@ -49,7 +49,13 @@ $login = $_SESSION['login'];
           if (info.event.url) {
               window.open(info.event.url);
           } else {
-              Swal.fire(info.event.title, 'Inicio: '+info.event.start.toLocaleString()+' Fim: '+info.event.end.toLocaleString(), 'info');
+              Swal.fire({
+                  title: info.event.title, 
+                  html: 
+                    'Inicio: '+info.event.start.toLocaleString()+
+                    'Fim: '+info.event.end.toLocaleString(), 
+                   icon: info
+              });
           }
       },
       //initialDate: dataatual,
