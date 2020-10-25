@@ -35,6 +35,10 @@
          ?>
             <form name="form1" action="configs/managebd.php" method="POST">
                 <div class="form-row">
+                    <div class="form-group col-md-3">
+                    <label for="codigo">Nº Paciente</label>
+                    <input type="text" class="form-control" id="codigo" name="codigo" readonly>
+                    </div>
                     <div class="form-group col-md-6">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nome" name="nome" style="text-transform: uppercase;" required>
@@ -61,17 +65,21 @@
                     <label for="uf">Estado</label>
                     <input type="text" class="form-control" id="uf" name="uf" style="text-transform: uppercase;">
                     </div>
+                    <div class="form-group col-md-3">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="form-control" id="email" name="email" style="text-transform: uppercase;">
+                    </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-6">
                     <label for="logradouro">Endereço</label>
                     <input type="text" class="form-control" id="logradouro" name="logradouro" style="text-transform: uppercase;">
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-md-1">
                     <label for="numero">Número</label>
                     <input type="text" class="form-control" id="numero" name="numero">
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                     <label for="complemento">Complemento</label>
                     <input type="text" class="form-control" id="complemento" name="complemento" style="text-transform: uppercase;">
                     </div>
