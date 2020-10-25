@@ -1,14 +1,85 @@
-<div class="row border-bottom bd-lightGray m-3">
-    <div class="cell-md-4 d-flex flex-align-center">
-        <!--<h3 class="dashboard-section-title text-center text-left-md w-100"><small></small></h3>-->
-    </div>
-
-    <div class="cell-md-8 d-flex flex-justify-center flex-justify-end-md flex-align-center">
-        <ul class="breadcrumbs bg-transparent">
-            <li class="page-item"><a href="inicio.php" class="page-link"><span class="mif-meter"></span></a></li>
-            <li class="page-item"><a href="" class="page-link">Pacientes</a></li>
-            <li class="page-item"><a href="" class="page-link">Cadastrar</a></li>
-        </ul>
+<div class="container-fluid">
+    <h1 class="mt-4">Pacientes</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active"></li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-user-plus mr-1"></i>
+            Cadastrar
+        </div>
+        <div class="card-body">
+        <?
+            if(isset($_SESSION['agendamessage'])){
+                    $status = $_SESSION['agendastatus'];
+                    if($status == "sucesso"){
+                        echo '<script type="text/javascript">',
+                                'cadastrou();',
+                             '</script>';
+                        /*echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button></div>';*/
+                    } elseif ($status == "erro") {
+                        echo '<script type="text/javascript">',
+                                'naocadastrou();',
+                             '</script>';
+                        /*echo '<div class="alert alert-danger" role="alert"> '. $_SESSION['agendamessage'] . 
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button></div>';*/
+                    }
+                    unset($_SESSION['agendamessage']);
+                    unset($_SESSION['agendastatus']);
+            }
+         ?>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome">
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -205,51 +276,3 @@
             </div>
      </div>
 </div>
-
-
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
