@@ -90,7 +90,7 @@
                     <input type="text" class="form-control" id="cel">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
 
                 <!-- SCRIPTS DE MASCARA -->
                 <script>
@@ -155,7 +155,13 @@
 
                             var digitoGerado=(soma1*10)+soma2;
                             if(digitoGerado!=digitoDigitado) 
-                                alert('CPF Invalido!');
+                            Swal.fire({
+                                title: 'CPF inválido', 
+                                position: 'top-end',
+                                icon: 'error',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
                         }
                         function MascaraCep(cep){
                             if(mascaraInteiro(cep)==false){
@@ -177,7 +183,13 @@
                                         $("#numero").focus();
                                     }
                                     else {
-                                        alert("CEP não encontrado!!");
+                                        Swal.fire({
+                                            title: 'CEP não encontrado!', 
+                                            position: 'top-end',
+                                            icon: 'error',
+                                            showConfirmButton: false,
+                                            timer: 1500
+                                        });
                                         $("#logradouro").val();
 				                        $("#complemento").val();
 				                        $("#bairro").val();
