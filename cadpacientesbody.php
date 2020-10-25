@@ -57,14 +57,24 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" class="form-control" id="cidade" name="cidade" style="text-transform: uppercase;">
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-1">
                     <label for="uf">Estado</label>
                     <input type="text" class="form-control" id="uf" name="uf" style="text-transform: uppercase;">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                    <label for="logradouro">Endereço</label>
+                    <input type="text" class="form-control" id="logradouro" name="logradouro" style="text-transform: uppercase;">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label for="numero">Número</label>
+                    <input type="text" class="form-control" id="numero" name="numero">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control" id="complemento" name="complemento" style="text-transform: uppercase;">
+                    </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
