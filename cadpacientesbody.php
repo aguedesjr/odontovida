@@ -39,11 +39,11 @@
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nome">
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                     <label for="cpf">CPF</label>
                     <input type="text" class="form-control" id="cpf">
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                     <label for="data">Data de Nascimento</label>
                     <input type="text" class="form-control" id="data">
                     </div>
