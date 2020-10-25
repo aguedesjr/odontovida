@@ -47,7 +47,7 @@
                     <label for="cpf">CPF</label>
                     <input type="text" class="form-control" id="cpf" name="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" required>
                     </div>
-                    <div class="form-group col-md-1">
+                    <div class="form-group col-md-2">
                     <label for="data">Data de Nascimento</label>
                     <input type="text" class="form-control" id="data" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10" required>
                     </div>
