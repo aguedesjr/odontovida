@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group col-md-2">
                     <label for="data">Data de Nascimento</label>
-                    <input type="text" class="form-control" id="data" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10" required>
+                    <input type="text" class="form-control" id="data" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10">
                     </div>
                     <div class="form-group col-md-2">
                     <label for="email">E-Mail</label>
@@ -57,23 +57,17 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-1">
                     <label for="cep">CEP</label>
                     <input type="text" class="form-control" id="cep" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="8">
                     </div>
-                    <div class="form-group col-md-3">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" style="text-transform: uppercase;">
-                    </div>
-                    <div class="form-group col-md-1">
-                    <label for="uf">Estado</label>
-                    <input type="text" class="form-control" id="uf" name="uf" style="text-transform: uppercase;">
-                    </div>
-                </div>
-                <div class="form-row">
                     <div class="form-group col-md-6">
                     <label for="logradouro">Endereço</label>
                     <input type="text" class="form-control" id="logradouro" name="logradouro" style="text-transform: uppercase;">
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" style="text-transform: uppercase;">
                     </div>
                     <div class="form-group col-md-1">
                     <label for="numero">Número</label>
@@ -85,18 +79,26 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" style="text-transform: uppercase;">
+                    <div class="form-group col-md-3">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" name="cidade" style="text-transform: uppercase;">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-1">
+                    <label for="uf">Estado</label>
+                    <input type="text" class="form-control" id="uf" name="uf" style="text-transform: uppercase;">
+                    </div>
+                    <div class="form-group col-md-1">
                     <label for="tel">Telefone</label>
                     <input type="text" class="form-control" id="tel">
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-md-1">
                     <label for="cel">Celular</label>
                     <input type="text" class="form-control" id="cel">
                     </div>
+                </div>
+                <div class="form-row">
+                    
+                    
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
 
@@ -226,6 +228,25 @@
                                         event.returnValue = false;
                                 }
                                 return formataCampo(cel, '(00) 00000-0000', event);
+                        }
+                        function cadastrou() {
+                            Swal.fire({
+                                    title: 'Cadastro realizado com sucesso!', 
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                        }
+
+                        function naocadastrou() {
+                            Swal.fire({
+                                    title: 'Erro ao realizar o cadastro', 
+                                    position: 'top-end',
+                                    icon: 'error',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
                         }
                     </script>
                 <!-- SCRIPTS DE MASCARA -->
