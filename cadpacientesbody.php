@@ -40,8 +40,12 @@
                     <input type="text" class="form-control" id="nome">
                     </div>
                     <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf">
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="data">Data de Nascimento</label>
+                    <input type="text" class="form-control" id="data">
                     </div>
                 </div>
                 <div class="form-group">
