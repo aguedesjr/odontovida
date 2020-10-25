@@ -87,11 +87,11 @@
                     <label for="uf">Estado</label>
                     <input type="text" class="form-control" id="uf" name="uf" style="text-transform: uppercase;">
                     </div>
-                    <div class="form-group col-md-1">
+                    <div class="form-group col-md-2">
                     <label for="tel">Telefone</label>
                     <input type="text" class="form-control" id="tel">
                     </div>
-                    <div class="form-group col-md-1">
+                    <div class="form-group col-md-2">
                     <label for="cel">Celular</label>
                     <input type="text" class="form-control" id="cel">
                     </div>
