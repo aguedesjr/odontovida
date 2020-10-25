@@ -33,19 +33,19 @@
                     unset($_SESSION['agendastatus']);
             }
          ?>
-            <form>
+            <form name="form1" action="configs/managebd.php" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome">
+                    <input type="text" class="form-control" id="nome" style="text-transform: uppercase;" required>
                     </div>
                     <div class="form-group col-md-3">
                     <label for="cpf">CPF</label>
-                    <input type="text" class="form-control" id="cpf">
+                    <input type="text" class="form-control" id="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" required>
                     </div>
                     <div class="form-group col-md-3">
                     <label for="data">Data de Nascimento</label>
-                    <input type="text" class="form-control" id="data">
+                    <input type="text" class="form-control" id="data" nKeyPress="MascaraData(form1.data);" maxlength="10" required>
                     </div>
                 </div>
                 <div class="form-group">
