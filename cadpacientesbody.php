@@ -61,11 +61,11 @@
                     <label for="cep">CEP</label>
                     <input type="text" class="form-control" id="cep" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="8">
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-5">
                     <label for="logradouro">Endereço</label>
                     <input type="text" class="form-control" id="logradouro" name="logradouro" style="text-transform: uppercase;">
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                     <label for="bairro">Bairro</label>
                     <input type="text" class="form-control" id="bairro" style="text-transform: uppercase;">
                     </div>
