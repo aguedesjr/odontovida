@@ -39,7 +39,7 @@
                     <label for="codigo">Nº Paciente</label>
                     <input type="text" class="form-control" id="codigo" name="codigo" readonly>
                     </div>
-                    <div class="form-group col-md-5">
+                    <div class="form-group col-md-4">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nome" name="nome" style="text-transform: uppercase;" required>
                     </div>
@@ -47,9 +47,13 @@
                     <label for="cpf">CPF</label>
                     <input type="text" class="form-control" id="cpf" name="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" required>
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-md-1">
                     <label for="data">Data de Nascimento</label>
                     <input type="text" class="form-control" id="data" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="form-control" id="email" name="email" style="text-transform: uppercase;">
                     </div>
                 </div>
                 <div class="form-row">
@@ -64,10 +68,6 @@
                     <div class="form-group col-md-1">
                     <label for="uf">Estado</label>
                     <input type="text" class="form-control" id="uf" name="uf" style="text-transform: uppercase;">
-                    </div>
-                    <div class="form-group col-md-3">
-                    <label for="email">E-Mail</label>
-                    <input type="email" class="form-control" id="email" name="email" style="text-transform: uppercase;">
                     </div>
                 </div>
                 <div class="form-row">
