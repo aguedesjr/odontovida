@@ -41,7 +41,8 @@
                         $sql = "SELECT MAX(id) FROM pacientes;";
                         $result = $conn->query($sql);
                         $row = $result->fetch_array(MYSQLI_NUM);
-                        $cod = $aux1.$aux2.($row[0]+1).$aux2;
+                        $cod = $row[0];
+                        //$cod = $aux1.$aux2.($row[0]+1).$aux2;
                         /* free result set */
                         $result->close();
                         /* close connection */
