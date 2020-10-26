@@ -291,8 +291,8 @@ $login = $_SESSION['login'];
                             </div>
                             <div class="card-body">
                             <?
-                                if(isset($_SESSION['agendamessage'])){
-                                        $status = $_SESSION['agendastatus'];
+                                if(isset($_SESSION['messagestatus'])){
+                                        $status = $_SESSION['messagestatus'];
                                         if($status == "sucesso"){
                                             echo '<script type="text/javascript">',
                                                     'cadastrou();',
@@ -310,8 +310,8 @@ $login = $_SESSION['login'];
                                                 <span aria-hidden="true">&times;</span>
                                             </button></div>';*/
                                         }
-                                        unset($_SESSION['agendamessage']);
-                                        unset($_SESSION['agendastatus']);
+                                        unset($_SESSION['messagestatus']);
+                                        //unset($_SESSION['agendastatus']);
                                 }
                              ?>
                                 <div id='script-warning'>

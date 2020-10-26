@@ -26,14 +26,14 @@ if (isset($_POST['cadastrarEvento'])) {
     ('$title','$color','$data_start_conv','$data_end_conv');";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['agendastatus']="sucesso";
-        $_SESSION['agendamessage']="Cadastro realizado com sucesso!";
+        $_SESSION['messagestatus']="sucesso";
+        //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
         header("Location: ../inicio.php");
     } else {
         //echo "Erro no cadastro";
         //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
-        $_SESSION['agendastatus']="erro";
-        $_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        $_SESSION['messagestatus']="erro";
+        //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
         header("Location: ../inicio.php");
     }
 }
@@ -68,32 +68,34 @@ if ($comando == "alterarEvento") {
 //Cadastra o paciente
 if (isset($_POST ['cadastrarPaciente'])) {
 
-    $nome = utf8_decode($_POST["nome"]);
+    $codigo = ($_POST["codigo"]);
+    $nome = strtoupper(utf8_decode($_POST["nome"]));
     $cpf = ($_POST["cpf"]);
     $data = $_POST["data"];
     $data = implode("-", array_reverse(explode("/", $data)));
+    $email = strtoupper(utf8_decode($_POST["email"]));
     $cep = $_POST["cep"];
-    $cidade = utf8_decode($_POST["cidade"]);
-    $uf = utf8_decode($_POST["uf"]);
-    $endereco = utf8_decode($_POST["logradouro"]);
+    $cidade = strtoupper(utf8_decode($_POST["cidade"]));
+    $uf = strtoupper(utf8_decode($_POST["uf"]));
+    $endereco = strtoupper(utf8_decode($_POST["logradouro"]));
     $numero = $_POST['numero'];
-    $complemento = utf8_decode($_POST["complemento"]);
-    $bairro = utf8_decode($_POST["bairro"]);
+    $complemento = strtoupper(utf8_decode($_POST["complemento"]));
+    $bairro = strtoupper(utf8_decode($_POST["bairro"]));
     $tel = $_POST['tel'];
     $cel = $_POST['cel'];
 
 
     $sql = "INSERT INTO pacientes 
-    (nome,data,cpf,endereco,cep,bairro,telefone,celular,cidade,estado,numero,complemento) 
+    (codigo,nome,data,cpf,endereco,cep,bairro,telefone,celular,cidade,estado,numero,complemento,email) 
     VALUES 
-    ('$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento');";
+    ('$codigo,'$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento','$email');";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['message']="Cadastro realizado com sucesso!";
-        header("Location: ../inicio.php#cadastrarpaciente");
+        $_SESSION['messagestatus']="sucesso";
+        header("Location: ../cadpacientes.php");
     } else {
-        $_SESSION['message']="Falha ao realizar o cadastro!";
-        header("Location: ../inicio.php#cadastrarpaciente");
+        $_SESSION['messagestatus']="erro";
+        header("Location: ../cadpacientes.php");
     }
 }
 //Encerra a conexão

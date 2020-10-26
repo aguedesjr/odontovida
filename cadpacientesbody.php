@@ -10,8 +10,8 @@
         </div>
         <div class="card-body">
         <?
-            if(isset($_SESSION['agendamessage'])){
-                    $status = $_SESSION['agendastatus'];
+            if(isset($_SESSION['messagestatus'])){
+                    $status = $_SESSION['messagestatus'];
                     if($status == "sucesso"){
                         echo '<script type="text/javascript">',
                                 'cadastrou();',
@@ -29,8 +29,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button></div>';*/
                     }
-                    unset($_SESSION['agendamessage']);
-                    unset($_SESSION['agendastatus']);
+                    unset($_SESSION['messagestatus']);
             }
          ?>
             <form name="form1" action="configs/managebd.php" method="POST">
@@ -44,8 +43,11 @@
                         $cod = $aux1.$aux2.($row[0]+1).$aux2;
                         /* free result set */
                         $result->close();
+                        /* close connection */
+                        $conn->close();
                     ?>
                     <div class="form-group col-md-2">
+                    <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
                     <label for="codigo">Nº Paciente</label>
                     <input type="text" class="form-control" id="codigo" name="codigo" value="<?echo $cod;?>" readonly>
                     </div>
@@ -104,27 +106,6 @@
                     <div class="form-group col-md-2">
                     <label for="cel">Celular</label>
                     <input type="text" class="form-control" id="cel">
-                    </div>
-
-                    <?
-                        $sql = "SELECT id, nome FROM convenios;";
-                        $result = $conn->query($sql);
-                    ?>
-
-                    <div class="form-group col-md-2">
-                    <label for="convenio">Convênio</label>
-                    <select class="form-control" id="convenio">
-                    <option value="">------------------</option>
-                    <? while ($row = $result->fetch_array(MYSQLI_NUM)) { ?>
-                        <option value=<? echo $row[0];?>><? echo strtoupper(utf8_encode($row[1]));?></option>
-                    <?};?>
-                    </select>
-                    <?
-                        /* free result set */
-                        $result->close();
-                        /* close connection */
-                        $conn->close();
-                    ?>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
