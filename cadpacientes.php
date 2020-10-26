@@ -3,7 +3,7 @@
 require_once ("validalogin.php");
 $login = $_SESSION['login']; 
 //Requer conexao previa com o banco
-require_once ("conn.php");
+require_once ("configs/conn.php");
 
 //Retorna erro em caso de problema de conexão com o BD
 if ($conn->connect_error) {
