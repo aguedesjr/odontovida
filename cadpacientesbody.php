@@ -101,11 +101,11 @@
                     </div>
                     <div class="form-group col-md-2">
                     <label for="tel">Telefone</label>
-                    <input type="text" class="form-control" id="tel">
+                    <input type="text" class="form-control" id="tel" onKeyPress="MascaraCep(form1.tel);" maxlength="10">
                     </div>
                     <div class="form-group col-md-2">
                     <label for="cel">Celular</label>
-                    <input type="text" class="form-control" id="cel">
+                    <input type="text" class="form-control" id="cel" onKeyPress="MascaraCep(form1.cel);" maxlength="11">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
