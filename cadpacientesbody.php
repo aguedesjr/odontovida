@@ -36,13 +36,12 @@
             <form name="form1" action="configs/managebd.php" method="POST">
                 <div class="form-row">
                     <?
-                        $aux1 = date("Ymd");
+                        $aux1 = date("Y");
                         $aux2 = rand(10,99);
                         $sql = "SELECT MAX(id) FROM pacientes;";
                         $result = $conn->query($sql);
                         $row = $result->fetch_array(MYSQLI_NUM);
-                        $cod = $row[0];
-                        //$cod = $aux1.$aux2.($row[0]+1).$aux2;
+                        $cod = $aux1.$aux2.($row[0]+1).$aux2;
                         /* free result set */
                         $result->close();
                         /* close connection */
