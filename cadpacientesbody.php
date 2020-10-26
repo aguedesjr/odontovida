@@ -108,20 +108,26 @@
                     <input type="text" class="form-control" id="cel">
                     </div>
 
+                    <?
+                        $sql = "SELECT id, nome FROM convenios;";
+                        $result = $conn->query($sql);
+                    ?>
+
                     <div class="form-group col-md-2">
                     <label for="convenio">Convênio</label>
                     <select class="form-control" id="convenio">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option value="">------------------</option>
+                    <? while ($row = $result->fetch_array(MYSQLI_NUM)) { ?>
+                    <option value=<? echo $row[0];?>><? echo strtoupper(utf8_encode($row[1]));?></option>
                     </select>
+                    <?
+                        };
+                        /* free result set */
+                        $result->close();
+                        /* close connection */
+                        $conn->close();
+                    ?>
                     </div>
-                </div>
-                <div class="form-row">
-                    
-                    
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
 
