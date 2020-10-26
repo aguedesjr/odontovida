@@ -8,6 +8,27 @@
             <i class="fas fa-user-plus mr-1"></i>
             Cadastrar
         </div>
+        <script>
+            function cadastrou() {
+               Swal.fire({
+                       title: 'Cadastro realizado com sucesso!', 
+                       position: 'top-end',
+                       icon: 'success',
+                       showConfirmButton: false,
+                       timer: 1500
+                   });
+           }
+
+           function naocadastrou() {
+               Swal.fire({
+                       title: 'Erro ao realizar o cadastro', 
+                       position: 'top-end',
+                       icon: 'error',
+                       showConfirmButton: false,
+                       timer: 1500
+                   });
+           }
+        </script>
         <div class="card-body">
         <?
             if(isset($_SESSION['messagestatus'])){
@@ -236,25 +257,6 @@
                                         event.returnValue = false;
                                 }
                                 return formataCampo(cel, '(00) 00000-0000', event);
-                        }
-                        function cadastrou() {
-                            Swal.fire({
-                                    title: 'Cadastro realizado com sucesso!', 
-                                    position: 'top-end',
-                                    icon: 'success',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-                        }
-
-                        function naocadastrou() {
-                            Swal.fire({
-                                    title: 'Erro ao realizar o cadastro', 
-                                    position: 'top-end',
-                                    icon: 'error',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
                         }
                     </script>
                 <!-- SCRIPTS DE MASCARA -->
