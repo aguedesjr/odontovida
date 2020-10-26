@@ -116,10 +116,10 @@
                     <select class="form-control" id="convenio">
                     <option value="">------------------</option>
                     <? while ($row = $result->fetch_array(MYSQLI_NUM)) { ?>
-                    <option value=<? echo $row[0];?>><? echo strtoupper(utf8_encode($row[1]));?></option>
+                        <option value=<? echo $row[0];?>><? echo strtoupper(utf8_encode($row[1]));?></option>
+                    <?};?>
                     </select>
                     <?
-                        };
                         /* free result set */
                         $result->close();
                         /* close connection */
