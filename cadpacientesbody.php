@@ -44,8 +44,6 @@
                         $cod = $aux1.$aux2.($row[0]+1).$aux2;
                         /* free result set */
                         $result->close();
-                        /* close connection */
-                        $conn->close();
                     ?>
                     <div class="form-group col-md-2">
                     <label for="codigo">Nº Paciente</label>
