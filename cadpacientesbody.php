@@ -35,9 +35,21 @@
          ?>
             <form name="form1" action="configs/managebd.php" method="POST">
                 <div class="form-row">
+                    <?
+                        $aux1 = date("Ymd");
+                        $aux2 = rand(10,99);
+                        $sql = "SELECT MAX(id) FROM pacientes;";
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_array(MYSQLI_NUM);
+                        $cod = $aux1.$aux2.($row[0]+1).$aux2;
+                        /* free result set */
+                        $result->close();
+                        /* close connection */
+                        $conn->close();
+                    ?>
                     <div class="form-group col-md-2">
                     <label for="codigo">Nº Paciente</label>
-                    <input type="text" class="form-control" id="codigo" name="codigo" readonly>
+                    <input type="text" class="form-control" id="codigo" name="codigo" value="<?echo $cod;?>" readonly>
                     </div>
                     <div class="form-group col-md-4">
                     <label for="nome">Nome</label>
@@ -94,6 +106,17 @@
                     <div class="form-group col-md-2">
                     <label for="cel">Celular</label>
                     <input type="text" class="form-control" id="cel">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                    <label for="convenio">Convênio</label>
+                    <select class="form-control" id="convenio">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
                     </div>
                 </div>
                 <div class="form-row">

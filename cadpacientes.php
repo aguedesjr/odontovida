@@ -2,6 +2,13 @@
 //Requer estar autenticado no sistema
 require_once ("validalogin.php");
 $login = $_SESSION['login']; 
+//Requer conexao previa com o banco
+require_once ("conn.php");
+
+//Retorna erro em caso de problema de conexão com o BD
+if ($conn->connect_error) {
+    die("Connection failed:" . $conn->connect_error);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
