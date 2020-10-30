@@ -69,20 +69,20 @@
                     ?>
                     <div class="form-group col-md-2">
                     <input type="hidden" name="cadastrarPaciente" value="cadastrarPaciente">
-                    <label for="codigo">Nº Paciente</label>
+                    <label for="codigo">Nº Paciente *</label>
                     <input type="text" class="form-control" id="codigo" name="codigo" value="<?echo $cod;?>" readonly>
                     </div>
                     <div class="form-group col-md-4">
-                    <label for="nome">Nome</label>
+                    <label for="nome">Nome *</label>
                     <input type="text" class="form-control" id="nome" name="nome" style="text-transform: uppercase;" required>
                     </div>
                     <div class="form-group col-md-2">
-                    <label for="cpf">CPF</label>
+                    <label for="cpf">CPF *</label>
                     <input type="text" class="form-control" id="cpf" name="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" required>
                     </div>
                     <div class="form-group col-md-2">
-                    <label for="data">Data de Nascimento</label>
-                    <input type="text" class="form-control" id="data" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10">
+                    <label for="data">Data de Nascimento *</label>
+                    <input type="text" class="form-control" id="data" name="data" onKeyPress="MascaraData(form1.data);" maxlength="10" required>
                     </div>
                     <div class="form-group col-md-2">
                     <label for="email">E-Mail</label>
@@ -125,11 +125,12 @@
                     <input type="text" class="form-control" id="tel" onKeyPress="MascaraTelefone(form1.tel);" maxlength="14">
                     </div>
                     <div class="form-group col-md-2">
-                    <label for="cel">Celular</label>
-                    <input type="text" class="form-control" id="cel" onKeyPress="MascaraCelular(form1.cel);" maxlength="15">
+                    <label for="cel">Celular *</label>
+                    <input type="text" class="form-control" id="cel" onKeyPress="MascaraCelular(form1.cel);" maxlength="15" required>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <div class="text-muted">* Campos obrigatórios</div>
 
                 <!-- SCRIPTS DE MASCARA -->
                 <script>
