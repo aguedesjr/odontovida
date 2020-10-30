@@ -130,18 +130,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <div class="form-row">
-                <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">* Campos obrigatórios</div>
-                            <!--<div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>-->
-                        </div>
-                </div>
-                </div>
+
                 <!-- SCRIPTS DE MASCARA -->
                 <script>
                          function mascaraInteiro(){
@@ -273,5 +262,18 @@
                 <!-- SCRIPTS DE MASCARA -->
             </form>
         </div>
+
+        <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">* Campos obrigatórios</div>
+                            <!--<div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>-->
+                        </div>
+        </div>
+
+
     </div>
 </div>
