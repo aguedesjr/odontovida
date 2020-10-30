@@ -261,9 +261,8 @@
                     </script>
                 <!-- SCRIPTS DE MASCARA -->
             </form>
-        </div>
 
-        <div class="container-fluid">
+            <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">* Campos obrigatórios</div>
                             <!--<div>
@@ -274,6 +273,6 @@
                         </div>
         </div>
 
-
+        </div>
     </div>
 </div>
