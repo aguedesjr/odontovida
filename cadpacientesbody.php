@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <br>
+                <div class="form-row">
                 <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">* Campos obrigatórios</div>
@@ -140,6 +140,7 @@
                                 <a href="#">Terms &amp; Conditions</a>
                             </div>-->
                         </div>
+                </div>
                 </div>
                 <!-- SCRIPTS DE MASCARA -->
                 <script>
