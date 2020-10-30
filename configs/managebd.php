@@ -88,7 +88,7 @@ if (isset($_POST ['cadastrarPaciente'])) {
     $sql = "INSERT INTO pacientes 
     (codigo,nome,data,cpf,endereco,cep,bairro,telefone,celular,cidade,estado,numero,complemento,email) 
     VALUES 
-    ('$codigo,'$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento','$email');";
+    ('$codigo','$nome','$data','$cpf','$endereco','$cep','$bairro','$tel','$cel','$cidade','$uf','$numero','$complemento','$email');";
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['messagestatus']="sucesso";
