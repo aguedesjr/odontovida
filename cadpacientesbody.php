@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <br>
+                <br/>
                 <div class="text-muted">* Campos obrigatórios</div>
 
                 <!-- SCRIPTS DE MASCARA -->
