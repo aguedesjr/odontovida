@@ -84,7 +84,6 @@ if (isset($_POST ['cadastrarPaciente'])) {
     $tel = $_POST['tel'];
     $cel = $_POST['cel'];
 
-
     $sql = "INSERT INTO pacientes 
     (codigo,nome,data,cpf,endereco,cep,bairro,telefone,celular,cidade,estado,numero,complemento,email) 
     VALUES 
@@ -95,9 +94,8 @@ if (isset($_POST ['cadastrarPaciente'])) {
         header("Location: ../cadpacientes.php");
     } else {
         $_SESSION['messagestatus']="erro";
-        echo $codigo;
-        echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
-        //header("Location: ../cadpacientes.php");
+        header("Location: ../cadpacientes.php");
+        //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
     }
 }
 //Encerra a conexão
