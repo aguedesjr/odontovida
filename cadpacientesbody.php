@@ -130,10 +130,10 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-1">
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-1">
                         <div class="container-fluid">
                             <div class="d-flex align-items-center justify-content-between small">
                                 <div class="text-muted">* Campos obrigatórios</div>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- SCRIPTS DE MASCARA -->
                 <script>
                          function mascaraInteiro(){
