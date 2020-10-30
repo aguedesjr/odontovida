@@ -68,9 +68,9 @@ if ($comando == "alterarEvento") {
 //Cadastra o paciente
 if (isset($_POST ['cadastrarPaciente'])) {
 
-    $codigo = ($_POST["codigo"]);
+    $codigo = $_POST["codigo"];
     $nome = strtoupper(utf8_decode($_POST["nome"]));
-    $cpf = ($_POST["cpf"]);
+    $cpf = $_POST["cpf"];
     $data = $_POST["data"];
     $data = implode("-", array_reverse(explode("/", $data)));
     $email = strtoupper(utf8_decode($_POST["email"]));
