@@ -95,6 +95,7 @@ if (isset($_POST ['cadastrarPaciente'])) {
         header("Location: ../cadpacientes.php");
     } else {
         $_SESSION['messagestatus']="erro";
+        echo $codigo;
         echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
         //header("Location: ../cadpacientes.php");
     }
