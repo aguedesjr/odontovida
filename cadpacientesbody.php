@@ -129,8 +129,19 @@
                     <input type="text" class="form-control" id="cel" onKeyPress="MascaraCelular(form1.cel);" maxlength="15" required>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
-
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="container-fluid">
+                            <div class="d-flex align-items-center justify-content-between small">
+                                <div class="text-muted">* Campos obrigatórios</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- SCRIPTS DE MASCARA -->
                 <script>
                          function mascaraInteiro(){
@@ -261,16 +272,6 @@
                     </script>
                 <!-- SCRIPTS DE MASCARA -->
             </form>
-
-            <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">* Campos obrigatórios</div>
-                            <!--<div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>-->
-                        </div>
         </div>
 
         </div>
