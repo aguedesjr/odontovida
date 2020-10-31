@@ -29,15 +29,19 @@
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
                                                 <th>Editar</th>
-                                                <th>APagar</th>
+                                                <th>Apagar</th>
                                             </tr>
-                                            <?};?>
+                                            <?};
+                                             /* free result set */
+                                            $result->close();
+                                            /* close connection */
+                                            $conn->close();?>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <script src="js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-                    <script src="js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+                    <script src="js/jquery.dataTables.min.js"></script>
+                    <script src="js/dataTables.bootstrap4.min.js"></script>
                     <script src="js/datatables.js"></script>
