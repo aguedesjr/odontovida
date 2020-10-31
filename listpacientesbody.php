@@ -24,7 +24,7 @@
                                             $result = $conn->query($sql);
                                         ?>
                                         <tbody>
-                                            <? $row = $result->fetch_array(MYSQLI_NUM) { ?>
+                                            <? while($row = $result->fetch_array(MYSQLI_NUM)) { ?>
                                             <tr>
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
