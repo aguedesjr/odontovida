@@ -33,7 +33,7 @@ if ($conn->connect_error) {
             <? include ("menu_lateral.php"); ?>
             <div id="layoutSidenav_content">
                 <main>
-                    <? include ("cadpacientesbody.php"); ?>
+                    <? include ("listpacientesbody.php"); ?>
                 </main>
                     <? include ("footer.php"); ?>
             </div>
