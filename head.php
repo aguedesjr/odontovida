@@ -7,6 +7,7 @@
         <title>Odontovida</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
         <link href="Bootstrap/dist/css/styles.css" rel="stylesheet" />
+        <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet" />
         <script src="js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
