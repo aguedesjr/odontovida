@@ -1,7 +1,4 @@
 <?
-//Requer estar autenticado no sistema
-require_once ("validalogin.php");
-$login = $_SESSION['login']; 
 //Requer conexao previa com o banco
 require_once ("configs/conn.php");
 
@@ -9,6 +6,9 @@ require_once ("configs/conn.php");
 if ($conn->connect_error) {
     die("Connection failed:" . $conn->connect_error);
 }
+//Requer estar autenticado no sistema
+require_once ("validalogin.php");
+$login = $_SESSION['login']; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
