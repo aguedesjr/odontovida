@@ -28,8 +28,8 @@
                                             <tr>
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
-                                                <th>Editar</th>
-                                                <th>Apagar</th>
+                                                <th><i class="fas fa-user-edit"></i><</th>
+                                                <th><i class="fas fa-user-minus"></i></th>
                                             </tr>
                                             <?};
                                              /* free result set */
