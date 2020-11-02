@@ -20,7 +20,7 @@
                                             </tr>
                                         </thead>
                                         <?
-                                            $sql = "SELECT codigo, nome FROM pacientes;";
+                                            $sql = "SELECT codigo, nome FROM pacientes ORDER BY nome;";
                                             $result = $conn->query($sql);
                                         ?>
                                         <tbody>
