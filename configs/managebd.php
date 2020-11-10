@@ -101,20 +101,22 @@ if (isset($_POST ['cadastrarPaciente'])) {
 }
 
 //Apagar o paciente
-if (isset($_POST ['deletarPaciente'])) {
+if (isset($_POST ['comando'])) {
+    $comando = utf8_decode($_POST["comando"]);
+    if ($comando == "deletarPaciente") {
+        $id = $_POST["id"];
 
-    $id = $_POST["id"];
+        $sql = "DELETE FROM pacientes 
+        WHERE id = '$id';";
 
-    $sql = "DELETE FROM pacientes 
-    WHERE id = '$id';";
-
-    if ($conn->query($sql) === TRUE) {
-        $_SESSION['messagestatus']="sucesso";
-        header("Location: ../listpacientes.php");
-    } else {
-        $_SESSION['messagestatus']="erro";
-        header("Location: ../listpacientes.php");
-        //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        if ($conn->query($sql) === TRUE) {
+            $_SESSION['messagestatus']="sucesso";
+            header("Location: ../listpacientes.php");
+        } else {
+            $_SESSION['messagestatus']="erro";
+            header("Location: ../listpacientes.php");
+            //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        }
     }
 }
 
