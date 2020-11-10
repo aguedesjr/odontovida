@@ -98,6 +98,25 @@ if (isset($_POST ['cadastrarPaciente'])) {
         //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
     }
 }
+
+//Apagar o paciente
+if (isset($_POST ['deletarPaciente'])) {
+
+    $id = $_POST["id"];
+
+    $sql = "DELETE FROM pacientes 
+    WHERE id = '$id';";
+
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['messagestatus']="sucesso";
+        header("Location: ../cadpacientes.php");
+    } else {
+        $_SESSION['messagestatus']="erro";
+        header("Location: ../cadpacientes.php");
+        //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+    }
+}
+
 //Encerra a conexão
 $conn->close();
 

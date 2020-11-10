@@ -20,7 +20,7 @@
                                             </tr>
                                         </thead>
                                         <?
-                                            $sql = "SELECT codigo, nome FROM pacientes ORDER BY nome;";
+                                            $sql = "SELECT codigo, nome, id FROM pacientes ORDER BY nome;";
                                             $result = $conn->query($sql);
                                         ?>
                                         <tbody>
@@ -28,8 +28,8 @@
                                             <tr>
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
-                                                <th style="align: center;"><button type="submit" class="btn btn-warning"><i class="fas fa-user-edit"></i> Editar</button></th>
-                                                <th style="align: center;"><button type="submit" class="btn btn-danger"><i class="fas fa-user-minus"></i> Apagar</button></th>
+                                                <th><button type="submit" class="btn btn-warning"><i class="fas fa-user-edit"></i> Editar</button></th>
+                                                <th><?echo '<a class="btn btn-danger" href="configs/managebd.php?deletarPaciente&id="'.$row[2].'"><i class="fas fa-user-minus"></i> Apagar</a>';?></th>
                                             </tr>
                                             <?};
                                              /* free result set */
