@@ -28,8 +28,8 @@
                                             <tr>
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
-                                                <th style="align: center;"><button type="submit" class="btn btn-primary"><i class="fas fa-user-edit"></i> Editar</button></th>
-                                                <th style="align: center;"><button type="submit" class="btn btn-primary"><i class="fas fa-user-minus"></i> Apagar</button></th>
+                                                <th style="align: center;"><button type="submit" class="btn btn-warning"><i class="fas fa-user-edit"></i> Editar</button></th>
+                                                <th style="align: center;"><button type="submit" class="btn btn-danger"><i class="fas fa-user-minus"></i> Apagar</button></th>
                                             </tr>
                                             <?};
                                              /* free result set */
