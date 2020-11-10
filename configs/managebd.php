@@ -110,10 +110,10 @@ if (isset($_POST ['deletarPaciente'])) {
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['messagestatus']="sucesso";
-        header("Location: ../cadpacientes.php");
+        header("Location: ../listpacientes.php");
     } else {
         $_SESSION['messagestatus']="erro";
-        header("Location: ../cadpacientes.php");
+        header("Location: ../listpacientes.php");
         //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
     }
 }

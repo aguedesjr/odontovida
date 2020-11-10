@@ -8,7 +8,51 @@
                                 <i class="fas fa-table mr-1"></i>
                                 Listar
                             </div>
+                            <script>
+                                function realizou() {
+                                Swal.fire({
+                                        title: 'Paciente apagado com sucesso!', 
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                            }
+
+                            function naorealizou() {
+                                Swal.fire({
+                                        title: 'Erro ao apagar paciente', 
+                                        position: 'top-end',
+                                        icon: 'error',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                            }
+                            </script>
                             <div class="card-body">
+                            <?
+                                if(isset($_SESSION['messagestatus'])){
+                                        $status = $_SESSION['messagestatus'];
+                                        if($status == "sucesso"){
+                                            echo '<script type="text/javascript">',
+                                                    'realizou();',
+                                                '</script>';
+                                            /*echo '<div class="alert alert-success" role="alert"> '. $_SESSION['agendamessage'] . 
+                                            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></div>';*/
+                                        } elseif ($status == "erro") {
+                                            echo '<script type="text/javascript">',
+                                                    'naorealizou();',
+                                                '</script>';
+                                            /*echo '<div class="alert alert-danger" role="alert"> '. $_SESSION['agendamessage'] . 
+                                            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></div>';*/
+                                        }
+                                        unset($_SESSION['messagestatus']);
+                                }
+                            ?>
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
