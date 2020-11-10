@@ -28,8 +28,8 @@
                                             <tr>
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
-                                                <th><?echo '<a class="btn btn-warning" href="editpacientes.php?id='.$row[2].'><i class="fas fa-user-edit"></i> Editar</a>';?></th>
-                                                <th><?echo '<a class="btn btn-danger" href="configs/managebd.php?deletarPaciente&id='.$row[2].'><i class="fas fa-user-minus"></i> Apagar</a>';?></th>
+                                                <th><?echo '<a class="btn btn-warning" href="editpacientes.php?id='.$row[2].'"><i class="fas fa-user-edit"></i> Editar</a>';?></th>
+                                                <th><?echo '<a class="btn btn-danger" href="configs/managebd.php?deletarPaciente&id='.$row[2].'"><i class="fas fa-user-minus"></i> Apagar</a>';?></th>
                                             </tr>
                                             <?};
                                              /* free result set */
