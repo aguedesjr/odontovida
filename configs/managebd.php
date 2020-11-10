@@ -39,31 +39,32 @@ if (isset($_POST['cadastrarEvento'])) {
 }
 
 //Altera o evento na agenda
-$comando = utf8_decode($_POST["comando"]);
-if ($comando == "alterarEvento") {
-    $id = $_POST["id"];
-    //$color = ($_POST["color"]);
-    $data_start = str_replace('/', '-', $_POST['newStart']);
-    $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
-    $data_end = str_replace('/', '-', $_POST['newEnd']);
-    $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
-    $sql = "UPDATE events SET start='$data_start_conv', end='$data_end_conv' WHERE id = '$id';";
-    //$conn->query($sql);
-    if ($conn->query($sql) === TRUE) {
-        echo "Alteração realizada!";
-        //$_SESSION['agendastatus']="sucesso";
-        //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
-        //header("Location: ../inicio.php");
-    } else {
-        echo "Alteração com erro!";
-        //echo "Erro no cadastro";
-        //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
-        //$_SESSION['agendastatus']="erro";
-        //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
-        //header("Location: ../inicio.php");
+if (isset($_POST ['comando'])) {
+    $comando = utf8_decode($_POST["comando"]);
+    if ($comando == "alterarEvento") {
+        $id = $_POST["id"];
+        //$color = ($_POST["color"]);
+        $data_start = str_replace('/', '-', $_POST['newStart']);
+        $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
+        $data_end = str_replace('/', '-', $_POST['newEnd']);
+        $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
+        $sql = "UPDATE events SET start='$data_start_conv', end='$data_end_conv' WHERE id = '$id';";
+        //$conn->query($sql);
+        if ($conn->query($sql) === TRUE) {
+            echo "Alteração realizada!";
+            //$_SESSION['agendastatus']="sucesso";
+            //$_SESSION['agendamessage']="Cadastro realizado com sucesso!";
+            //header("Location: ../inicio.php");
+        } else {
+            echo "Alteração com erro!";
+            //echo "Erro no cadastro";
+            //echo mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
+            //$_SESSION['agendastatus']="erro";
+            //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+            //header("Location: ../inicio.php");
+        }
     }
 }
-
 
 //Cadastra o paciente
 if (isset($_POST ['cadastrarPaciente'])) {
