@@ -1,4 +1,3 @@
-<!-- Recupero o nome dos pacientes para o modal abaixo -->
 <?
 include_once ("../configs/conn.php");
 
@@ -10,8 +9,8 @@ $valor = $_GET['valor'];
         if (mysqli_num_rows($resultset) > 0) {
             while( $rows = mysqli_fetch_assoc($resultset) ) {	
                 // recupera os nomes
-                //echo $row["nome"];
-                echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$rows["nome"]."')\">" . $rows["nome"]. "</a><br />";
+                echo $rows["nome"];
+                //echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$rows["nome"]."')\">" . $rows["nome"]. "</a><br />";
             }
         }
     //$dados = substr($dados,0,-1); //retira a ultima virgula
