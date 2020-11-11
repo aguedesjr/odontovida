@@ -32,7 +32,7 @@ req.onreadystatechange = function() {
     var resposta = req.responseText;
 
     // Abaixo colocamos a(s) resposta(s) na div resultado
-    document.getElementById('title').innerHTML = resposta;
+    document.getElementById('title').value = resposta;
     }
 }
 req.send(null);
