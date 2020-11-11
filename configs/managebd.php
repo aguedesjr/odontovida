@@ -100,6 +100,7 @@ if (isset($_POST ['cadastrarPaciente'])) {
     }
 }
 
+if (isset($_REQUEST['paciente'])) {
 $paciente=$_REQUEST['paciente'];
     //Apagar o paciente
     if ($paciente == "deletarPaciente") {
@@ -117,8 +118,7 @@ $paciente=$_REQUEST['paciente'];
             //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
         }
     }
-
-echo $comando1;
+}
 
 //Encerra a conexão
 $conn->close();

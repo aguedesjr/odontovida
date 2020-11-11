@@ -337,19 +337,19 @@ $login = $_SESSION['login'];
         </div>
         <!-- Recupero o nome dos pacientes para o modal abaixo -->
         <?
-        $sqlPacientes = "SELECT nome FROM pacientes;";
+        $sqlPacientes = "SELECT nome FROM pacientes WHERE nome LIKE '%".$valor."%';";
         $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
         if (mysqli_num_rows($result) > 0) {
             while( $rows = mysqli_fetch_assoc($resultset) ) {	
                 // recupera os nomes
-                $dados = $dados."\"".$row["nome"]."\",";
+                echo $row["nome"];
             }
         }
         $dados = substr($dados,0,-1); //retira a ultima virgula
         ?>
         <script>
             $( function() {
-                var availableTags = [<?php echo $dados?>];
+                var availableTags = [<? echo $dados;?>];
                 $("#title").autocomplete({
                     source: availableTags
                 });
@@ -371,7 +371,7 @@ $login = $_SESSION['login'];
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome do Paciente</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="title" class="form-control" id="title" placeholder="Nome do Paciente">
+                                    <input type="text" name="title" class="form-control" id="title" placeholder="Nome do Paciente" onkeyup="buscarFornec(this.value)" style="text-transform:uppercase">
                                 </div>
                             </div>
                             <div class="form-group row">
