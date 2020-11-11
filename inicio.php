@@ -21,11 +21,12 @@ $login = $_SESSION['login'];
         <title>Odontovida</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
         <link href="Bootstrap/dist/css/styles.css" rel="stylesheet" />
-        <link href="css/jquery-ui.css" rel="stylesheet" />
+        <!--<link href="css/jquery-ui.css" rel="stylesheet" />-->
         <script src="js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-        <script src="js/jquery-ui.js" crossorigin="anonymous"></script>
+        <script src="js/funcnome.js" crossorigin="anonymous"></script>
+        <!--<script src="js/jquery-ui.js" crossorigin="anonymous"></script>-->
         <script src="js/popper.min.js"></script>
         <script src="js/sweetalert2@10.js"></script>
         <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -335,25 +336,14 @@ $login = $_SESSION['login'];
                 <? include ("footer.php"); ?>
             </div>
         </div>
-        <!-- Recupero o nome dos pacientes para o modal abaixo -->
-        <?
-        $sqlPacientes = "SELECT nome FROM pacientes WHERE nome LIKE '%".$valor."%';";
-        $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
-        if (mysqli_num_rows($result) > 0) {
-            while( $rows = mysqli_fetch_assoc($resultset) ) {	
-                // recupera os nomes
-                echo $row["nome"];
-            }
-        }
-        $dados = substr($dados,0,-1); //retira a ultima virgula
-        ?>
+        
         <script>
-            $( function() {
+            /*$( function() {
                 var availableTags = [<? echo $dados;?>];
                 $("#title").autocomplete({
                     source: availableTags
                 });
-            } );
+            } );*/
         </script>
         <!-- Recupero o nome dos pacientes para o modal abaixo -->
         <!-- Modal de Cadastro de Usuários -->
