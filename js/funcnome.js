@@ -22,7 +22,7 @@ req.onreadystatechange = function() {
 
     // Exibe a mensagem "Buscando Noticias..." enquanto carrega
     if(req.readyState == 1) {
-        document.getElementById('resultado').innerHTML = 'Buscando Fornecedor ...';
+        document.getElementById('title').innerHTML = 'Buscando Fornecedor ...';
     }
 
     // Verifica se o Ajax realizou todas as operações corretamente
@@ -32,7 +32,7 @@ req.onreadystatechange = function() {
     var resposta = req.responseText;
 
     // Abaixo colocamos a(s) resposta(s) na div resultado
-    document.getElementById('resultado').innerHTML = resposta;
+    document.getElementById('title').innerHTML = resposta;
     }
 }
 req.send(null);
@@ -61,7 +61,7 @@ req.onreadystatechange = function() {
 
     // Exibe a mensagem "Aguarde..." enquanto carrega
     if(req.readyState == 1) {
-        document.getElementById('conteudo').innerHTML = 'Aguarde...';
+        document.getElementById('title').innerHTML = 'Aguarde...';
     }
 
     // Verifica se o Ajax realizou todas as operações corretamente
