@@ -38,9 +38,9 @@ if (isset($_POST['cadastrarEvento'])) {
     }
 }
 
-//Altera o evento na agenda
 if (isset($_POST ['comando'])) {
     $comando = utf8_decode($_POST["comando"]);
+    //Altera o evento na agenda
     if ($comando == "alterarEvento") {
         $id = $_POST["id"];
         //$color = ($_POST["color"]);
@@ -62,6 +62,22 @@ if (isset($_POST ['comando'])) {
             //$_SESSION['agendastatus']="erro";
             //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
             //header("Location: ../inicio.php");
+        }
+    }
+    //Apagar o paciente
+    if ($comando == "deletarPaciente") {
+        $id = $_POST["id"];
+
+        $sql = "DELETE FROM pacientes 
+        WHERE id = '$id';";
+
+        if ($conn->query($sql) === TRUE) {
+            $_SESSION['messagestatus']="sucesso";
+            header("Location: ../listpacientes.php");
+        } else {
+            $_SESSION['messagestatus']="erro";
+            header("Location: ../listpacientes.php");
+            //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
         }
     }
 }
@@ -97,26 +113,6 @@ if (isset($_POST ['cadastrarPaciente'])) {
         $_SESSION['messagestatus']="erro";
         header("Location: ../cadpacientes.php");
         //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
-    }
-}
-
-//Apagar o paciente
-if (isset($_POST ['comando'])) {
-    $comando = utf8_decode($_POST["comando"]);
-    if ($comando == "deletarPaciente") {
-        $id = $_POST["id"];
-
-        $sql = "DELETE FROM pacientes 
-        WHERE id = '$id';";
-
-        if ($conn->query($sql) === TRUE) {
-            $_SESSION['messagestatus']="sucesso";
-            header("Location: ../listpacientes.php");
-        } else {
-            $_SESSION['messagestatus']="erro";
-            header("Location: ../listpacientes.php");
-            //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
-        }
     }
 }
 
