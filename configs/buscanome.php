@@ -11,7 +11,7 @@ $valor = $_GET['valor'];
             while( $rows = mysqli_fetch_assoc($resultset) ) {	
                 // recupera os nomes
                 //echo $row["nome"];
-                echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$row["nome"]."')\">" . $row["nome"]. "</a><br />";
+                echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$rows["nome"]."')\">" . $row["nome"]. "</a><br />";
             }
         }
     //$dados = substr($dados,0,-1); //retira a ultima virgula
