@@ -1,4 +1,11 @@
 <?
+//Requer conexao previa com o banco
+require_once ("configs/conn.php");
+
+//Retorna erro em caso de problema de conexão com o BD
+if ($conn->connect_error) {
+    die("Connection failed:" . $conn->connect_error);
+}
 //Requer estar autenticado no sistema
 require_once ("validalogin.php");
 $login = $_SESSION['login']; 
@@ -326,7 +333,25 @@ $login = $_SESSION['login'];
                 <? include ("footer.php"); ?>
             </div>
         </div>
-
+        <!-- Recupero o nome dos pacientes para o modal abaixo -->
+        <?
+        $sqlPacientes = "SELECT nome FROM pacientes;";
+        $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
+        while( $rows = mysqli_fetch_assoc($resultset) ) {	
+            // recupera os nomes
+            $dados = $dados."\"".$row["nome"]."\",";
+        }
+        $dados = substr($dados,0,-1); //retira a ultima virgula
+        ?>
+        <script>
+            $( function() {
+                var availableTags = [<?php echo $dados?>];
+                $( "#title" ).autocomplete({
+                    source: availableTags
+                });
+            } );
+        </script>
+        <!-- Recupero o nome dos pacientes para o modal abaixo -->
         <!-- Modal de Cadastro de Usuários -->
         <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
