@@ -65,8 +65,10 @@ if (isset($_POST ['comando'])) {
         }
     }
     //Apagar o paciente
+    echo $comando;
     if ($comando == "deletarPaciente") {
         $id = $_POST["id"];
+        echo $id;
 
         $sql = "DELETE FROM pacientes 
         WHERE id = '$id';";
