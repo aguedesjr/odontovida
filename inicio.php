@@ -21,6 +21,7 @@ $login = $_SESSION['login'];
         <title>Odontovida</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
         <link href="Bootstrap/dist/css/styles.css" rel="stylesheet" />
+        <link href="css/jquery-ui.css" rel="stylesheet" />
         <script src="js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
@@ -338,16 +339,18 @@ $login = $_SESSION['login'];
         <?
         $sqlPacientes = "SELECT nome FROM pacientes;";
         $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
-        while( $rows = mysqli_fetch_assoc($resultset) ) {	
-            // recupera os nomes
-            $dados = $dados."\"".$row["nome"]."\",";
+        if (mysqli_num_rows($result) > 0) {
+            while( $rows = mysqli_fetch_assoc($resultset) ) {	
+                // recupera os nomes
+                $dados = $dados."\"".$row["nome"]."\",";
+            }
         }
         $dados = substr($dados,0,-1); //retira a ultima virgula
         ?>
         <script>
             $( function() {
                 var availableTags = [<?php echo $dados?>];
-                $( "#title" ).autocomplete({
+                $("#title").autocomplete({
                     source: availableTags
                 });
             } );
