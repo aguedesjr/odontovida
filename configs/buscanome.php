@@ -1,6 +1,10 @@
 <!-- Recupero o nome dos pacientes para o modal abaixo -->
 <?
 include_once ("../configs/conn.php");
+
+// Recebe o valor enviado
+$valor = $_GET['valor'];
+
     $sqlPacientes = "SELECT nome FROM pacientes WHERE nome LIKE '%".$valor."%';";
     $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
         if (mysqli_num_rows($result) > 0) {
