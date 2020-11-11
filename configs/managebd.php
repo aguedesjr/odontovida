@@ -64,24 +64,6 @@ if (isset($_POST ['comando'])) {
             //header("Location: ../inicio.php");
         }
     }
-    //Apagar o paciente
-    echo $comando;
-    if ($comando == "deletarPaciente") {
-        $id = $_POST["id"];
-        echo $id;
-
-        $sql = "DELETE FROM pacientes 
-        WHERE id = '$id';";
-
-        if ($conn->query($sql) === TRUE) {
-            $_SESSION['messagestatus']="sucesso";
-            header("Location: ../listpacientes.php");
-        } else {
-            $_SESSION['messagestatus']="erro";
-            header("Location: ../listpacientes.php");
-            //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
-        }
-    }
 }
 
 //Cadastra o paciente
@@ -118,7 +100,24 @@ if (isset($_POST ['cadastrarPaciente'])) {
     }
 }
 
-$comando1=$_REQUEST['comando'];
+$paciente=$_REQUEST['paciente'];
+    //Apagar o paciente
+    if ($paciente == "deletarPaciente") {
+        $id = $_REQUEST["id"];
+
+        $sql = "DELETE FROM pacientes 
+        WHERE id = '$id';";
+
+        if ($conn->query($sql) === TRUE) {
+            $_SESSION['messagestatus']="sucesso";
+            header("Location: ../listpacientes.php");
+        } else {
+            $_SESSION['messagestatus']="erro";
+            header("Location: ../listpacientes.php");
+            //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        }
+    }
+
 echo $comando1;
 
 //Encerra a conexão
