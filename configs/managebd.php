@@ -118,6 +118,9 @@ if (isset($_POST ['cadastrarPaciente'])) {
     }
 }
 
+$comando1=$_REQUEST['comando'];
+echo $comando1;
+
 //Encerra a conexão
 $conn->close();
 
