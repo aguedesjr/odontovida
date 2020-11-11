@@ -7,7 +7,7 @@ $valor = $_GET['valor'];
 
     $sqlPacientes = "SELECT nome FROM pacientes WHERE nome LIKE '%".$valor."%';";
     $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
-        if (mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($resultset) > 0) {
             while( $rows = mysqli_fetch_assoc($resultset) ) {	
                 // recupera os nomes
                 //echo $row["nome"];
