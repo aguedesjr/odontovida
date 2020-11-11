@@ -59,12 +59,14 @@
                                             <tr>
                                                 <th>Codigo</th>
                                                 <th>Nome</th>
+                                                <th>Celular</th>
+                                                <th>E-mail</th>
                                                 <th>Editar</th>
                                                 <th>Apagar</th>
                                             </tr>
                                         </thead>
                                         <?
-                                            $sql = "SELECT codigo, nome, id FROM pacientes ORDER BY nome;";
+                                            $sql = "SELECT codigo, nome, id, celular, email FROM pacientes ORDER BY nome;";
                                             $result = $conn->query($sql);
                                         ?>
                                         <tbody>
@@ -72,6 +74,8 @@
                                             <tr>
                                                 <th><? echo $row[0]; ?></th>
                                                 <th><? echo $row[1]; ?></th>
+                                                <th><? echo $row[3]; ?></th>
+                                                <th><? echo $row[4]; ?></th>
                                                 <th><?echo '<a class="btn btn-warning" href="editpacientes.php?id='.$row[2].'"><i class="fas fa-user-edit"></i> Editar</a>';?></th>
                                                 <th><?echo '<a class="btn btn-danger" href="configs/managebd.php?paciente=deletarPaciente&id='.$row[2].'"><i class="fas fa-user-minus"></i> Apagar</a>';?></th>
                                             </tr>
