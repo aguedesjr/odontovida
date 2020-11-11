@@ -24,6 +24,7 @@ $login = $_SESSION['login'];
         <script src="js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-ui.js" crossorigin="anonymous"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/sweetalert2@10.js"></script>
         <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
