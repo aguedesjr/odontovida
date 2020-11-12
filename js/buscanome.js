@@ -9,7 +9,7 @@ $(function () {
             }
             $.post('configs/buscanome.php', dados, function(retorna){
                 // mostra dentro da ul o resultado obtido
-                $(".resultado").html(retorna);
+                $(".resultado").innerHTML(retorna);
 
             });
         }
