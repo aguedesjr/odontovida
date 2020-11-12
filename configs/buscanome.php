@@ -26,6 +26,6 @@ include_once ("../configs/conn.php");
                 //echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$rows["nome"]."')\">" . $rows["nome"]. "</a><br />";
             }
         } else {
-            echo "Nenhum paciente encontrado...."
+            echo "Nenhum paciente encontrado....";
         }
 ?>
