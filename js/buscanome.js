@@ -7,7 +7,7 @@ $(function () {
             var dados = {
                 palavra : pesquisa
             }
-            $.post('../configs/buscanome.php', dados, function(retorna){
+            $.post('configs/buscanome.php', dados, function(retorna){
                 // mostra dentro da ul o resultado obtido
                 $(".resultado").html(retorna);
 
