@@ -21,17 +21,34 @@ $login = $_SESSION['login'];
         <title>Odontovida</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
         <link href="Bootstrap/dist/css/styles.css" rel="stylesheet" />
-        <!--<link href="css/jquery-ui.css" rel="stylesheet" />-->
+        <link href="css/jquery-ui.css" rel="stylesheet" />
         <script src="js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-        <script src="js/buscanome.js" crossorigin="anonymous"></script>
-        <!--<script src="js/jquery-ui.js" crossorigin="anonymous"></script>-->
+        <!--<script src="js/buscanome.js" crossorigin="anonymous"></script>-->
+        <script src="js/jquery-ui.js" crossorigin="anonymous"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/sweetalert2@10.js"></script>
         <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="Bootstrap/dist/js/scripts.js"></script>
         <script src='lib/main.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                
+                // Captura o retorno do retornaCliente.php
+                $.getJSON('configs/buscanome.php', function(data){
+                    var paciente = [];
+                    
+                    // Armazena na array capturando somente o nome do cliente
+                    $(data).each(function(key, value) {
+                        paciente.push(value.nome);
+                    });
+                    
+                    // Chamo o Auto complete do JQuery ui setando o id do input, array com os dados e o mínimo de caracteres para disparar o AutoComplete
+                    $('#title').autocomplete({ source: paciente, minLength: 3});
+                });
+            });
+        </script>
         <script>
 
   document.addEventListener('DOMContentLoaded', function() {

@@ -15,7 +15,8 @@ include_once ("conn.php");
         }*/
     //$dados = substr($dados,0,-1); //retira a ultima virgula
 
-    $nome = filter_input(INPUT_POST, 'palavra', FILTER_SANITIZE_STRING);
+    // Funcionando em parte
+    /*$nome = filter_input(INPUT_POST, 'palavra', FILTER_SANITIZE_STRING);
     $sqlPacientes = "SELECT nome FROM pacientes WHERE nome LIKE '%$nome%' LIMIT 20;";
     $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
         if (($resultset) AND ($resultset->num_rows != 0)) {
@@ -27,5 +28,8 @@ include_once ("conn.php");
             }
         } else {
             echo "Nenhum paciente encontrado....";
-        }
+        }*/
+    $sqlPacientes = "SELECT nome FROM pacientes;";
+    $resultset = mysqli_query($conn, $sqlPacientes) or die("database error:". mysqli_error($conn));
+    echo json_encode($resultset->fetch_all(MYSQLI_ASSOC));
 ?>
