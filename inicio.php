@@ -25,7 +25,7 @@ $login = $_SESSION['login'];
         <script src="js/all.min.js" crossorigin="anonymous"></script>
         <link href='lib/main.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-        <script src="js/funcnome.js" crossorigin="anonymous"></script>
+        <script src="js/buscanome.js" crossorigin="anonymous"></script>
         <!--<script src="js/jquery-ui.js" crossorigin="anonymous"></script>-->
         <script src="js/popper.min.js"></script>
         <script src="js/sweetalert2@10.js"></script>
@@ -361,7 +361,8 @@ $login = $_SESSION['login'];
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome do Paciente</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="title" class="form-control" id="title" placeholder="Nome do Paciente" onkeyup="buscarFornec(this.value)" style="text-transform:uppercase">
+                                    <input type="text" name="title" class="form-control" id="title" placeholder="Nome do Paciente" style="text-transform:uppercase">
+                                    <div class="resultado"></div>
                                 </div>
                             </div>
                             <div class="form-group row">
