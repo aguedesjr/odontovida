@@ -339,7 +339,7 @@ $login = $_SESSION['login'];
         
         <script>
             /*$( function() {
-                var availableTags = [<? echo $dados;?>];
+                var availableTags = [<? //echo $dados;?>];
                 $("#title").autocomplete({
                     source: availableTags
                 });

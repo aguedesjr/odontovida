@@ -1,5 +1,5 @@
 <?
-include_once ("../configs/conn.php");
+include_once ("conn.php");
 
 // Recebe o valor enviado
 /*$valor = $_GET['valor'];
