@@ -32,23 +32,7 @@ $login = $_SESSION['login'];
         <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="Bootstrap/dist/js/scripts.js"></script>
         <script src='lib/main.js'></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                
-                // Captura o retorno do retornaCliente.php
-                $.getJSON('configs/buscanome.php', function(data){
-                    var paciente = [];
-                    
-                    // Armazena na array capturando somente o nome do cliente
-                    $(data).each(function(key, value) {
-                        paciente.push(value.nome);
-                    });
-                    
-                    // Chamo o Auto complete do JQuery ui setando o id do input, array com os dados e o mínimo de caracteres para disparar o AutoComplete
-                    $('#cadastrar #title').autocomplete({ zIndex: 3999, modal: true, source: paciente, minLength: 3});
-                });
-            });
-        </script>
+        
         <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -374,6 +358,23 @@ $login = $_SESSION['login'];
                         </button>
                     </div>
                     <div class="modal-body">
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            
+                            // Captura o retorno do retornaCliente.php
+                            $.getJSON('configs/buscanome.php', function(data){
+                                var paciente = [];
+                                
+                                // Armazena na array capturando somente o nome do cliente
+                                $(data).each(function(key, value) {
+                                    paciente.push(value.nome);
+                                });
+                                
+                                // Chamo o Auto complete do JQuery ui setando o id do input, array com os dados e o mínimo de caracteres para disparar o AutoComplete
+                                $('#cadastrar #title').autocomplete({ zIndex: 3999, modal: true, source: paciente, minLength: 3});
+                            });
+                        });
+                    </script>
                         <form method="POST" action="configs/managebd.php">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nome do Paciente</label>
