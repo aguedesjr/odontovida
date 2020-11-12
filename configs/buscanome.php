@@ -21,8 +21,8 @@ include_once ("conn.php");
         if (($resultset) AND ($resultset->num_rows != 0)) {
             while( $rows = mysqli_fetch_assoc($resultset) ) {	
                 // recupera os nomes
-                echo $rows["nome"];
-                //echo "< li>".$rows["nome"]."</>";
+                echo $rows["nome"]."<br>";
+                //echo "<br li>".$rows["nome"]."</br>";
                 //echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$rows["nome"]."')\">" . $rows["nome"]. "</a><br />";
             }
         } else {
