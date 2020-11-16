@@ -9,7 +9,7 @@
                             </a>
                             <div class="sb-sidenav-menu-heading">Consultório</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pacientes" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-hospital-user"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-hospital-user" style="color:red"></i></div>
                                 Pacientes
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
