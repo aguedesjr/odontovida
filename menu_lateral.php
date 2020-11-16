@@ -4,12 +4,12 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Inicio</div>
                             <a class="nav-link" href="inicio.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt" style="color:blue"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt" style="color:red"></i></div>
                                 Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Consultório</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pacientes" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-hospital-user" style="color:red"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-hospital-user" style="color:blue"></i></div>
                                 Pacientes
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -19,12 +19,12 @@
                                     <a class="nav-link" href="listpacientes.php">Listar</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pacientes" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#convenio" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="far fa-id-card" style="color:green"></i></div>
                                 Convênios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="pacientes" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <div class="collapse" id="convenio" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="cadpacientes.php">Cadastrar</a>
                                     <a class="nav-link" href="listpacientes.php">Listar</a>
