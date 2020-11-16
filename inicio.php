@@ -371,7 +371,7 @@ $login = $_SESSION['login'];
                                 });
                                 
                                 // Chamo o Auto complete do JQuery ui setando o id do input, array com os dados e o mínimo de caracteres para disparar o AutoComplete
-                                $('#cadastrar #title').autocomplete({ zIndex: 3999, modal: true, source: paciente, minLength: 3});
+                                $('#cadastrar #title').autocomplete({ source: paciente, minLength: 3});
                             });
                         });
                     </script>
