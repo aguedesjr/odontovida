@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------------------------
 
 include_once ("../configs/conn.php");
-$sqlEvents = "SELECT id, title, start, end, color FROM events LIMIT 20";
+$sqlEvents = "SELECT id, title, start, end, color FROM events";
 $resultset = mysqli_query($conn, $sqlEvents) or die("database error:". mysqli_error($conn));
 $calendar = array();
 $response = array();

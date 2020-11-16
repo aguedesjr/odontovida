@@ -20,9 +20,9 @@ if (isset($_POST['cadastrarEvento'])) {
     $data_end = str_replace('/', '-', $_POST['end']);
     $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
 
-    echo $title." - ".$color." - ".$data_start_conv." - ".$data_end_conv;
+    //echo $title." - ".$color." - ".$data_start_conv." - ".$data_end_conv;
     
-    /*$sql = "INSERT INTO events 
+    $sql = "INSERT INTO events 
     (title,color,start,end) 
     VALUES 
     ('$title','$color','$data_start_conv','$data_end_conv');";
@@ -37,7 +37,7 @@ if (isset($_POST['cadastrarEvento'])) {
         $_SESSION['messagestatus']="erro";
         //$_SESSION['agendamessage']="Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
         header("Location: ../inicio.php");
-    }*/
+    }
 }
 
 if (isset($_POST ['comando'])) {
