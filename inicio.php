@@ -359,7 +359,7 @@ $login = $_SESSION['login'];
                     </div>
                     <div class="modal-body">
                     <script type="text/javascript">
-                        $(document).ready(function() {
+                        $(function() {
                             
                             // Captura o retorno do retornaCliente.php
                             $.getJSON('configs/buscanome.php', function(data){
