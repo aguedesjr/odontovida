@@ -4,7 +4,7 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Inicio</div>
                             <a class="nav-link" href="inicio.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt" style="color:blue"></i></div>
                                 Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Consultório</div>
@@ -20,7 +20,7 @@
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pacientes" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="far fa-id-card"></i></div>
+                                <div class="sb-nav-link-icon"><i class="far fa-id-card" style="color:green"></i></div>
                                 Convênios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
