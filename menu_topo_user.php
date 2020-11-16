@@ -5,7 +5,7 @@
                         <!--<a class="dropdown-item" href="#">Settings</a>
                         <a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>-->
-                        <a class="dropdown-item" href="logout.php">Sair</a>
+                        <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i>Sair</a>
                     </div>
                 </li>
             </ul>
