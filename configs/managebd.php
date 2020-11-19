@@ -122,6 +122,23 @@ $paciente=$_REQUEST['paciente'];
     }
 }
 
+//Cadastra o convenio
+if (isset($_POST ['cadastrarConvenio'])) {
+
+    $nome = strtoupper(utf8_decode($_POST["nome"]));
+
+    $sql = "INSERT INTO convenios (nome) VALUES ('$nome');";
+
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['messagestatus']="sucesso";
+        header("Location: ../cadconvenio.php");
+    } else {
+        $_SESSION['messagestatus']="erro";
+        header("Location: ../cadconvenio.php");
+        //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+    }
+}
+
 //Encerra a conexão
 $conn->close();
 
