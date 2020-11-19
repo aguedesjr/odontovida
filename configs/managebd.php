@@ -139,6 +139,26 @@ if (isset($_POST ['cadastrarConvenio'])) {
     }
 }
 
+if (isset($_REQUEST['convenio'])) {
+    $convenio=$_REQUEST['convenio'];
+        //Apagar o convênio
+        if ($convenio == "deletarConvenio") {
+            $id = $_REQUEST["id"];
+    
+            $sql = "DELETE FROM convenios 
+            WHERE id = '$id';";
+    
+            if ($conn->query($sql) === TRUE) {
+                $_SESSION['messagestatus']="sucesso";
+                header("Location: ../listconvenio.php");
+            } else {
+                $_SESSION['messagestatus']="erro";
+                header("Location: ../listconvenio.php");
+                //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+            }
+        }
+    }
+
 //Encerra a conexão
 $conn->close();
 

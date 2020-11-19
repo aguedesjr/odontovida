@@ -5,7 +5,7 @@
     </ol>
     <div class="card mb-4">
         <div class="card-header">
-            <i class="fas fa-user-plus mr-1"></i>
+            <i class="fas fa-folder-plus mr-1"></i>
             Cadastrar
         </div>
         <script>
