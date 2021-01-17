@@ -29,7 +29,7 @@ $login = $_SESSION['login'];
         <script src="js/popper.min.js"></script>
         <script src="js/sweetalert2@10.js"></script>
         <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="Bootstrap/dist/js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
         <script src='lib/main.js'></script>
         
         <script>
