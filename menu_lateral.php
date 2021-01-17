@@ -31,7 +31,7 @@
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#procedimentos" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="far fa-id-card" style="color:yellow"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-tooth" style="color:yellow"></i></div>
                                 Procedimentos
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
