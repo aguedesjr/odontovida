@@ -74,7 +74,7 @@
             <form name="form1" action="configs/managebd.php" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <input type="hidden" name="cadastrarConvenio" value="cadastrarProcedimento">
+                        <input type="hidden" name="cadastrarProcedimento" value="cadastrarProcedimento">
                         <label for="nome">Código *</label>
                         <input type="text" class="form-control" id="codigo" name="codigo" style="text-transform: uppercase;" required>
                     </div>
