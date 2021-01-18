@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <?
-                        $sql = "SELECT codigo, nome FROM convenios ORDER BY nome;";
+                        $sql = "SELECT id, nome FROM convenios ORDER BY nome;";
                         $result = $conn->query($sql);
                     ?>
                     <div class="form-group col-md-4">
@@ -104,7 +104,7 @@
                             <?  while($row = $result->fetch_array(MYSQLI_NUM)) { 
                                     echo '<option value="'.$row[0].'">'.$row[1].'</option>';
                                 }
-                            ?>;
+                            ?>
                         </select>
                     </div>
                 </div>
