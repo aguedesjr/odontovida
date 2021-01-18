@@ -82,6 +82,21 @@
                         <label for="nome">Nome *</label>
                         <input type="text" class="form-control" id="nome" name="nome" style="text-transform: uppercase;" required>
                     </div>
+                    <div class="form-group col-md-4">
+                        <label for="SelectGrupo">Grupo *</label>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Escolher...</option>
+                            <option value="CIRURGIA">CIRURGIA</option>
+                            <option value="DENTÍSTICA">DENTÍSTICA</option>
+                            <option value="DIAGNÓSTICOS">DIAGNÓSTICOS</option>
+                            <option value="ENDODONTIA">ENDODONTIA</option>
+                            <option value="IMPLANTOLOGIA">IMPLANTOLOGIA</option>
+                            <option value="ORTODONTIA">ORTODONTIA</option>
+                            <option value="PERIODONTIA">PERIODONTIA</option>
+                            <option value="PROFILAXIA">PROFILAXIA</option>
+                            <option value="PRÓTESE">PRÓTESE</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
