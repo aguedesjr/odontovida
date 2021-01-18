@@ -66,9 +66,6 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    
-                </div>
-                <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="nome">Valor *</label>
                         <div class="input-group mb-3">
@@ -77,6 +74,15 @@
                             </div>
                             <input type="text" class="form-control" id="valor" name="valor" style="text-transform: uppercase;" required>
                         </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="SelectConvenio"></label>
+                        <select class="custom-select" id="SelectConvenio">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-row">
