@@ -75,13 +75,17 @@
                             <input type="text" class="form-control" id="valor" name="valor" style="text-transform: uppercase;" required>
                         </div>
                     </div>
+                    <?
+                        $sql = "SELECT codigo, nome FROM convenio ORDER BY nome;";
+                        $result = $conn->query($sql);
+                    ?>
                     <div class="form-group col-md-4">
                         <label for="SelectConvenio">Convênio *</label>
                         <select class="custom-select" id="SelectConvenio">
-                            <option selected>Choose...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected>Selecionar...</option>
+                            <? while($row = $result->fetch_array(MYSQLI_NUM)) { 
+                                echo '<option value="'.$row[0].'">'.$row[1].'</option>;'
+                            ?>;
                         </select>
                     </div>
                 </div>
