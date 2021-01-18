@@ -157,7 +157,44 @@ if (isset($_REQUEST['convenio'])) {
                 //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
             }
         }
+}
+
+//Cadastra o convenio
+if (isset($_POST ['cadastrarProcedimento'])) {
+
+    $nome = strtoupper(utf8_decode($_POST["nome"]));
+
+    $sql = "INSERT INTO convenios (nome) VALUES ('$nome');";
+
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['messagestatus']="sucesso";
+        header("Location: ../cadconvenio.php");
+    } else {
+        $_SESSION['messagestatus']="erro";
+        header("Location: ../cadprocedimentos.php");
+        //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
     }
+}
+
+if (isset($_REQUEST['convenio'])) {
+    $convenio=$_REQUEST['convenio'];
+        //Apagar o convênio
+        if ($convenio == "deletarConvenio") {
+            $id = $_REQUEST["id"];
+    
+            $sql = "DELETE FROM convenios 
+            WHERE id = '$id';";
+    
+            if ($conn->query($sql) === TRUE) {
+                $_SESSION['messagestatus']="sucesso";
+                header("Location: ../listprocedimentos.php");
+            } else {
+                $_SESSION['messagestatus']="erro";
+                header("Location: ../listprocedimentos.php");
+                //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+            }
+        }
+}
 
 //Encerra a conexão
 $conn->close();
