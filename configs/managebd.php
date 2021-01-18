@@ -175,8 +175,8 @@ if (isset($_POST ['cadastrarProcedimento'])) {
         header("Location: ../cadprocedimentos.php");
     } else {
         $_SESSION['messagestatus']="erro";
-        header("Location: ../cadprocedimentos.php");
-        //echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
+        //header("Location: ../cadprocedimentos.php");
+        echo "Erro ao realizar o cadastro: " . mysqli_errno($conn) . " - " . mysqli_error($conn);
     }
 }
 
