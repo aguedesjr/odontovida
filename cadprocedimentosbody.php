@@ -85,7 +85,7 @@
                     <div class="form-group col-md-4">
                         <label for="SelectGrupo">Grupo *</label>
                         <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Escolher...</option>
+                            <option selected>Selecionar...</option>
                             <option value="CIRURGIA">CIRURGIA</option>
                             <option value="DENTÍSTICA">DENTÍSTICA</option>
                             <option value="DIAGNÓSTICOS">DIAGNÓSTICOS</option>
