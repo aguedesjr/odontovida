@@ -83,8 +83,9 @@
                         <label for="SelectConvenio">Convênio *</label>
                         <select class="custom-select" id="SelectConvenio">
                             <option selected>Selecionar...</option>
-                            <? //while($row = $result->fetch_array(MYSQLI_NUM)) { 
-                                //echo '<option value="'.$row[0].'">'.$row[1].'</option>;'
+                            <?  while($row = $result->fetch_array(MYSQLI_NUM)) { 
+                                    echo '<option value="'.$row[0].'">'.$row[1].'</option>';
+                                }
                             ?>;
                         </select>
                     </div>
