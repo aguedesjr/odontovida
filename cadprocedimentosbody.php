@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="grupo">Grupo *</label>
-                        <select class="custom-select" id="grupo">
+                        <select class="custom-select" id="grupo" name="grupo">
                             <option selected>Selecionar...</option>
                             <option value="CIRURGIA">CIRURGIA</option>
                             <option value="DENTÍSTICA">DENTÍSTICA</option>
@@ -114,7 +114,7 @@
                     ?>
                     <div class="form-group col-md-4">
                         <label for="convenio">Convênio *</label>
-                        <select class="custom-select" id="convenio">
+                        <select class="custom-select" id="convenio" name="convenio">
                             <option selected>Selecionar...</option>
                             <?  while($row = $result->fetch_array(MYSQLI_NUM)) { 
                                     echo '<option value="'.$row[0].'">'.$row[1].'</option>';

@@ -162,11 +162,11 @@ if (isset($_REQUEST['convenio'])) {
 //Cadastra o procedimento
 if (isset($_POST ['cadastrarProcedimento'])) {
 
-    $codigo = strtoupper(utf8_decode($_POST["codigo"]));
+    $codigo = $_POST["codigo"];
     $nome = strtoupper(utf8_decode($_POST["nome"]));
     $grupo = strtoupper(utf8_decode($_POST["grupo"]));
-    $convenio = strtoupper(utf8_decode($_POST["convenio"]));
-    $valor = strtoupper(utf8_decode($_POST["valor"]));
+    $convenio = $_POST["convenio"];
+    $valor = $_POST["valor"];
 
     $sql = "INSERT INTO procedimentos (codigo,nome,grupo,convenio,valor) VALUES ('$codigo','$nome','$grupo','$convenio','$valor');";
 
