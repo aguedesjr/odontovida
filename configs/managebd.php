@@ -163,8 +163,8 @@ if (isset($_REQUEST['convenio'])) {
 if (isset($_POST ['cadastrarProcedimento'])) {
 
     $codigo = $_POST["codigo"];
-    $nome = strtoupper(utf8_encode($_POST["nome"]));
-    $grupo = strtoupper(utf8_encode($_POST["grupo"]));
+    $nome = strtoupper(utf8_decode($_POST["nome"]));
+    $grupo = strtoupper(utf8_decode($_POST["grupo"]));
     $convenio = $_POST["convenio"];
     $valor = $_POST["valor"];
 
