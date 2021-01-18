@@ -28,6 +28,24 @@
                        timer: 1500
                    });
            }
+
+           function formatarMoeda() {
+                var elemento = document.getElementById('valor');
+                var valor = elemento.value;
+
+                valor = valor + '';
+                valor = parseInt(valor.replace(/[\D]+/g, ''));
+                valor = valor + '';
+                valor = valor.replace(/([0-9]{2})$/g, ",$1");
+
+                if (valor.length > 6) {
+                    valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+                }
+
+                elemento.value = valor;
+                if(valor == 'NaN') elemento.value = '';
+           }
+</script>
         </script>
         <div class="card-body">
         <?
@@ -72,11 +90,11 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">R$</span>
                             </div>
-                            <input type="text" class="form-control" id="valor" name="valor" style="text-transform: uppercase;" required>
+                            <input type="text" class="form-control" id="valor" name="valor" onkeyup="formatarMoeda()" required>
                         </div>
                     </div>
                     <?
-                        $sql = "SELECT codigo, nome FROM convenio ORDER BY nome;";
+                        $sql = "SELECT codigo, nome FROM convenios ORDER BY nome;";
                         $result = $conn->query($sql);
                     ?>
                     <div class="form-group col-md-4">
