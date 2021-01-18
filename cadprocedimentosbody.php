@@ -83,8 +83,8 @@
                         <input type="text" class="form-control" id="nome" name="nome" style="text-transform: uppercase;" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="SelectGrupo">Grupo *</label>
-                        <select class="custom-select" id="inputGroupSelect01">
+                        <label for="grupo">Grupo *</label>
+                        <select class="custom-select" id="grupo">
                             <option selected>Selecionar...</option>
                             <option value="CIRURGIA">CIRURGIA</option>
                             <option value="DENTÍSTICA">DENTÍSTICA</option>
@@ -113,8 +113,8 @@
                         $result = $conn->query($sql);
                     ?>
                     <div class="form-group col-md-4">
-                        <label for="SelectConvenio">Convênio *</label>
-                        <select class="custom-select" id="SelectConvenio">
+                        <label for="convenio">Convênio *</label>
+                        <select class="custom-select" id="convenio">
                             <option selected>Selecionar...</option>
                             <?  while($row = $result->fetch_array(MYSQLI_NUM)) { 
                                     echo '<option value="'.$row[0].'">'.$row[1].'</option>';

@@ -159,16 +159,20 @@ if (isset($_REQUEST['convenio'])) {
         }
 }
 
-//Cadastra o convenio
+//Cadastra o procedimento
 if (isset($_POST ['cadastrarProcedimento'])) {
 
+    $codigo = strtoupper(utf8_decode($_POST["codigo"]));
     $nome = strtoupper(utf8_decode($_POST["nome"]));
+    $grupo = strtoupper(utf8_decode($_POST["grupo"]));
+    $convenio = strtoupper(utf8_decode($_POST["convenio"]));
+    $valor = strtoupper(utf8_decode($_POST["valor"]));
 
-    $sql = "INSERT INTO convenios (nome) VALUES ('$nome');";
+    $sql = "INSERT INTO procedimentos (codigo,nome,grupo,convenio,valor) VALUES ('$codigo','$nome','$grupo','$convenio','$valor');";
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['messagestatus']="sucesso";
-        header("Location: ../cadconvenio.php");
+        header("Location: ../cadprocedimentos.php");
     } else {
         $_SESSION['messagestatus']="erro";
         header("Location: ../cadprocedimentos.php");
